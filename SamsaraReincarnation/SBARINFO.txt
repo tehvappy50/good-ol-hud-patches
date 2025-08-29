@@ -1,0 +1,7 @@
+// These affect the other HUDs as well; can't really do anything about that.
+InterpolateHealth false;
+InterpolateArmor false;
+LowerHealthCap false;
+
+#include "SBARINFO.fullscreen"
+#include "SBARINFO.inventoryfullscreen"

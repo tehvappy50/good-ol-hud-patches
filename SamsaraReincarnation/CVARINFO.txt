@@ -1,0 +1,4 @@
+user bool goh_samsara_showcharacterportrait = true;
+//user bool goh_samsara_showstatustimers = true; // uncomment when these are done
+user bool goh_samsara_showcharactername = true;
+user bool goh_samsara_showalienweaponammo = false;

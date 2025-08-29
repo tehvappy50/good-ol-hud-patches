@@ -1,0 +1,405 @@
+// Character portraits
+
+Graphic "TPCHDOOM_HUD", 176, 132
+{
+    Patch "TPCHDOOM", 0, 0
+    XScale 6.28571
+    YScale 4.71428
+}
+
+Graphic "TPCHDG64_HUD", 117, 136
+{
+    Patch "TPCHDG64", 0, 0
+    XScale 4.17857
+    YScale 4.85714
+}
+
+Graphic "TPCHCHEX_HUD", 219, 134
+{
+    Patch "TPCHCHEX", 0, 0
+    XScale 7.82142
+    YScale 4.78571
+}
+
+Graphic "TPCHCORV_HUD", 152, 101
+{
+    Patch "TPCHCORV", 0, 0
+    XScale 5.42857
+    YScale 3.60714
+}
+
+Graphic "TPCHWOLF_HUD", 76, 83
+{
+    Patch "TPCHWOLF", 0, 0
+    XScale 2.71428
+    YScale 2.96428
+}
+
+Graphic "TPCHWOL2_HUD", 76, 83
+{
+    Patch "TPCHWOL2", 0, 0
+    XScale 2.71428
+    YScale 2.96428
+}
+
+Graphic "TPCHWOL3_HUD", 76, 87
+{
+    Patch "TPCHWOL3", 0, 0
+    XScale 2.71428
+    YScale 3.10714
+}
+
+Graphic "TPCHHEXN_HUD", 150, 141
+{
+    Patch "TPCHHEXN", 0, 0
+    XScale 5.35714
+    YScale 5.03571
+}
+
+Graphic "TPCHHEXM_HUD", 175, 138
+{
+    Patch "TPCHHEXM", 0, 0
+    XScale 6.25
+    YScale 4.92857
+}
+
+Graphic "TPCHHEXF_HUD", 199, 138
+{
+    Patch "TPCHHEXF", 0, 0
+    XScale 7.10714
+    YScale 4.92857
+}
+
+Graphic "TPCHDUKE_HUD", 175, 137
+{
+    Patch "TPCHDUKE", 0, 0
+    XScale 6.25
+    YScale 4.89285
+}
+
+Graphic "TPCHDLAB_HUD", 184, 137
+{
+    Patch "TPCHDLAB", 0, 0
+    XScale 6.57142
+    YScale 4.89285
+}
+
+Graphic "TPCHMARA_HUD", 195, 155
+{
+    Patch "TPCHMARA", 0, 0
+    XScale 6.96428
+    YScale 5.53571
+}
+
+Graphic "TPCHQUAK_HUD", 180, 136
+{
+    Patch "TPCHQUAK", 0, 0
+    XScale 6.42857
+    YScale 4.85714
+}
+
+Graphic "TPCHROTT_HUD", 141, 145
+{
+    Patch "TPCHROTT", 0, 0
+    XScale 5.03571
+    YScale 5.17857
+}
+
+Graphic "TPCHTCAS_HUD", 155, 138
+{
+    Patch "TPCHTCAS", 0, 0
+    XScale 5.53571
+    YScale 4.92857
+}
+
+Graphic "TPCHTBAR_HUD", 104, 128
+{
+    Patch "TPCHTBAR", 0, 0
+    XScale 3.71428
+    YScale 4.57142
+}
+
+Graphic "TPCHLLNI_HUD", 114, 128
+{
+    Patch "TPCHLLNI", 0, 0
+    XScale 4.07142
+    YScale 4.57142
+}
+
+Graphic "TPCHDOUG_HUD", 109, 138
+{
+    Patch "TPCHDOUG", 0, 0
+    XScale 3.89285
+    YScale 4.92857
+}
+
+Graphic "TPCHBSTN_HUD", 218, 187
+{
+    Patch "TPCHBSTN", 0, 0
+    XScale 7.78571
+    YScale 6.67857
+}
+
+Graphic "TPCHBLOD_HUD", 132, 140
+{
+    Patch "TPCHBLOD", 0, 0
+    XScale 4.71428
+    YScale 5
+}
+
+Graphic "TPCHSTRF_HUD", 138, 140
+{
+    Patch "TPCHSTRF", 0, 0
+    XScale 4.92857
+    YScale 5
+}
+
+Graphic "TPCHERAD_HUD", 154, 102
+{
+    Patch "TPCHERAD", 0, 0
+    XScale 5.5
+    YScale 3.64285
+}
+
+Graphic "TPCHERA2_HUD", 115, 118
+{
+    Patch "TPCHERA2", 0, 0
+    XScale 4.10714
+    YScale 4.21428
+}
+
+Graphic "TPCHERA3_HUD", 123, 123
+{
+    Patch "TPCHERA3", 0, 0
+    XScale 4.39285
+    YScale 4.39285
+}
+
+Graphic "TPCHERA4_HUD", 150, 110
+{
+    Patch "TPCHERA4", 0, 0
+    XScale 5.35714
+    YScale 3.92857
+}
+
+Graphic "TPCHCOR7_HUD", 220, 198
+{
+    Patch "TPCHCOR7", 0, 0
+    XScale 7.85714
+    YScale 7.07142
+}
+
+Graphic "TPCHRMR_HUD", 184, 114
+{
+    Patch "TPCHRMR", 0, 0
+    XScale 6.57142
+    YScale 4.07142
+}
+
+Graphic "TPCHKYLE_HUD", 111, 134
+{
+    Patch "TPCHKYLE", 0, 0
+    XScale 3.96428
+    YScale 4.78571
+}
+
+Graphic "TPCHIPOG_HUD", 154, 102
+{
+    Patch "TPCHIPOG", 0, 0
+    XScale 5.5
+    YScale 3.64285
+}
+
+Graphic "TPCHIPO2_HUD", 154, 102
+{
+    Patch "TPCHIPO2", 0, 0
+    XScale 5.5
+    YScale 3.64285
+}
+
+Graphic "TPCHIPO3_HUD", 154, 102
+{
+    Patch "TPCHIPO3", 0, 0
+    XScale 5.5
+    YScale 3.64285
+}
+
+Graphic "TPCHIPO4_HUD", 187, 102
+{
+    Patch "TPCHIPO4", 0, 0
+    XScale 6.67857
+    YScale 3.64285
+}
+
+Graphic "TPCHIPO5_HUD", 160, 102
+{
+    Patch "TPCHIPO5", 0, 0
+    XScale 5.71428
+    YScale 3.64285
+}
+
+Graphic "TPCHJACK_HUD", 117, 135
+{
+    Patch "TPCHJACK", 0, 0
+    XScale 4.17857
+    YScale 4.82142
+}
+
+Graphic "TPCHWTCH_HUD", 178, 137
+{
+    Patch "TPCHWTCH", 0, 0
+    XScale 6.35714
+    YScale 4.89285
+}
+
+Graphic "TPCHFREE_HUD", 242, 225
+{
+    Patch "TPCHFREE", 0, 0
+    XScale 8.64285
+    YScale 8.03571
+}
+
+Graphic "TPCHSHEP_HUD", 174, 231
+{
+    Patch "TPCHSHEP", 0, 0
+    XScale 6.21428
+    YScale 8.25
+}
+
+Graphic "TPCHWANG_HUD", 156, 135
+{
+    Patch "TPCHWANG", 0, 0
+    XScale 5.57142
+    YScale 4.82142
+}
+
+Graphic "TPCHCMDA_HUD", 178, 134
+{
+    Patch "TPCHCMDA", 0, 0
+    XScale 6.35714
+    YScale 4.78571
+}
+
+Graphic "TPCHPSEX_HUD", 124, 116
+{
+    Patch "TPCHPSEX", 0, 0
+    XScale 4.42857
+    YScale 4.14285
+}
+
+Graphic "TPCHLEON_HUD", 181, 132
+{
+    Patch "TPCHLEON", 0, 0
+    XScale 6.46428
+    YScale 4.71428
+}
+
+Graphic "TPCHBITT_HUD", 135, 116
+{
+    Patch "TPCHBITT", 0, 0
+    XScale 4.82142
+    YScale 4.14285
+}
+
+Graphic "TPCHHEX2_HUD", 200, 126
+{
+    Patch "TPCHHEX2", 0, 0
+    XScale 7.14285
+    YScale 4.5
+}
+
+Graphic "TPCHBOND_HUD", 86, 135
+{
+    Patch "TPCHBOND", 0, 0
+    XScale 3.07142
+    YScale 4.82142
+}
+
+Graphic "TPCHFING_HUD", 93, 135
+{
+    Patch "TPCHFING", 0, 0
+    XScale 3.32142
+    YScale 4.82142
+}
+
+Graphic "TPCHEVER_HUD", 126, 87
+{
+    Patch "TPCHEVER", 0, 0
+    XScale 4.5
+    YScale 3.10714
+}
+
+Graphic "TPCHPAIN_HUD", 118, 142
+{
+    Patch "TPCHPAIN", 0, 0
+    XScale 4.21428
+    YScale 5.07142
+}
+
+Graphic "TPCHP849_HUD", 107, 141
+{
+    Patch "TPCHP849", 0, 0
+    XScale 3.82142
+    YScale 5.03571
+}
+
+Graphic "TPCHRTCW_HUD", 145, 141
+{
+    Patch "TPCHRTCW", 0, 0
+    XScale 5.17857
+    YScale 5.03571
+}
+
+Graphic "TPCHQ3SG_HUD", 152, 144
+{
+    Patch "TPCHQ3SG", 0, 0
+    XScale 5.42857
+    YScale 5.14285
+}
+
+Graphic "TPCHPYRO_HUD", 210, 145
+{
+    Patch "TPCHPYRO", 0, 0
+    XScale 7.5
+    YScale 5.17857
+}
+
+Graphic "TPCHDENT_HUD", 111, 143
+{
+    Patch "TPCHDENT", 0, 0
+    XScale 3.96428
+    YScale 5.10714
+}
+
+// Player stats
+
+Graphic "Q1PPICON_HUD", 44, 44
+{
+	Patch "TIPSYM01", 0, 0 { Blend "#FFFFFF", 1.0 }
+    XScale 3.66666
+    YScale 3.66666
+}
+
+// Passive/counter-based inventory
+
+Graphic "PKSOULS_HUD", 64, 64 { Patch "PKSOULS", 0, 0 }
+
+Graphic "DS57_HUD", 63, 39
+{
+    Patch "DS57C0", 0, 0
+    Offset 31, 51
+}
+
+Graphic "DXAUGCAN_HUD", 34, 36 { Patch "DXAUGCAN", -4, 0 }
+
+Graphic "DXAUGECL_HUD", 42, 36 { Patch "DXAUGECL", 0, 0 }
+
+// Hardcoded graphic "hiding"
+
+Graphic "HX2XPBAK", 128, 5 { Patch "TNT1A0", 0, 0 }
+
+Graphic "HX2XPBAR", 128, 3 { Patch "TNT1A0", 0, 0 }
+
+Graphic "RTCWBAR0", 64, 16 { Patch "TNT1A0", 0, 0 }
+
+Graphic "RTCWBAR1", 64, 16 { Patch "TNT1A0", 0, 0 }

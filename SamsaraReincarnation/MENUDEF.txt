@@ -1,0 +1,29 @@
+OptionMenu "GoodOlHUDOptions"
+{
+    Title "$GOODOLHUD_MENU_TITLE_OPTIONS"
+    Option "$GOODOLHUD_MENU_SHOWBERSERK",                   "goh_showberserk",                   "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWARMORTYPE",                 "goh_showarmortype",                 "YesNo"
+    //Option "$GOODOLHUD_MENU_SHOWMUGSHOT",                   "goh_showmugshot",                   "YesNo" // not everyone has mugshots
+    Option "$GOODOLHUD_MENU_SAMSARA_SHOWCHARACTERPORTRAIT", "goh_samsara_showcharacterportrait", "YesNo"
+    //Option "$GOODOLHUD_MENU_SHOWPOWERUPTIMERS",             "goh_showpoweruptimers",             "YesNo" // uncomment when these are done
+    //Option "$GOODOLHUD_MENU_SAMSARA_SHOWSTATUSTIMERS",      "goh_samsara_showstatustimers",      "YesNo" // uncomment when these are done
+    Option "$GOODOLHUD_MENU_SHOWPLAYERNAME",                "goh_showplayername",                "YesNo"
+    Option "$GOODOLHUD_MENU_SAMSARA_SHOWCHARACTERNAME",     "goh_samsara_showcharactername",     "YesNo"
+    //Option "$GOODOLHUD_MENU_SHOWWEAPONBAR",                 "goh_showweaponbar",                 "YesNo" // samsara has its own setting
+    Option "$GOODOLHUD_MENU_SHOWWEAPONNAME",                "goh_showweaponname",                "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWARMORSAVEPERCENT",          "goh_showarmorsavepercent",          "YesNo"
+    Option "$GOODOLHUD_MENU_COLORHEALTHONINVULN",           "goh_colorhealthoninvuln",           "YesNo"
+    Option "$GOODOLHUD_MENU_ALWAYSSHOWINVENTORYCOUNTER",    "goh_alwaysshowinventorycounter",    "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWAIRTIMER",                  "goh_showairtimer",                  "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWCOINCOUNTER",               "goh_showcoincounter",               "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWSTAMINA",                   "goh_showstamina",                   "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWACCURACY",                  "goh_showaccuracy",                  "YesNo"
+    Option "$GOODOLHUD_MENU_THEME",                         "goh_theme",                         "GoodOlHUDThemeSettings"
+    Option "$GOODOLHUD_MENU_SHOWTIMER",                     "goh_showtimer",                     "YesNo"
+    Option "$GOODOLHUD_MENU_BARGRADIENTS",                  "goh_bargradients",                  "OnOff"
+    Option "$GOODOLHUD_MENU_SHOWAMMOCAPACITIES",            "goh_showammocapacities",            "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWMONSTERCOUNTER",            "goh_showmonstercounter",            "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWSECRETCOUNTER",             "goh_showsecretcounter",             "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWITEMCOUNTER",               "goh_showitemcounter",               "YesNo"
+    Option "$GOODOLHUD_MENU_SAMSARA_SHOWALIENWEAPONAMMO",   "goh_samsara_showalienweaponammo",   "YesNo"
+}

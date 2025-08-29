@@ -1,0 +1,6 @@
+StatusBar InventoryFullscreen, FullscreenOffsets
+{
+    // Inventory bar
+    IfCVarInt goh_alwaysshowinventorycounter, 1, equal { DrawInventoryBar Doom, AlwaysShowCounter, 7, INDEXFONT, -106 + Center, -31, -78 + Center, -9, White; }
+    else { DrawInventoryBar Doom, 7, INDEXFONT, -106 + Center, -31, -78 + Center, -9, White; }
+}
