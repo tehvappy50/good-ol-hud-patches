@@ -332,69 +332,69 @@ StatusBar Fullscreen, FullscreenOffsets
             IsSelected not " RailGun ", "Gigazorcher 2100" {
             IsSelected not Wraithverge, Bloodscourge {
             IsSelected not Quietus, " Bloodscourge " {
-            IsSelected not "Glock 17", "Golden Desert Eagle" {
-            IsSelected not ".44 Magnum Mega Class A1", "KKV-7 SMG Flechette" {
-            IsSelected not "WSTE-M5 Combat Shotgun", "Fusion Pistol" {
-            IsSelected not "MA-75B Assault Rifle", "SPNKR-XP SSM Launcher" {
-            IsSelected not "TOZT-7 Napalm Unit", "SPNKR-25 Auto Cannon" {
-            IsSelected not "ONI-71 Wave Motion Cannon", "Alien Weapon" {
-            IsSelected not " Alien Weapon ", "Tech.50 Pacifier" {
-            IsSelected not "Grenade Launcher DOE", "Nailgun DOE" {
-            IsSelected not "  Rocket Launcher DOE  ", "Super Nailgun DOE" {
-            IsSelected not "Thunderbolt DOE", "  Crossbow Poison  " {
-            IsSelected not " Grenade Launcher WP ", " Grenade Launcher Gas " {
-            IsSelected not Taser, "Assault Cannon" {
-            IsSelected not "Bow and Arrows", Shortsword {
-            IsSelected not "Battle Axe", "Ice Halberd" {
-            IsSelected not "Fire Mace", "Broad Sword" {
-            IsSelected not "Frozen Two-Hand Sword", "Pike Axe" {
-            IsSelected not "9mm Pistol", "Assault Shotgun" {
-            IsSelected not ".357 Python", "Desert Eagle" {
-            IsSelected not MP5, " RPG " {
-            IsSelected not "Spore Launcher", "M249 Squad Automatic Weapon" {
-            IsSelected not "HL Crossbow", "M40A1 Sniper Rifle" {
-            IsSelected not SWUzi, PSMagnum {
-            IsSelected not ExShotgun, PSM60 {
-            IsSelected not " .454 Casull Pistol ", " RR Dynomite Crossbow " {
-            IsSelected not " Chicken Crossbow ", Hexen2RavenStaff {
-            IsSelected not Hexen2TempestStaff, Goldeneye_PP7Silenced {
-            IsSelected not Goldeneye_Klobb, Goldeneye_PP7SpecialIssue {
-            IsSelected not Goldeneye_DD44, Goldfinger_PPKSilenced {
-            IsSelected not Goldfinger_PPK, Goldfinger_ColtM1911 {
-            IsSelected not Goldfinger_LugerP08, Goldfinger_WaltherP38 {
-            IsSelected not Goldeneye_KF7Soviet, Goldfinger_MP40 {
-            IsSelected not Goldeneye_AutoShotgun, Goldeneye_Shotgun {
-            IsSelected not Goldfinger_Shotgun, Goldfinger_OverUnder {
-            IsSelected not Goldeneye_AR33, Goldfinger_AK47 {
-            IsSelected not Goldeneye_Phantom, Goldfinger_ThompsonDrum {
-            IsSelected not Goldfinger_Thompson, Goldeneye_RocketLauncher {
-            IsSelected not Goldfinger_SuperBazooka, Goldeneye_GrenadeLauncher {
-            IsSelected not Goldfinger_M79, Goldeneye_RCP90 {
-            IsSelected not Goldfinger_M1Carbine, Goldeneye_Cougar {
-            IsSelected not Goldeneye_SilverPP7, Goldeneye_ArabahViper {
-            IsSelected not Goldfinger_M1Garand, Goldfinger_Kar98k {
-            IsSelected not Goldeneye_GoldenGun, Goldfinger_M14 {
-            IsSelected not Goldeneye_SniperRifle, Goldfinger_AR7 {
-            IsSelected not Goldeneye_SilencedD5K, Goldeneye_ZMG {
-            IsSelected not Goldeneye_D5KDeutsche, Goldfinger_UZI {
-            IsSelected not Goldfinger_SmithWesson22, Goldfinger_SmithWesson36 {
-            IsSelected not Goldeneye_GoldPP7, Goldfinger_GoldMagnum {
-            IsSelected not Goldeneye_TankWeapon, Catacomb_AtomicQuickSpell {
-            IsSelected not Unreal_AutoMag, RTCW_Luger {
-            IsSelected not RTCW_Colt, RTCW_MP40 {
-            IsSelected not RTCW_Thompson, RTCW_Mauser {
-            IsSelected not RTCW_Snooper, RTCW_FG42 {
-            IsSelected not RTCW_StG44, RTCW_BAR {
-            IsSelected not RTCW_Panzerfaust, RTCW_K43 {
-            IsSelected not RTCW_M1Garand, RTCW_Venom {
-            IsSelected not RTCW_MG42, RTCW_Browning {
-            IsSelected not RTCW_Sten, RTCW_Winchester {
-            IsSelected not DeusEx_10mmPistol, DeusEx_MiniCrossbow {
-            IsSelected not DeusEx_Shotgun, DeusEx_AssaultShotgun {
-            IsSelected not DeusEx_AssaultRifle, DeusEx_GEPGun {
-            IsSelected not DeusEx_FlameThrower, DeusEx_MJ12PlasmaRifle {
-            IsSelected not DeusEx_SniperRifle, DeusEx_StealthPistol {
-            IsSelected not DeusEx_RiotProd
+            IsSelected not "Glock 17", Duke3D_M16 {
+            IsSelected not "Golden Desert Eagle", ".44 Magnum Mega Class A1" {
+            IsSelected not "KKV-7 SMG Flechette", "WSTE-M5 Combat Shotgun" {
+            IsSelected not "Fusion Pistol", "MA-75B Assault Rifle" {
+            IsSelected not "SPNKR-XP SSM Launcher", "TOZT-7 Napalm Unit" {
+            IsSelected not "SPNKR-25 Auto Cannon", "ONI-71 Wave Motion Cannon" {
+            IsSelected not "Alien Weapon", " Alien Weapon " {
+            IsSelected not "Tech.50 Pacifier", "Grenade Launcher DOE" {
+            IsSelected not "Nailgun DOE", "  Rocket Launcher DOE  " {
+            IsSelected not "Super Nailgun DOE", "Thunderbolt DOE" {
+            IsSelected not "  Crossbow Poison  ", " Grenade Launcher WP " {
+            IsSelected not " Grenade Launcher Gas ", Taser {
+            IsSelected not "Assault Cannon", "Bow and Arrows" {
+            IsSelected not Shortsword, "Battle Axe" {
+            IsSelected not "Ice Halberd", "Fire Mace" {
+            IsSelected not "Broad Sword", "Frozen Two-Hand Sword" {
+            IsSelected not "Pike Axe", "9mm Pistol" {
+            IsSelected not "Assault Shotgun", ".357 Python" {
+            IsSelected not "Desert Eagle", MP5 {
+            IsSelected not " RPG ", "Spore Launcher" {
+            IsSelected not "M249 Squad Automatic Weapon", "HL Crossbow" {
+            IsSelected not "M40A1 Sniper Rifle", SWUzi {
+            IsSelected not PSMagnum, ExShotgun {
+            IsSelected not PSM60, " .454 Casull Pistol " {
+            IsSelected not " RR Dynomite Crossbow ", " Chicken Crossbow " {
+            IsSelected not Hexen2RavenStaff, Hexen2TempestStaff {
+            IsSelected not Goldeneye_PP7Silenced, Goldeneye_Klobb {
+            IsSelected not Goldeneye_PP7SpecialIssue, Goldeneye_DD44 {
+            IsSelected not Goldfinger_PPKSilenced, Goldfinger_PPK {
+            IsSelected not Goldfinger_ColtM1911, Goldfinger_LugerP08 {
+            IsSelected not Goldfinger_WaltherP38, Goldeneye_KF7Soviet {
+            IsSelected not Goldfinger_MP40, Goldeneye_AutoShotgun {
+            IsSelected not Goldeneye_Shotgun, Goldfinger_Shotgun {
+            IsSelected not Goldfinger_OverUnder, Goldeneye_AR33 {
+            IsSelected not Goldfinger_AK47, Goldeneye_Phantom {
+            IsSelected not Goldfinger_ThompsonDrum, Goldfinger_Thompson {
+            IsSelected not Goldeneye_RocketLauncher, Goldfinger_SuperBazooka {
+            IsSelected not Goldeneye_GrenadeLauncher, Goldfinger_M79 {
+            IsSelected not Goldeneye_RCP90, Goldfinger_M1Carbine {
+            IsSelected not Goldeneye_Cougar, Goldeneye_SilverPP7 {
+            IsSelected not Goldeneye_ArabahViper, Goldfinger_M1Garand {
+            IsSelected not Goldfinger_Kar98k, Goldeneye_GoldenGun {
+            IsSelected not Goldfinger_M14, Goldeneye_SniperRifle {
+            IsSelected not Goldfinger_AR7, Goldeneye_SilencedD5K {
+            IsSelected not Goldeneye_ZMG, Goldeneye_D5KDeutsche {
+            IsSelected not Goldfinger_UZI, Goldfinger_SmithWesson22 {
+            IsSelected not Goldfinger_SmithWesson36, Goldeneye_GoldPP7 {
+            IsSelected not Goldfinger_GoldMagnum, Goldeneye_TankWeapon {
+            IsSelected not Catacomb_AtomicQuickSpell, Unreal_AutoMag {
+            IsSelected not RTCW_Luger, RTCW_Colt {
+            IsSelected not RTCW_MP40, RTCW_Thompson {
+            IsSelected not RTCW_Mauser, RTCW_Snooper {
+            IsSelected not RTCW_FG42, RTCW_StG44 {
+            IsSelected not RTCW_BAR, RTCW_Panzerfaust {
+            IsSelected not RTCW_K43, RTCW_M1Garand {
+            IsSelected not RTCW_Venom, RTCW_MG42 {
+            IsSelected not RTCW_Browning, RTCW_Sten {
+            IsSelected not RTCW_Winchester, DeusEx_10mmPistol {
+            IsSelected not DeusEx_MiniCrossbow, DeusEx_Shotgun {
+            IsSelected not DeusEx_AssaultShotgun, DeusEx_AssaultRifle {
+            IsSelected not DeusEx_GEPGun, DeusEx_FlameThrower {
+            IsSelected not DeusEx_MJ12PlasmaRifle, DeusEx_SniperRifle {
+            IsSelected not DeusEx_StealthPistol, DeusEx_RiotProd
             {
                 UsesAmmo
                 {
@@ -1696,7 +1696,7 @@ StatusBar Fullscreen, FullscreenOffsets
                 }
             }
 
-            IsSelected "Golden Desert Eagle"
+            IsSelected Duke3D_M16, "Golden Desert Eagle"
             {
                 InInventory SamsaraReloadMode, 2
                 {
@@ -7681,56 +7681,57 @@ StatusBar Fullscreen, FullscreenOffsets
             IsSelected not " RailGun ", "Gigazorcher 2100" {
             IsSelected not Wraithverge, Bloodscourge {
             IsSelected not Quietus, " Bloodscourge " {
-            IsSelected not "Golden Desert Eagle", "KKV-7 SMG Flechette" {
-            IsSelected not "WSTE-M5 Combat Shotgun", "Fusion Pistol" {
-            IsSelected not "MA-75B Assault Rifle", "SPNKR-XP SSM Launcher" {
-            IsSelected not "TOZT-7 Napalm Unit", "SPNKR-25 Auto Cannon" {
-            IsSelected not "ONI-71 Wave Motion Cannon", Taser {
-            IsSelected not M24CAW, M343Vulcan {
-            IsSelected not AssaultShotgun, AlienDualBlaster {
-            IsSelected not AlienPlasmaRifle, AlienAssaultCannon {
-            IsSelected not AlienDisintegrator, "Assault Cannon" {
-            IsSelected not " Phase Rifle ", "Phase Repeater" {
-            IsSelected not " Lock-on Cannon ", "Assault Shotgun" {
-            IsSelected not ".357 Python", "Desert Eagle" {
-            IsSelected not MP5, " RPG " {
-            IsSelected not "Spore Launcher", "M249 Squad Automatic Weapon" {
-            IsSelected not "HL Crossbow", "M40A1 Sniper Rifle" {
-            IsSelected not SWUzi, ExShotgun {
-            IsSelected not PSM60, Hexen2RavenStaff {
-            IsSelected not Hexen2TempestStaff, Goldeneye_KF7Soviet {
-            IsSelected not Goldfinger_MP40, Goldeneye_AutoShotgun {
-            IsSelected not Goldeneye_Shotgun, Goldfinger_Shotgun {
-            IsSelected not Goldfinger_OverUnder, Goldeneye_AR33 {
-            IsSelected not Goldfinger_AK47, Goldeneye_Phantom {
-            IsSelected not Goldfinger_ThompsonDrum, Goldfinger_Thompson {
-            IsSelected not Goldeneye_RocketLauncher, Goldfinger_SuperBazooka {
-            IsSelected not Goldeneye_GrenadeLauncher, Goldfinger_M79 {
-            IsSelected not Goldeneye_RCP90, Goldfinger_M1Carbine {
-            IsSelected not Goldeneye_Cougar, Goldeneye_SilverPP7 {
-            IsSelected not Goldeneye_ArabahViper, Goldfinger_M1Garand {
-            IsSelected not Goldfinger_Kar98k, Goldeneye_GoldenGun {
-            IsSelected not Goldfinger_M14, Goldeneye_SniperRifle {
-            IsSelected not Goldfinger_AR7, Goldeneye_SilencedD5K {
-            IsSelected not Goldeneye_ZMG, Goldeneye_D5KDeutsche {
-            IsSelected not Goldfinger_UZI, Goldfinger_SmithWesson22 {
-            IsSelected not Goldfinger_SmithWesson36, Goldeneye_GoldPP7 {
-            IsSelected not Goldfinger_GoldMagnum, Goldeneye_TankWeapon {
-            IsSelected not Catacomb_AtomicQuickSpell, Painkiller_Stakegun {
-            IsSelected not Painkiller_Shotgun, Painkiller_Boltgun {
-            IsSelected not Painkiller_Rifle, Painkiller_Electrodriver {
-            IsSelected not RTCW_MP40, RTCW_Thompson {
-            IsSelected not RTCW_Mauser, RTCW_Snooper {
-            IsSelected not RTCW_FG42, RTCW_StG44 {
-            IsSelected not RTCW_BAR, RTCW_Panzerfaust {
-            IsSelected not RTCW_K43, RTCW_M1Garand {
-            IsSelected not RTCW_Venom, RTCW_MG42 {
-            IsSelected not RTCW_Browning, RTCW_Sten {
-            IsSelected not RTCW_Winchester, DeusEx_MiniCrossbow {
-            IsSelected not DeusEx_Shotgun, DeusEx_AssaultShotgun {
-            IsSelected not DeusEx_AssaultRifle, DeusEx_GEPGun {
-            IsSelected not DeusEx_FlameThrower, DeusEx_MJ12PlasmaRifle {
-            IsSelected not DeusEx_SniperRifle, DeusEx_RiotProd
+            IsSelected not Duke3D_M16, "Golden Desert Eagle" {
+            IsSelected not "KKV-7 SMG Flechette", "WSTE-M5 Combat Shotgun" {
+            IsSelected not "Fusion Pistol", "MA-75B Assault Rifle" {
+            IsSelected not "SPNKR-XP SSM Launcher", "TOZT-7 Napalm Unit" {
+            IsSelected not "SPNKR-25 Auto Cannon", "ONI-71 Wave Motion Cannon" {
+            IsSelected not Taser, M24CAW {
+            IsSelected not M343Vulcan, AssaultShotgun {
+            IsSelected not AlienDualBlaster, AlienPlasmaRifle {
+            IsSelected not AlienAssaultCannon, AlienDisintegrator {
+            IsSelected not "Assault Cannon", " Phase Rifle " {
+            IsSelected not "Phase Repeater", " Lock-on Cannon " {
+            IsSelected not "Assault Shotgun", ".357 Python" {
+            IsSelected not "Desert Eagle", MP5 {
+            IsSelected not " RPG ", "Spore Launcher" {
+            IsSelected not "M249 Squad Automatic Weapon", "HL Crossbow" {
+            IsSelected not "M40A1 Sniper Rifle", SWUzi {
+            IsSelected not ExShotgun, PSM60 {
+            IsSelected not Hexen2RavenStaff, Hexen2TempestStaff {
+            IsSelected not Goldeneye_KF7Soviet, Goldfinger_MP40 {
+            IsSelected not Goldeneye_AutoShotgun, Goldeneye_Shotgun {
+            IsSelected not Goldfinger_Shotgun, Goldfinger_OverUnder {
+            IsSelected not Goldeneye_AR33, Goldfinger_AK47 {
+            IsSelected not Goldeneye_Phantom, Goldfinger_ThompsonDrum {
+            IsSelected not Goldfinger_Thompson, Goldeneye_RocketLauncher {
+            IsSelected not Goldfinger_SuperBazooka, Goldeneye_GrenadeLauncher {
+            IsSelected not Goldfinger_M79, Goldeneye_RCP90 {
+            IsSelected not Goldfinger_M1Carbine, Goldeneye_Cougar {
+            IsSelected not Goldeneye_SilverPP7, Goldeneye_ArabahViper {
+            IsSelected not Goldfinger_M1Garand, Goldfinger_Kar98k {
+            IsSelected not Goldeneye_GoldenGun, Goldfinger_M14 {
+            IsSelected not Goldeneye_SniperRifle, Goldfinger_AR7 {
+            IsSelected not Goldeneye_SilencedD5K, Goldeneye_ZMG {
+            IsSelected not Goldeneye_D5KDeutsche, Goldfinger_UZI {
+            IsSelected not Goldfinger_SmithWesson22, Goldfinger_SmithWesson36 {
+            IsSelected not Goldeneye_GoldPP7, Goldfinger_GoldMagnum {
+            IsSelected not Goldeneye_TankWeapon, Catacomb_AtomicQuickSpell {
+            IsSelected not Painkiller_Stakegun, Painkiller_Shotgun {
+            IsSelected not Painkiller_Boltgun, Painkiller_Rifle {
+            IsSelected not Painkiller_Electrodriver, RTCW_MP40 {
+            IsSelected not RTCW_Thompson, RTCW_Mauser {
+            IsSelected not RTCW_Snooper, RTCW_FG42 {
+            IsSelected not RTCW_StG44, RTCW_BAR {
+            IsSelected not RTCW_Panzerfaust, RTCW_K43 {
+            IsSelected not RTCW_M1Garand, RTCW_Venom {
+            IsSelected not RTCW_MG42, RTCW_Browning {
+            IsSelected not RTCW_Sten, RTCW_Winchester {
+            IsSelected not DeusEx_MiniCrossbow, DeusEx_Shotgun {
+            IsSelected not DeusEx_AssaultShotgun, DeusEx_AssaultRifle {
+            IsSelected not DeusEx_GEPGun, DeusEx_FlameThrower {
+            IsSelected not DeusEx_MJ12PlasmaRifle, DeusEx_SniperRifle {
+            IsSelected not DeusEx_RiotProd
             {
                 UsesSecondaryAmmo
                 {
@@ -8433,7 +8434,7 @@ StatusBar Fullscreen, FullscreenOffsets
                         }
                     }
                 }
-            }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+            }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
             IsSelected FWeapQuietus, CWeapWraithverge
             {
@@ -8889,7 +8890,7 @@ StatusBar Fullscreen, FullscreenOffsets
                 }
             }
 
-            IsSelected "Golden Desert Eagle"
+            IsSelected Duke3D_M16, "Golden Desert Eagle"
             {
                 InInventory SamsaraReloadMode, 2
                 {
@@ -18953,7 +18954,7 @@ StatusBar Fullscreen, FullscreenOffsets
                                 }
                             }
                         }
-                    } else IsSelected "Golden Desert Eagle" {
+                    } else IsSelected Duke3D_M16, "Golden Desert Eagle" {
                         IfCVarInt goh_showammocapacities, 1, equal
                         {
                             InInventory SamsaraReloadMode, 2
@@ -34821,7 +34822,7 @@ StatusBar Fullscreen, FullscreenOffsets
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Bijou, AmmoCapacity ExpanderAmmo, Alignment(Left), DrawShadow, -151, -41, 2;
                             }
                         }
-                    } else IsSelected "Golden Desert Eagle" {
+                    } else IsSelected Duke3D_M16, "Golden Desert Eagle" {
                         InInventory SamsaraReloadMode, 2
                         {
                             IfCVarInt goh_showweaponname, 1, equal
@@ -65741,7 +65742,8 @@ StatusBar Fullscreen, FullscreenOffsets
                     else IsSelected Mauler2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_MAULER2", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else { DrawString "fonts/goodolhud_font.bmf", Untranslated, WeaponTag, -6, -25, 2, Alignment(Right), DrawShadow; }
                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                    IsSelected "Glock 17" { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DUKELAB_FALLBACKRANGED", -6, -25, 2, Alignment(Right), DrawShadow; }
+                    IsSelected "Mighty Boot" { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DUKELAB_FALLBACKMELEE", -6, -25, 2, Alignment(Right), DrawShadow; }
+                    else IsSelected "Glock 17" { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DUKELAB_FALLBACKRANGED", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected Pipebombs { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DUKELAB_SLOT1", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected "  Shotgun  " { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DUKELAB_SLOT2", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected "Explosive Shotgun" { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DUKELAB_SLOT3", -6, -25, 2, Alignment(Right), DrawShadow; }
@@ -65876,10 +65878,10 @@ StatusBar Fullscreen, FullscreenOffsets
                     else IsSelected " Aldus Pistol " { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_DOMINATRIX_FALLBACKRANGED", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected " Super Plasma Annihilator "
                     {
-                        InInventory IPOGAtt4 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
                     }
                     else IsSelected StrifeCrossbow { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected StrifeCrossbow2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW2", -6, -25, 2, Alignment(Right), DrawShadow; }
@@ -65893,10 +65895,10 @@ StatusBar Fullscreen, FullscreenOffsets
                     else IsSelected " Aldus Pistol " { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MUTANT_FALLBACKRANGED", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected " Super Plasma Annihilator "
                     {
-                        InInventory IPOGAtt4 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
                     }
                     else IsSelected StrifeCrossbow { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected StrifeCrossbow2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW2", -6, -25, 2, Alignment(Right), DrawShadow; }
@@ -65910,10 +65912,10 @@ StatusBar Fullscreen, FullscreenOffsets
                     else IsSelected " Aldus Pistol " { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_LIZARDMAN_FALLBACKRANGED", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected " Super Plasma Annihilator "
                     {
-                        InInventory IPOGAtt4 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
                     }
                     else IsSelected StrifeCrossbow { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected StrifeCrossbow2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW2", -6, -25, 2, Alignment(Right), DrawShadow; }
@@ -65925,10 +65927,10 @@ StatusBar Fullscreen, FullscreenOffsets
                 } else { // Aldus Kaden/Tobias Locke
                     IsSelected " Super Plasma Annihilator "
                     {
-                        InInventory IPOGAtt4 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
-                        else InInventory IPOGAtt1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 3 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_RIPPER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SPLASH", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else InInventory SamsaraIPOGSuperPlasmaAnnihilatorMode, 1 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_SCATTER", -6, -25, 2, Alignment(Right), DrawShadow; }
+                        else { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_SAMSARA_MOOMAN_SLOT7_HITSCAN", -6, -25, 2, Alignment(Right), DrawShadow; }
                     }
                     else IsSelected StrifeCrossbow { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW", -6, -25, 2, Alignment(Right), DrawShadow; }
                     else IsSelected StrifeCrossbow2 { DrawString "fonts/goodolhud_font.bmf", Untranslated, "$GOODOLHUD_WEAPON_STRIFECROSSBOW2", -6, -25, 2, Alignment(Right), DrawShadow; }
@@ -66601,7 +66603,7 @@ StatusBar Fullscreen, FullscreenOffsets
                     IsSelected Totenkopf_MP40, Totenkopf_MP40Dual { DrawImage "STY2NUM4", -319, -54; }
                     IsSelected "Serpent Staff", "Blight Shock" { DrawImage "STY2NUM4", -319, -54; }
                     IsSelected "Jotunn's Flail" { DrawImage "STY2NUM4", -319, -54; }
-                    IsSelected "Chaingun Cannon" { DrawImage "STY2NUM4", -319, -54; }
+                    IsSelected "Chaingun Cannon", Duke3D_M16 { DrawImage "STY2NUM4", -319, -54; }
                     IsSelected "MA-75B Assault Rifle" { DrawImage "STY2NUM4", -319, -54; }
                     IsSelected Nailgun, "Nailgun DOE" { DrawImage "STY2NUM4", -319, -54; }
                     IsSelected MP40 { DrawImage "STY2NUM4", -319, -54; }
@@ -66865,9 +66867,6 @@ StatusBar Fullscreen, FullscreenOffsets
                             } else { // Parias (Reincarnation)
                                 InInventory GotWeapon7 { DrawImage "STYSNUM7", -295, -54; }
                             }
-                        } else InInventory QuakeClass {
-                            InInventory GotWeapon7 || QuadDamageItem { DrawImage "STYSNUM7", -295, -54; }
-                            else InInventory QuadDamagePower { DrawImage "STYSNUM7", -295, -54; }
                         } else InInventory CalebClass {
                             InInventory LifeLeech || BloodNaturomDemonto { DrawImage "STYSNUM7", -295, -54; }
                         } else InInventory KatarnClass {
@@ -66905,8 +66904,7 @@ StatusBar Fullscreen, FullscreenOffsets
                     IsSelected Quietus { DrawImage "STY2NUM7", -295, -54; }
                     IsSelected "Devastator Weapon" { DrawImage "STY2NUM7", -295, -54; }
                     IsSelected "ONI-71 Wave Motion Cannon" { DrawImage "STY2NUM7", -295, -54; }
-                    IsSelected Thunderbolt, "Thunderbolt DOE" { DrawImage "STY2NUM7", -295, -54; } // weapons take priority over inventory items
-                    else InInventory QuadDamagePower { DrawImage "STY2NUM7", -295, -54; }
+                    IsSelected Thunderbolt, "Thunderbolt DOE" { DrawImage "STY2NUM7", -295, -54; }
                     IsSelected FlameWall { DrawImage "STY2NUM7", -295, -54; }
                     IsSelected "Anti-Plasma Cannon" { DrawImage "STY2NUM7", -295, -54; }
                     IsSelected LifeLeech { DrawImage "STY2NUM7", -295, -54; }
@@ -66949,7 +66947,6 @@ StatusBar Fullscreen, FullscreenOffsets
                     }
                     IsSelected DeusEx_MJ12PlasmaRifle { DrawImage "STY2NUM7", -295, -54; }
 
-                    InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Red, SamsaraQuadDamageCooldownDisplay, -287, -48; }
                     InInventory DisruptorPSICooldown
                     {
                         InInventory DisruptorPsionicSelected, 3 { DrawNumber 3, INDEXFONT, Red, DisruptorPSICooldown, -287, -48; }
@@ -66978,6 +66975,7 @@ StatusBar Fullscreen, FullscreenOffsets
                     }
                     InInventory SamsaraDarkServantCooldown { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, -238, -82; }
                     InInventory HolodukeCooldown { DrawNumber 3, INDEXFONT, Gray, HolodukeCooldown, -238, -82; }
+                    InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Ice, SamsaraQuadDamageCooldownDisplay, -238, -82; }
                     InInventory SamsaraBloodGunsAkimboHUDDisplay, 3 {}
                     else InInventory SamsaraBloodGunsAkimboHUDDisplay, 2
                     {
@@ -67276,7 +67274,7 @@ StatusBar Fullscreen, FullscreenOffsets
                     IsSelected Totenkopf_MP40, Totenkopf_MP40Dual { DrawImage "STY2NUM4", -319, -38; }
                     IsSelected "Serpent Staff", "Blight Shock" { DrawImage "STY2NUM4", -319, -38; }
                     IsSelected "Jotunn's Flail" { DrawImage "STY2NUM4", -319, -38; }
-                    IsSelected "Chaingun Cannon" { DrawImage "STY2NUM4", -319, -38; }
+                    IsSelected "Chaingun Cannon", Duke3D_M16 { DrawImage "STY2NUM4", -319, -38; }
                     IsSelected "MA-75B Assault Rifle" { DrawImage "STY2NUM4", -319, -38; }
                     IsSelected Nailgun, "Nailgun DOE" { DrawImage "STY2NUM4", -319, -38; }
                     IsSelected MP40 { DrawImage "STY2NUM4", -319, -38; }
@@ -67540,9 +67538,6 @@ StatusBar Fullscreen, FullscreenOffsets
                             } else { // Parias (Reincarnation)
                                 InInventory GotWeapon7 { DrawImage "STYSNUM7", -295, -38; }
                             }
-                        } else InInventory QuakeClass {
-                            InInventory GotWeapon7 || QuadDamageItem { DrawImage "STYSNUM7", -295, -38; }
-                            else InInventory QuadDamagePower { DrawImage "STYSNUM7", -295, -38; }
                         } else InInventory CalebClass {
                             InInventory LifeLeech || BloodNaturomDemonto { DrawImage "STYSNUM7", -295, -38; }
                         } else InInventory KatarnClass {
@@ -67580,8 +67575,7 @@ StatusBar Fullscreen, FullscreenOffsets
                     IsSelected Quietus { DrawImage "STY2NUM7", -295, -38; }
                     IsSelected "Devastator Weapon" { DrawImage "STY2NUM7", -295, -38; }
                     IsSelected "ONI-71 Wave Motion Cannon" { DrawImage "STY2NUM7", -295, -38; }
-                    IsSelected Thunderbolt, "Thunderbolt DOE" { DrawImage "STY2NUM7", -295, -38; } // weapons take priority over inventory items
-                    else InInventory QuadDamagePower { DrawImage "STY2NUM7", -295, -38; }
+                    IsSelected Thunderbolt, "Thunderbolt DOE" { DrawImage "STY2NUM7", -295, -38; }
                     IsSelected FlameWall { DrawImage "STY2NUM7", -295, -38; }
                     IsSelected "Anti-Plasma Cannon" { DrawImage "STY2NUM7", -295, -38; }
                     IsSelected LifeLeech { DrawImage "STY2NUM7", -295, -38; }
@@ -67624,7 +67618,6 @@ StatusBar Fullscreen, FullscreenOffsets
                     }
                     IsSelected DeusEx_MJ12PlasmaRifle { DrawImage "STY2NUM7", -295, -38; }
 
-                    InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Red, SamsaraQuadDamageCooldownDisplay, -287, -32; }
                     InInventory DisruptorPSICooldown
                     {
                         InInventory DisruptorPsionicSelected, 3 { DrawNumber 3, INDEXFONT, Red, DisruptorPSICooldown, -287, -32; }
@@ -67653,6 +67646,7 @@ StatusBar Fullscreen, FullscreenOffsets
                     }
                     InInventory SamsaraDarkServantCooldown { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, -238, -66; }
                     InInventory HolodukeCooldown { DrawNumber 3, INDEXFONT, Gray, HolodukeCooldown, -238, -66; }
+                    InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Ice, SamsaraQuadDamageCooldownDisplay, -238, -66; }
                     InInventory SamsaraBloodGunsAkimboHUDDisplay, 3 {}
                     else InInventory SamsaraBloodGunsAkimboHUDDisplay, 2
                     {
@@ -67952,7 +67946,7 @@ StatusBar Fullscreen, FullscreenOffsets
                 IsSelected Totenkopf_MP40Dual, Totenkopf_MP40Dual { DrawImage "STY2NUM4", -319, -22; }
                 IsSelected "Serpent Staff", "Blight Shock" { DrawImage "STY2NUM4", -319, -22; }
                 IsSelected "Jotunn's Flail" { DrawImage "STY2NUM4", -319, -22; }
-                IsSelected "Chaingun Cannon" { DrawImage "STY2NUM4", -319, -22; }
+                IsSelected "Chaingun Cannon", Duke3D_M16 { DrawImage "STY2NUM4", -319, -22; }
                 IsSelected "MA-75B Assault Rifle" { DrawImage "STY2NUM4", -319, -22; }
                 IsSelected Nailgun, "Nailgun DOE" { DrawImage "STY2NUM4", -319, -22; }
                 IsSelected MP40 { DrawImage "STY2NUM4", -319, -22; }
@@ -68216,9 +68210,6 @@ StatusBar Fullscreen, FullscreenOffsets
                         } else { // Parias (Reincarnation)
                             InInventory GotWeapon7 { DrawImage "STYSNUM7", -295, -22; }
                         }
-                    } else InInventory QuakeClass {
-                        InInventory GotWeapon7 || QuadDamageItem { DrawImage "STYSNUM7", -295, -22; }
-                        else InInventory QuadDamagePower { DrawImage "STYSNUM7", -295, -22; }
                     } else InInventory CalebClass {
                         InInventory LifeLeech || BloodNaturomDemonto { DrawImage "STYSNUM7", -295, -22; }
                     } else InInventory KatarnClass {
@@ -68256,8 +68247,7 @@ StatusBar Fullscreen, FullscreenOffsets
                 IsSelected Quietus { DrawImage "STY2NUM7", -295, -22; }
                 IsSelected "Devastator Weapon" { DrawImage "STY2NUM7", -295, -22; }
                 IsSelected "ONI-71 Wave Motion Cannon" { DrawImage "STY2NUM7", -295, -22; }
-                IsSelected Thunderbolt, "Thunderbolt DOE" { DrawImage "STY2NUM7", -295, -22; } // weapons take priority over inventory items
-                else InInventory QuadDamagePower { DrawImage "STY2NUM7", -295, -22; }
+                IsSelected Thunderbolt, "Thunderbolt DOE" { DrawImage "STY2NUM7", -295, -22; }
                 IsSelected FlameWall { DrawImage "STY2NUM7", -295, -22; }
                 IsSelected "Anti-Plasma Cannon" { DrawImage "STY2NUM7", -295, -22; }
                 IsSelected LifeLeech { DrawImage "STY2NUM7", -295, -22; }
@@ -68300,7 +68290,6 @@ StatusBar Fullscreen, FullscreenOffsets
                 }
                 IsSelected DeusEx_MJ12PlasmaRifle { DrawImage "STY2NUM7", -295, -22; }
 
-                InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Red, SamsaraQuadDamageCooldownDisplay, -287, -22; }
                 InInventory DisruptorPSICooldown
                 {
                     InInventory DisruptorPsionicSelected, 3 { DrawNumber 3, INDEXFONT, Red, DisruptorPSICooldown, -287, -22; }
@@ -68329,6 +68318,7 @@ StatusBar Fullscreen, FullscreenOffsets
                 }
                 InInventory SamsaraDarkServantCooldown { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, -238, -50; }
                 InInventory HolodukeCooldown { DrawNumber 3, INDEXFONT, Gray, HolodukeCooldown, -238, -50; }
+                InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Ice, SamsaraQuadDamageCooldownDisplay, -238, -50; }
                 InInventory SamsaraBloodGunsAkimboHUDDisplay, 3 {}
                 else InInventory SamsaraBloodGunsAkimboHUDDisplay, 2
                 {
@@ -102919,48 +102909,48 @@ StatusBar Fullscreen, FullscreenOffsets
                             {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 122, Center; } // Duke Nukem 64
-                                    else { DrawImage "ARTIJETP", -66, 122, Center; } // Original/Life's a Beach
+                                    InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 122, Center; } // Duke Nukem 64
+                                    else { DrawImage "JETP_HUD", -66, 122, Center; } // Original/Life's a Beach
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 146, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 106, Center; } // Duke Nukem 64
-                                    else { DrawImage "ARTIJETP", -66, 106, Center; } // Original/Life's a Beach
+                                    InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 106, Center; } // Duke Nukem 64
+                                    else { DrawImage "JETP_HUD", -66, 106, Center; } // Original/Life's a Beach
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 106, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 106, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 106, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 106, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 90, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 90, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 90, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 90, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                             }
                         } else IfCVarInt goh_showsecretcounter, 1, equal {
                             IfCVarInt goh_showitemcounter, 1, equal
                             {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 106, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 106, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 106, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 106, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 90, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 90, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 90, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 90, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                             }
                         } else IfCVarInt goh_showitemcounter, 1, equal {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 90, Center; } // Duke Nukem 64
-                            else { DrawImage "ARTIJETP", -66, 90, Center; } // Original/Life's a Beach
+                            InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 90, Center; } // Duke Nukem 64
+                            else { DrawImage "JETP_HUD", -66, 90, Center; } // Original/Life's a Beach
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                         } else {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 74, Center; } // Duke Nukem 64
-                            else { DrawImage "ARTIJETP", -66, 74, Center; } // Original/Life's a Beach
+                            InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 74, Center; } // Duke Nukem 64
+                            else { DrawImage "JETP_HUD", -66, 74, Center; } // Original/Life's a Beach
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                         }
@@ -102971,48 +102961,48 @@ StatusBar Fullscreen, FullscreenOffsets
                             {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 106, Center; } // Duke Nukem 64
-                                    else { DrawImage "ARTIJETP", -66, 106, Center; } // Original/Life's a Beach
+                                    InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 106, Center; } // Duke Nukem 64
+                                    else { DrawImage "JETP_HUD", -66, 106, Center; } // Original/Life's a Beach
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 90, Center; } // Duke Nukem 64
-                                    else { DrawImage "ARTIJETP", -66, 90, Center; } // Original/Life's a Beach
+                                    InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 90, Center; } // Duke Nukem 64
+                                    else { DrawImage "JETP_HUD", -66, 90, Center; } // Original/Life's a Beach
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 90, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 90, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 90, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 90, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 74, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 74, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 74, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 74, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             }
                         } else IfCVarInt goh_showsecretcounter, 1, equal {
                             IfCVarInt goh_showitemcounter, 1, equal
                             {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 90, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 90, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 90, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 90, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 74, Center; } // Duke Nukem 64
-                                else { DrawImage "ARTIJETP", -66, 74, Center; } // Original/Life's a Beach
+                                InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 74, Center; } // Duke Nukem 64
+                                else { DrawImage "JETP_HUD", -66, 74, Center; } // Original/Life's a Beach
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             }
                         } else IfCVarInt goh_showitemcounter, 1, equal {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 74, Center; } // Duke Nukem 64
-                            else { DrawImage "ARTIJETP", -66, 74, Center; } // Original/Life's a Beach
+                            InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 74, Center; } // Duke Nukem 64
+                            else { DrawImage "JETP_HUD", -66, 74, Center; } // Original/Life's a Beach
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                         } else {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 58, Center; } // Duke Nukem 64
-                            else { DrawImage "ARTIJETP", -66, 58, Center; } // Original/Life's a Beach
+                            InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 58, Center; } // Duke Nukem 64
+                            else { DrawImage "JETP_HUD", -66, 58, Center; } // Original/Life's a Beach
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                         }
@@ -103033,50 +103023,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                     {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 190, Center;
+                                            DrawImage "NIV3_HUD", -66, 190, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 214, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 190, Center;
+                                            DrawImage "NIV2_HUD", -66, 190, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 214, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 190, Center;
+                                            DrawImage "NIVI_HUD", -66, 190, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 214, 2;
                                         }
                                     } else {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 174, Center;
+                                            DrawImage "NIV3_HUD", -66, 174, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 174, Center;
+                                            DrawImage "NIV2_HUD", -66, 174, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 174, Center;
+                                            DrawImage "NIVI_HUD", -66, 174, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                         }
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 174, Center;
+                                        DrawImage "NIV3_HUD", -66, 174, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 174, Center;
+                                        DrawImage "NIV2_HUD", -66, 174, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 174, Center;
+                                        DrawImage "NIVI_HUD", -66, 174, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 158, Center;
+                                        DrawImage "NIV3_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 158, Center;
+                                        DrawImage "NIV2_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 158, Center;
+                                        DrawImage "NIVI_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     }
                                 }
@@ -103085,50 +103075,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 174, Center;
+                                        DrawImage "NIV3_HUD", -66, 174, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 174, Center;
+                                        DrawImage "NIV2_HUD", -66, 174, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 174, Center;
+                                        DrawImage "NIVI_HUD", -66, 174, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 158, Center;
+                                        DrawImage "NIV3_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 158, Center;
+                                        DrawImage "NIV2_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 158, Center;
+                                        DrawImage "NIVI_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     }
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 158, Center;
+                                    DrawImage "NIV3_HUD", -66, 158, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 158, Center;
+                                    DrawImage "NIV2_HUD", -66, 158, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 158, Center;
+                                    DrawImage "NIVI_HUD", -66, 158, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 }
                             } else {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 142, Center;
+                                    DrawImage "NIV3_HUD", -66, 142, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 142, Center;
+                                    DrawImage "NIV2_HUD", -66, 142, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 142, Center;
+                                    DrawImage "NIVI_HUD", -66, 142, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 }
                             }
@@ -103141,50 +103131,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                     {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 174, Center;
+                                            DrawImage "NIV3_HUD", -66, 174, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 174, Center;
+                                            DrawImage "NIV2_HUD", -66, 174, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 174, Center;
+                                            DrawImage "NIVI_HUD", -66, 174, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                         }
                                     } else {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 158, Center;
+                                            DrawImage "NIV3_HUD", -66, 158, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 158, Center;
+                                            DrawImage "NIV2_HUD", -66, 158, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 158, Center;
+                                            DrawImage "NIVI_HUD", -66, 158, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                         }
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 158, Center;
+                                        DrawImage "NIV3_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 158, Center;
+                                        DrawImage "NIV2_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 158, Center;
+                                        DrawImage "NIVI_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 142, Center;
+                                        DrawImage "NIV3_HUD", -66, 142, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 142, Center;
+                                        DrawImage "NIV2_HUD", -66, 142, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 142, Center;
+                                        DrawImage "NIVI_HUD", -66, 142, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                     }
                                 }
@@ -103193,50 +103183,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 158, Center;
+                                        DrawImage "NIV3_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 158, Center;
+                                        DrawImage "NIV2_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 158, Center;
+                                        DrawImage "NIVI_HUD", -66, 158, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 142, Center;
+                                        DrawImage "NIV3_HUD", -66, 142, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 142, Center;
+                                        DrawImage "NIV2_HUD", -66, 142, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 142, Center;
+                                        DrawImage "NIVI_HUD", -66, 142, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                     }
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 142, Center;
+                                    DrawImage "NIV3_HUD", -66, 142, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 142, Center;
+                                    DrawImage "NIV2_HUD", -66, 142, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 142, Center;
+                                    DrawImage "NIVI_HUD", -66, 142, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 }
                             } else {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 126, Center;
+                                    DrawImage "NIV3_HUD", -66, 126, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 126, Center;
+                                    DrawImage "NIV2_HUD", -66, 126, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 126, Center;
+                                    DrawImage "NIVI_HUD", -66, 126, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                                 }
                             }
@@ -103252,50 +103242,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                     {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 122, Center;
+                                            DrawImage "NIV3_HUD", -66, 122, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 146, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 122, Center;
+                                            DrawImage "NIV2_HUD", -66, 122, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 146, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 122, Center;
+                                            DrawImage "NIVI_HUD", -66, 122, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 146, 2;
                                         }
                                     } else {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 106, Center;
+                                            DrawImage "NIV3_HUD", -66, 106, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 106, Center;
+                                            DrawImage "NIV2_HUD", -66, 106, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 106, Center;
+                                            DrawImage "NIVI_HUD", -66, 106, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                         }
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 106, Center;
+                                        DrawImage "NIV3_HUD", -66, 106, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 106, Center;
+                                        DrawImage "NIV2_HUD", -66, 106, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 106, Center;
+                                        DrawImage "NIVI_HUD", -66, 106, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 90, Center;
+                                        DrawImage "NIV3_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 90, Center;
+                                        DrawImage "NIV2_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 90, Center;
+                                        DrawImage "NIVI_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     }
                                 }
@@ -103304,50 +103294,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 106, Center;
+                                        DrawImage "NIV3_HUD", -66, 106, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 106, Center;
+                                        DrawImage "NIV2_HUD", -66, 106, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 106, Center;
+                                        DrawImage "NIVI_HUD", -66, 106, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 90, Center;
+                                        DrawImage "NIV3_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 90, Center;
+                                        DrawImage "NIV2_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 90, Center;
+                                        DrawImage "NIVI_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     }
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 90, Center;
+                                    DrawImage "NIV3_HUD", -66, 90, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 90, Center;
+                                    DrawImage "NIV2_HUD", -66, 90, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 90, Center;
+                                    DrawImage "NIVI_HUD", -66, 90, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 }
                             } else {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 74, Center;
+                                    DrawImage "NIV3_HUD", -66, 74, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 74, Center;
+                                    DrawImage "NIV2_HUD", -66, 74, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 74, Center;
+                                    DrawImage "NIVI_HUD", -66, 74, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 }
                             }
@@ -103360,50 +103350,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                     {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 106, Center;
+                                            DrawImage "NIV3_HUD", -66, 106, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 106, Center;
+                                            DrawImage "NIV2_HUD", -66, 106, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 106, Center;
+                                            DrawImage "NIVI_HUD", -66, 106, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                         }
                                     } else {
                                         InInventory DukeClassMode, 2 // Duke Nukem 64
                                         {
-                                            DrawImage "ARTINIV3", -66, 90, Center;
+                                            DrawImage "NIV3_HUD", -66, 90, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                         } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                            DrawImage "ARTINIV2", -66, 90, Center;
+                                            DrawImage "NIV2_HUD", -66, 90, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                         } else { // Original
-                                            DrawImage "ARTINIVI", -66, 90, Center;
+                                            DrawImage "NIVI_HUD", -66, 90, Center;
                                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                         }
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 90, Center;
+                                        DrawImage "NIV3_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 90, Center;
+                                        DrawImage "NIV2_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 90, Center;
+                                        DrawImage "NIVI_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 74, Center;
+                                        DrawImage "NIV3_HUD", -66, 74, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 74, Center;
+                                        DrawImage "NIV2_HUD", -66, 74, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 74, Center;
+                                        DrawImage "NIVI_HUD", -66, 74, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                     }
                                 }
@@ -103412,50 +103402,50 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 90, Center;
+                                        DrawImage "NIV3_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 90, Center;
+                                        DrawImage "NIV2_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 90, Center;
+                                        DrawImage "NIVI_HUD", -66, 90, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     }
                                 } else {
                                     InInventory DukeClassMode, 2 // Duke Nukem 64
                                     {
-                                        DrawImage "ARTINIV3", -66, 74, Center;
+                                        DrawImage "NIV3_HUD", -66, 74, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                     } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                        DrawImage "ARTINIV2", -66, 74, Center;
+                                        DrawImage "NIV2_HUD", -66, 74, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                     } else { // Original
-                                        DrawImage "ARTINIVI", -66, 74, Center;
+                                        DrawImage "NIVI_HUD", -66, 74, Center;
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                     }
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 74, Center;
+                                    DrawImage "NIV3_HUD", -66, 74, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 74, Center;
+                                    DrawImage "NIV2_HUD", -66, 74, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 74, Center;
+                                    DrawImage "NIVI_HUD", -66, 74, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 }
                             } else {
                                 InInventory DukeClassMode, 2 // Duke Nukem 64
                                 {
-                                    DrawImage "ARTINIV3", -66, 58, Center;
+                                    DrawImage "NIV3_HUD", -66, 58, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                                 } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                    DrawImage "ARTINIV2", -66, 58, Center;
+                                    DrawImage "NIV2_HUD", -66, 58, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                                 } else { // Original
-                                    DrawImage "ARTINIVI", -66, 58, Center;
+                                    DrawImage "NIVI_HUD", -66, 58, Center;
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                                 }
                             }
@@ -103475,56 +103465,56 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     IfCVarInt goh_showitemcounter, 1, equal
                                     {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 258, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 258, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 258, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 258, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 258, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 258, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 282, 2;
                                     } else {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 242, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 242, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 242, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 242, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 242, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 242, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 266, 2;
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 242, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 242, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 242, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 242, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 242, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 242, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 266, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 226, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 226, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 226, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 226, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 226, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 226, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 250, 2;
                                 }
                             } else IfCVarInt goh_showsecretcounter, 1, equal {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 242, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 242, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 242, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 242, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 242, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 242, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 266, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 226, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 226, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 226, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 226, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 226, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 226, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 250, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 226, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 226, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 226, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 226, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 226, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 226, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 250, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 210, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 210, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 210, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 210, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 210, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 210, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 234, 2;
                             }
@@ -103535,56 +103525,56 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     IfCVarInt goh_showitemcounter, 1, equal
                                     {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 242, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 242, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 242, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 242, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 242, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 242, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 266, 2;
                                     } else {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 226, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 226, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 226, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 226, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 226, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 226, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 250, 2;
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 226, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 226, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 226, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 226, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 226, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 226, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 250, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 210, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 210, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 210, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 210, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 210, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 210, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 234, 2;
                                 }
                             } else IfCVarInt goh_showsecretcounter, 1, equal {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 226, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 226, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 226, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 226, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 226, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 226, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 250, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 210, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 210, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 210, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 210, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 210, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 210, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 234, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 210, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 210, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 210, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 210, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 210, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 210, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 234, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 194, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 194, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 194, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 194, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 194, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 194, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 218, 2;
                             }
@@ -103598,56 +103588,56 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     IfCVarInt goh_showitemcounter, 1, equal
                                     {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 190, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 190, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 190, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 190, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 190, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 190, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 214, 2;
                                     } else {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 174, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 174, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 174, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 174, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 174, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 174, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 174, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 174, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 174, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 174, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 174, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 174, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 158, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 158, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 158, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 158, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 158, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 158, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 }
                             } else IfCVarInt goh_showsecretcounter, 1, equal {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 174, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 174, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 174, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 174, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 174, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 174, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 158, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 158, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 158, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 158, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 158, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 158, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 158, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 158, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 158, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 158, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 158, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 158, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 142, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 142, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 142, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 142, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 142, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 142, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                             }
@@ -103658,56 +103648,56 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     IfCVarInt goh_showitemcounter, 1, equal
                                     {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 174, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 174, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 174, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 174, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 174, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 174, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 198, 2;
                                     } else {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 158, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 158, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 158, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 158, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 158, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 158, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 158, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 158, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 158, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 158, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 158, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 158, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 142, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 142, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 142, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 142, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 142, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 142, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 }
                             } else IfCVarInt goh_showsecretcounter, 1, equal {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 158, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 158, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 158, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 158, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 158, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 158, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 182, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 142, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 142, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 142, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 142, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 142, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 142, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 142, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 142, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 142, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 142, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 142, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 142, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 126, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 126, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 126, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 126, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 126, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 126, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                             }
@@ -103721,56 +103711,56 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     IfCVarInt goh_showitemcounter, 1, equal
                                     {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 122, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 122, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 122, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 122, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 122, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 122, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 146, 2;
                                     } else {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 106, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 106, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 106, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 106, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 106, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 106, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 106, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 106, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 106, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 106, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 106, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 106, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 90, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 90, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 90, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 90, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 90, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 90, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 }
                             } else IfCVarInt goh_showsecretcounter, 1, equal {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 106, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 106, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 106, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 106, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 106, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 106, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 90, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 90, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 90, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 90, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 90, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 90, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 90, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 90, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 90, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 90, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 90, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 90, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 74, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 74, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 74, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 74, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 74, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 74, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             }
@@ -103781,56 +103771,56 @@ StatusBar Fullscreen, FullscreenOffsets
                                 {
                                     IfCVarInt goh_showitemcounter, 1, equal
                                     {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 106, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 106, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 106, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 106, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 106, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 106, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 130, 2;
                                     } else {
-                                        InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 90, Center; } // Duke Nukem 64
-                                        else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 90, Center; } // Life's a Beach
-                                        else { DrawImage "ARTISTER", -66, 90, Center; } // Original
+                                        InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 90, Center; } // Duke Nukem 64
+                                        else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 90, Center; } // Life's a Beach
+                                        else { DrawImage "STER_HUD", -66, 90, Center; } // Original
 
                                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                     }
                                 } else IfCVarInt goh_showitemcounter, 1, equal {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 90, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 90, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 90, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 90, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 90, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 90, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 74, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 74, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 74, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 74, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 74, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 74, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 }
                             } else IfCVarInt goh_showsecretcounter, 1, equal {
                                 IfCVarInt goh_showitemcounter, 1, equal
                                 {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 90, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 90, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 90, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 90, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 90, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 90, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 114, 2;
                                 } else {
-                                    InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 74, Center; } // Duke Nukem 64
-                                    else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 74, Center; } // Life's a Beach
-                                    else { DrawImage "ARTISTER", -66, 74, Center; } // Original
+                                    InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 74, Center; } // Duke Nukem 64
+                                    else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 74, Center; } // Life's a Beach
+                                    else { DrawImage "STER_HUD", -66, 74, Center; } // Original
 
                                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                                 }
                             } else IfCVarInt goh_showitemcounter, 1, equal {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 74, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 74, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 74, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 74, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 74, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 74, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             } else {
-                                InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 58, Center; } // Duke Nukem 64
-                                else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 58, Center; } // Life's a Beach
-                                else { DrawImage "ARTISTER", -66, 58, Center; } // Original
+                                InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 58, Center; } // Duke Nukem 64
+                                else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 58, Center; } // Life's a Beach
+                                else { DrawImage "STER_HUD", -66, 58, Center; } // Original
 
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                             }
@@ -104834,7 +104824,7 @@ StatusBar Fullscreen, FullscreenOffsets
                 }
             }
 
-            InInventory HalfLifeClass // ARTINIVI is placeholder
+            InInventory HalfLifeClass // NIVI_HUD is placeholder
             {
                 IfCVarInt goh_showtimer, 1, equal
                 {
@@ -104844,33 +104834,33 @@ StatusBar Fullscreen, FullscreenOffsets
                         {
                             IfCVarInt goh_showitemcounter, 1, equal
                             {
-                                DrawImage "ARTINIVI", -66, 122, Center;
+                                DrawImage "NIVI_HUD", -66, 122, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 146, 2;
                             } else {
-                                DrawImage "ARTINIVI", -66, 106, Center;
+                                DrawImage "NIVI_HUD", -66, 106, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 130, 2;
                             }
                         } else IfCVarInt goh_showitemcounter, 1, equal {
-                            DrawImage "ARTINIVI", -66, 106, Center;
+                            DrawImage "NIVI_HUD", -66, 106, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 130, 2;
                         } else {
-                            DrawImage "ARTINIVI", -66, 90, Center;
+                            DrawImage "NIVI_HUD", -66, 90, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 114, 2;
                         }
                     } else IfCVarInt goh_showsecretcounter, 1, equal {
                         IfCVarInt goh_showitemcounter, 1, equal
                         {
-                            DrawImage "ARTINIVI", -66, 106, Center;
+                            DrawImage "NIVI_HUD", -66, 106, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 130, 2;
                         } else {
-                            DrawImage "ARTINIVI", -66, 90, Center;
+                            DrawImage "NIVI_HUD", -66, 90, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 114, 2;
                         }
                     } else IfCVarInt goh_showitemcounter, 1, equal {
-                        DrawImage "ARTINIVI", -66, 90, Center;
+                        DrawImage "NIVI_HUD", -66, 90, Center;
                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 114, 2;
                     } else {
-                        DrawImage "ARTINIVI", -66, 74, Center;
+                        DrawImage "NIVI_HUD", -66, 74, Center;
                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 98, 2;
                     }
                 } else {
@@ -104880,33 +104870,33 @@ StatusBar Fullscreen, FullscreenOffsets
                         {
                             IfCVarInt goh_showitemcounter, 1, equal
                             {
-                                DrawImage "ARTINIVI", -66, 106, Center;
+                                DrawImage "NIVI_HUD", -66, 106, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 130, 2;
                             } else {
-                                DrawImage "ARTINIVI", -66, 90, Center;
+                                DrawImage "NIVI_HUD", -66, 90, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 114, 2;
                             }
                         } else IfCVarInt goh_showitemcounter, 1, equal {
-                            DrawImage "ARTINIVI", -66, 90, Center;
+                            DrawImage "NIVI_HUD", -66, 90, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 114, 2;
                         } else {
-                            DrawImage "ARTINIVI", -66, 74, Center;
+                            DrawImage "NIVI_HUD", -66, 74, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 98, 2;
                         }
                     } else IfCVarInt goh_showsecretcounter, 1, equal {
                         IfCVarInt goh_showitemcounter, 1, equal
                         {
-                            DrawImage "ARTINIVI", -66, 90, Center;
+                            DrawImage "NIVI_HUD", -66, 90, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 114, 2;
                         } else {
-                            DrawImage "ARTINIVI", -66, 74, Center;
+                            DrawImage "NIVI_HUD", -66, 74, Center;
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 98, 2;
                         }
                     } else IfCVarInt goh_showitemcounter, 1, equal {
-                        DrawImage "ARTINIVI", -66, 74, Center;
+                        DrawImage "NIVI_HUD", -66, 74, Center;
                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 98, 2;
                     } else {
-                        DrawImage "ARTINIVI", -66, 58, Center;
+                        DrawImage "NIVI_HUD", -66, 58, Center;
                         DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 82, 2;
                     }
                 }
@@ -105481,13 +105471,13 @@ StatusBar Fullscreen, FullscreenOffsets
                 {
                     IfCVarInt goh_showtimer, 1, equal
                     {
-                        InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 74, Center; } // Duke Nukem 64
-                        else { DrawImage "ARTIJETP", -66, 74, Center; } // Original/Life's a Beach
+                        InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 74, Center; } // Duke Nukem 64
+                        else { DrawImage "JETP_HUD", -66, 74, Center; } // Original/Life's a Beach
 
                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                     } else {
-                        InInventory DukeClassMode, 2 { DrawImage "ARTIJET2", -66, 58, Center; } // Duke Nukem 64
-                        else { DrawImage "ARTIJETP", -66, 58, Center; } // Original/Life's a Beach
+                        InInventory DukeClassMode, 2 { DrawImage "JET2_HUD", -66, 58, Center; } // Duke Nukem 64
+                        else { DrawImage "JETP_HUD", -66, 58, Center; } // Original/Life's a Beach
 
                         DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeJetpackFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                     }
@@ -105501,25 +105491,25 @@ StatusBar Fullscreen, FullscreenOffsets
                         {
                             InInventory DukeClassMode, 2 // Duke Nukem 64
                             {
-                                DrawImage "ARTINIV3", -66, 142, Center;
+                                DrawImage "NIV3_HUD", -66, 142, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                             } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                DrawImage "ARTINIV2", -66, 142, Center;
+                                DrawImage "NIV2_HUD", -66, 142, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                             } else { // Original
-                                DrawImage "ARTINIVI", -66, 142, Center;
+                                DrawImage "NIVI_HUD", -66, 142, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                             }
                         } else {
                             InInventory DukeClassMode, 2 // Duke Nukem 64
                             {
-                                DrawImage "ARTINIV3", -66, 126, Center;
+                                DrawImage "NIV3_HUD", -66, 126, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                             } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                DrawImage "ARTINIV2", -66, 126, Center;
+                                DrawImage "NIV2_HUD", -66, 126, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                             } else { // Original
-                                DrawImage "ARTINIVI", -66, 126, Center;
+                                DrawImage "NIVI_HUD", -66, 126, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                             }
                         }
@@ -105528,25 +105518,25 @@ StatusBar Fullscreen, FullscreenOffsets
                         {
                             InInventory DukeClassMode, 2 // Duke Nukem 64
                             {
-                                DrawImage "ARTINIV3", -66, 74, Center;
+                                DrawImage "NIV3_HUD", -66, 74, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                DrawImage "ARTINIV2", -66, 74, Center;
+                                DrawImage "NIV2_HUD", -66, 74, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             } else { // Original
-                                DrawImage "ARTINIVI", -66, 74, Center;
+                                DrawImage "NIVI_HUD", -66, 74, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                             }
                         } else {
                             InInventory DukeClassMode, 2 // Duke Nukem 64
                             {
-                                DrawImage "ARTINIV3", -66, 58, Center;
+                                DrawImage "NIV3_HUD", -66, 58, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Gray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                             } else InInventory DukeClassMode, 1 { // Life's a Beach
-                                DrawImage "ARTINIV2", -66, 58, Center;
+                                DrawImage "NIV2_HUD", -66, 58, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", Black, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                             } else { // Original
-                                DrawImage "ARTINIVI", -66, 58, Center;
+                                DrawImage "NIVI_HUD", -66, 58, Center;
                                 DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, DukeVisionFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                             }
                         }
@@ -105559,45 +105549,45 @@ StatusBar Fullscreen, FullscreenOffsets
                     {
                         IfCVarInt goh_showtimer, 1, equal
                         {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 210, Center; } // Duke Nukem 64
-                            else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 210, Center; } // Life's a Beach
-                            else { DrawImage "ARTISTER", -66, 210, Center; } // Original
+                            InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 210, Center; } // Duke Nukem 64
+                            else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 210, Center; } // Life's a Beach
+                            else { DrawImage "STER_HUD", -66, 210, Center; } // Original
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 234, 2;
                         } else {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 194, Center; } // Duke Nukem 64
-                            else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 194, Center; } // Life's a Beach
-                            else { DrawImage "ARTISTER", -66, 194, Center; } // Original
+                            InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 194, Center; } // Duke Nukem 64
+                            else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 194, Center; } // Life's a Beach
+                            else { DrawImage "STER_HUD", -66, 194, Center; } // Original
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 218, 2;
                         }
                     } else InInventory DukeVisionFuel || DukeJetpackFuel {
                         IfCVarInt goh_showtimer, 1, equal
                         {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 142, Center; } // Duke Nukem 64
-                            else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 142, Center; } // Life's a Beach
-                            else { DrawImage "ARTISTER", -66, 142, Center; } // Original
+                            InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 142, Center; } // Duke Nukem 64
+                            else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 142, Center; } // Life's a Beach
+                            else { DrawImage "STER_HUD", -66, 142, Center; } // Original
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 166, 2;
                         } else {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 126, Center; } // Duke Nukem 64
-                            else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 126, Center; } // Life's a Beach
-                            else { DrawImage "ARTISTER", -66, 126, Center; } // Original
+                            InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 126, Center; } // Duke Nukem 64
+                            else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 126, Center; } // Life's a Beach
+                            else { DrawImage "STER_HUD", -66, 126, Center; } // Original
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 150, 2;
                         }
                     } else {
                         IfCVarInt goh_showtimer, 1, equal
                         {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 74, Center; } // Duke Nukem 64
-                            else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 74, Center; } // Life's a Beach
-                            else { DrawImage "ARTISTER", -66, 74, Center; } // Original
+                            InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 74, Center; } // Duke Nukem 64
+                            else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 74, Center; } // Life's a Beach
+                            else { DrawImage "STER_HUD", -66, 74, Center; } // Original
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 98, 2;
                         } else {
-                            InInventory DukeClassMode, 2 { DrawImage "ARTISTE3", -66, 58, Center; } // Duke Nukem 64
-                            else InInventory DukeClassMode, 1 { DrawImage "ARTISTE2", -66, 58, Center; } // Life's a Beach
-                            else { DrawImage "ARTISTER", -66, 58, Center; } // Original
+                            InInventory DukeClassMode, 2 { DrawImage "STE3_HUD", -66, 58, Center; } // Duke Nukem 64
+                            else InInventory DukeClassMode, 1 { DrawImage "STE2_HUD", -66, 58, Center; } // Life's a Beach
+                            else { DrawImage "STER_HUD", -66, 58, Center; } // Original
 
                             DrawNumber 4, "fonts/goodolhud_font.bmf", DarkBrown, DukeSteroidsFuel, Alignment(Center), DrawShadow, -67, 82, 2;
                         }
@@ -105711,14 +105701,14 @@ StatusBar Fullscreen, FullscreenOffsets
                 }
             }
 
-            InInventory HalfLifeClass // ARTINIVI is placeholder
+            InInventory HalfLifeClass // NIVI_HUD is placeholder
             {
                 IfCVarInt goh_showtimer, 1, equal
                 {
-                    DrawImage "ARTINIVI", -66, 74, Center;
+                    DrawImage "NIVI_HUD", -66, 74, Center;
                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 98, 2;
                 } else {
-                    DrawImage "ARTINIVI", -66, 58, Center;
+                    DrawImage "NIVI_HUD", -66, 58, Center;
                     DrawNumber 4, "fonts/goodolhud_font.bmf", DarkGray, SamsaraFlashLightAmmoDisplay, Alignment(Center), DrawShadow, -67, 82, 2;
                 }
 

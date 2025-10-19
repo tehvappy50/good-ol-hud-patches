@@ -375,12 +375,36 @@ Graphic "TPCHDENT_HUD", 111, 143
 
 Graphic "Q1PPICON_HUD", 44, 44
 {
-	Patch "TIPSYM01", 0, 0 { Blend "#FFFFFF", 1.0 }
+    Patch "TIPSYM01", 0, 0 { Blend "#FFFFFF", 1.0 }
     XScale 3.66666
     YScale 3.66666
 }
 
 // Passive/counter-based inventory
+
+Graphic "STER_HUD", 21, 30
+{
+    XScale 1.250
+    YScale 1.250
+    Offset -8, -4
+    Patch "STER_HUD", 0, 0
+}
+
+Graphic "STE2_HUD", 22, 64
+{
+    XScale 2.500
+    YScale 2.500
+    Offset -28, -6
+    Patch "STE2_HUD", 0, 0
+}
+
+Graphic "STE3_HUD", 26, 39
+{
+    XScale 1.500
+    YScale 1.500
+    Offset -9, -3
+    Patch "STE3_HUD", 0, 0
+}
 
 Graphic "PKSOULS_HUD", 64, 64 { Patch "PKSOULS", 0, 0 }
 
