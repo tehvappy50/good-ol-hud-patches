@@ -689,14 +689,14 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     385400
                 };
 
-                if (currentlevel >= maxlevel) { experiencereqamount = (Hexen2XPRequirementAmounts[10] + 1) + (192700 * (currentlevel - 12)); }
+                if (currentlevel >= maxlevel) { experiencereqamount = Hexen2XPRequirementAmounts[10] + (192700 * (currentlevel - 12)); }
                 else if (currentlevel >= 12)
                 {
-                    experiencereqamount = (Hexen2XPRequirementAmounts[10] + 1) + (192700 * (currentlevel - 11));
-                    experienceoffset = (Hexen2XPRequirementAmounts[10] + 1) + (192700 * (currentlevel - 12));
+                    experiencereqamount = Hexen2XPRequirementAmounts[10] + (192700 * (currentlevel - 11));
+                    experienceoffset = Hexen2XPRequirementAmounts[10] + (192700 * (currentlevel - 12));
                 } else {
-                    experiencereqamount = Hexen2XPRequirementAmounts[currentlevel - 1] + 1;
-                    if (currentlevel > 1) { experienceoffset = Hexen2XPRequirementAmounts[currentlevel - 2] + 1; }
+                    experiencereqamount = Hexen2XPRequirementAmounts[currentlevel - 1];
+                    if (currentlevel > 1) { experienceoffset = Hexen2XPRequirementAmounts[currentlevel - 2]; }
                 }
                 break;
             }
@@ -1178,7 +1178,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawPowerupTimers(int coordbasex, int coordbasey)
     {
-        int maxpowerups = 57 * 3;
+        int maxpowerups = 56 * 3;
 
         static const Name PowerupDefinitions[] =
         {
@@ -1211,7 +1211,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PowerSamsaraDoomguyStrWeaponPower",     "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerHereticTome",                      "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerSamsaraBloodGunsAkimbo",           "red",       "[RubyOre]", // different text color for heretic coexistence
-            "PowerSamsaraBloodGunsAkimboHub",        "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerEradEnWP",                         "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerHexen2WeaponLevel2",               "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerCatacomb_SpreadShot",              "green",     "[GreenBorder]",
@@ -1945,7 +1944,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'BloodGreaseGun':
               case 'NapalmLauncher':
               case 'TeslaCannon':
-                weaponmode = "$GOODOLHUD_WEAPON_MODE_" .. (Powerup(CPlayer.mo.FindInventory("PowerSamsaraBloodGunsAkimbo")) || Powerup(CPlayer.mo.FindInventory("PowerSamsaraBloodGunsAkimboHub")) || CPlayer.mo.FindInventory("SamsaraBloodGunsAkimboToggled")  ? "DUAL" : "SINGLE");
+                weaponmode = "$GOODOLHUD_WEAPON_MODE_" .. (Powerup(CPlayer.mo.FindInventory("PowerSamsaraBloodGunsAkimbo")) || CPlayer.mo.FindInventory("SamsaraBloodGunsAkimboToggled")  ? "DUAL" : "SINGLE");
                 break;
 
               case '  Crossbow  ':
@@ -3552,7 +3551,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         if (classmode) { altclassnum = clamp(classmode.Amount, 0, clamp(classmode.MaxAmount, 0, ALTCLASSCOUNT - 1)); }
 
-        let extraweapons = CPlayer.mo.FindInventory("SamsaraExtraWeaponsAreEnabled");
         let vanillaquake = CPlayer.mo.FindInventory("QuakeModeOn");
 
         int currentammo, currentammomax;
@@ -3605,7 +3603,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DOOM:
-                    if (altclassnum == 2 && extraweapons) { break; }
+                    if (altclassnum == 2) { break; }
 
                   default: continue;
                 }
@@ -4049,6 +4047,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_MARATHON && Weapon(CPlayer.mo.FindInventory("SPNKR-25 Auto Cannon"))) ||
                                 (classnum == CLASS_QUAKE && Weapon(CPlayer.mo.FindInventory("Rocket Powered Impaler"))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodFlamethrower"))) ||
+                                (classnum == CLASS_RMR && Weapon(CPlayer.mo.FindInventory("Subestron Arm"))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("Czerka Adventurer"))) ||
                                 (classnum == CLASS_DISRUPTOR && Weapon(CPlayer.mo.FindInventory(" Disruptor Plasmalance "))) ||
                                 (classnum == CLASS_BITTERMAN && Weapon(CPlayer.mo.FindInventory("Q2PlasmaBeam"))) ||
@@ -4356,6 +4355,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_MARATHON && weaponname == "SPNKR-25 Auto Cannon") ||
                                   (classnum == CLASS_QUAKE && weaponname == "Rocket Powered Impaler") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodFlamethrower") ||
+                                  (classnum == CLASS_RMR && weaponname == "Subestron Arm") ||
                                   (classnum == CLASS_KATARN && weaponname == "Czerka Adventurer") ||
                                   (classnum == CLASS_DISRUPTOR && weaponname == " Disruptor Plasmalance ") ||
                                   (classnum == CLASS_BITTERMAN && weaponname == "Q2PlasmaBeam") ||
@@ -4383,7 +4383,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_STRIFE && (weaponname == " Mauler " || weaponname == " Mauler Torpedo ")) ||
                           (classnum == CLASS_ERAD && weaponname == " Plasma Ball ") ||
                           (classnum == CLASS_C7 && weaponname == "AlienDisintegrator") ||
-                          (classnum == CLASS_RMR && (weaponname == " RMR Plasma Cannon " || weaponname == "Subestron Arm")) ||
+                          (classnum == CLASS_RMR && weaponname == " RMR Plasma Cannon ") ||
                           (classnum == CLASS_KATARN && weaponname == "Assault Cannon") ||
                           (classnum == CLASS_POGREED && weaponname == " Super Plasma Annihilator ") ||
                           (classnum == CLASS_DISRUPTOR && (weaponname == " Disruptor Zodiac " || (CPlayer.mo.FindInventory("DisruptorTeraBall") && CPlayer.mo.FindInventory("DisruptorBlastExists")))) ||
