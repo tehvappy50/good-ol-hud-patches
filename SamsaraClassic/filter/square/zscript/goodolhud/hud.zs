@@ -2009,6 +2009,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 switch (i.GetClassName())
                 {
+                  default:
+                    if (!i.Icon.IsValid()) { continue; }
+                    break;
+
                   case 'TriangleKey': iconoverride = "STKEYS0"; break;
                   case 'CircleKey': iconoverride = "STKEYS1"; break;
                   case 'SquareKey': iconoverride = "STKEYS2"; break;
@@ -2022,10 +2026,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'CrescentRune': iconoverride = "STKEYSC"; break;
                   case 'DiamondRune': iconoverride = "STKEYSD"; break;
                   case 'OctagonKey': iconoverride = "STKEYSO"; break;
-
-                  default:
-                    if (!i.Icon.IsValid()) { continue; }
-                    break;
                 }
 
                 Vector2 size;
