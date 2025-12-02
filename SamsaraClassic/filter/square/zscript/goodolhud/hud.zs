@@ -2003,11 +2003,43 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         for (let i = CPlayer.mo.Inv; i; i = i.Inv)
         {
-            if (i is "Key" && i.Icon.IsValid())
+            if (i is "Key")
             {
-                DrawTexture(i.Icon, keypos, DI_ITEM_RIGHT_TOP);
+                Name iconoverride = "";
 
-                Vector2 size = TexMan.GetScaledSize(i.Icon);
+                switch (i.GetClassName())
+                {
+                  case 'TriangleKey': iconoverride = "STKEYS0"; break;
+                  case 'CircleKey': iconoverride = "STKEYS1"; break;
+                  case 'SquareKey': iconoverride = "STKEYS2"; break;
+                  case 'PyramidKey': iconoverride = "STKEYS3"; break;
+                  case 'SphereKey': iconoverride = "STKEYS4"; break;
+                  case 'CubeKey': iconoverride = "STKEYS5"; break;
+                  case 'HexagonKey': iconoverride = "STKEYS7"; break;
+                  case 'RhombusKey': iconoverride = "STKEYS8"; break;
+                  case 'TrapezoidKey': iconoverride = "STKEYS6"; break;
+                  case 'StarRune': iconoverride = "STKEYSS"; break;
+                  case 'CrescentRune': iconoverride = "STKEYSC"; break;
+                  case 'DiamondRune': iconoverride = "STKEYSD"; break;
+                  case 'OctagonKey': iconoverride = "STKEYSO"; break;
+
+                  default:
+                    if (!i.Icon.IsValid()) { continue; }
+                    break;
+                }
+
+                Vector2 size;
+
+                if (iconoverride != "")
+                {
+                    DrawTexture(TexMan.CheckForTexture(iconoverride), keypos, DI_ITEM_RIGHT_TOP);
+
+                    size = TexMan.GetScaledSize(TexMan.CheckForTexture(iconoverride));
+                } else {
+                    DrawTexture(i.Icon, keypos, DI_ITEM_RIGHT_TOP);
+
+                    size = TexMan.GetScaledSize(i.Icon);
+                }
 
                 keypos.Y += size.Y + 2;
             }
