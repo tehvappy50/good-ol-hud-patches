@@ -1,0 +1,6 @@
+// Bottom Left
+nosave bool goh_samsara_showcharactername = true;
+nosave bool goh_samsara_characternamecolor = true;
+
+// Bottom Right
+nosave bool goh_samsara_showalienweaponammo = false;

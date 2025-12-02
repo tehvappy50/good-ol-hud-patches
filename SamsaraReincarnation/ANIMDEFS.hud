@@ -1,4 +1,34 @@
-texture DS57_HUD
+texture DM64UAR1_HUDT
+pic DM64UAR1_HUDT_1 tics 4
+pic DM64UAR1_HUDT_2 tics 4
+pic DM64UAR1_HUDT_3 tics 4
+pic DM64UAR1_HUDT_4 tics 4
+pic DM64UAR1_HUDT_5 tics 4
+pic DM64UAR1_HUDT_4 tics 4
+pic DM64UAR1_HUDT_3 tics 4
+pic DM64UAR1_HUDT_2 tics 4
+
+texture DM64UAR2_HUDT
+pic DM64UAR2_HUDT_1 tics 4
+pic DM64UAR2_HUDT_2 tics 4
+pic DM64UAR2_HUDT_3 tics 4
+pic DM64UAR2_HUDT_4 tics 4
+pic DM64UAR2_HUDT_5 tics 4
+pic DM64UAR2_HUDT_4 tics 4
+pic DM64UAR2_HUDT_3 tics 4
+pic DM64UAR2_HUDT_2 tics 4
+
+texture DM64UAR3_HUDT
+pic DM64UAR3_HUDT_1 tics 4
+pic DM64UAR3_HUDT_2 tics 4
+pic DM64UAR3_HUDT_3 tics 4
+pic DM64UAR3_HUDT_4 tics 4
+pic DM64UAR3_HUDT_5 tics 4
+pic DM64UAR3_HUDT_4 tics 4
+pic DM64UAR3_HUDT_3 tics 4
+pic DM64UAR3_HUDT_2 tics 4
+
+texture DS57_HUDT
 pic DS57A0 tics 2
 pic DS57B0 tics 2
 pic DS57C0 tics 2

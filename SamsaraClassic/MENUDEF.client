@@ -1,0 +1,53 @@
+OptionMenu "GoodOlHUDOptions"
+{
+    Title "$GOODOLHUD_MENU_TITLE_OPTIONS"
+    StaticText "$GOODOLHUD_MENU_SECTION_GENERAL", 1
+    Option "$GOODOLHUD_MENU_THEME",                      "goh_theme",                      "GoodOlHUDThemeSettings"
+    Option "$GOODOLHUD_MENU_COLORSCHEME",                "goh_colorscheme",                "GoodOlHUDColorSchemeSettings"
+    Option "$GOODOLHUD_MENU_BARGRADIENTS",               "goh_bargradients",               "OnOff"
+    Option "$GOODOLHUD_MENU_ALWAYSSHOWINVENTORYCOUNTER", "goh_alwaysshowinventorycounter", "YesNo"
+    StaticText ""
+    StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMLEFT", 1
+    Option "$GOODOLHUD_MENU_SHOWTEAMNAME",               "goh_showteamname",               "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWPLAYERNAME",             "goh_showplayername",             "YesNo"
+    Option "$GOODOLHUD_MENU_SAMSARA_SHOWCHARACTERNAME",  "goh_samsara_showcharactername",  "YesNo"
+    Option "$GOODOLHUD_MENU_PLAYERNAMETEAMCOLOR",        "goh_playernameteamcolor",        "YesNo"
+    Option "$GOODOLHUD_MENU_SAMSARA_CHARACTERNAMECOLOR", "goh_samsara_characternamecolor", "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWMUGSHOT",                "goh_showmugshot",                "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWSTAMINA",                "goh_showstamina",                "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWACCURACY",               "goh_showaccuracy",               "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWARMORTYPE",              "goh_showarmortype",              "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWARMORSAVEPERCENT",       "goh_showarmorsavepercent",       "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWARMORCLASS",             "goh_showarmorclass",             "GoodOlHUDShowArmorClassSettings"
+    Option "$GOODOLHUD_MENU_COLORHEALTHONINVULN",        "goh_colorhealthoninvuln",        "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWBERSERK",                "goh_showberserk",                "YesNo"
+    Option "$GOODOLHUD_MENU_LOWERHEALTHCAP",             "goh_lowerhealthcap",             "NoYes"
+    Option "$GOODOLHUD_MENU_SWAPHEALTHARMOR",            "goh_swaphealtharmor",            "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWXPTONEXTLEVEL",          "goh_showxptonextlevel",          "GoodOlHUDShowXPToNextLevelSettings"
+    Option "$GOODOLHUD_MENU_SHOWPOWERUPTIMERS",          "goh_showpoweruptimers",          "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWSTATUSTIMERS",           "goh_showstatustimers",           "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWHAZARDCOUNT",            "goh_showhazardcount",            "YesNo"
+    //StaticText ""
+    //StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMCENTER", 1
+    StaticText ""
+    StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMRIGHT", 1
+    Option "$GOODOLHUD_MENU_SHOWWEAPONNAME",              "goh_showweaponname",              "YesNo"
+    Option "$GOODOLHUD_MENU_RELOADABLEAMMOLABEL",         "goh_reloadableammolabel",         "GoodOlHUDReloadableAmmoLabelSettings"
+    Option "$GOODOLHUD_MENU_SAMSARA_SHOWALIENWEAPONAMMO", "goh_samsara_showalienweaponammo", "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWAMMOCAPACITIES",          "goh_showammocapacities",          "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWCOINCOUNTER",             "goh_showcoincounter",             "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWWEAPONBAR",               "goh_showweaponbar",               "YesNo"
+    //StaticText ""
+    //StaticText "$GOODOLHUD_MENU_SECTION_TOPLEFT", 1
+    StaticText ""
+    StaticText "$GOODOLHUD_MENU_SECTION_TOPCENTER", 1
+    Option "$GOODOLHUD_MENU_SHOWAIRTIMER", "goh_showairtimer", "YesNo"
+    StaticText ""
+    StaticText "$GOODOLHUD_MENU_SECTION_TOPRIGHT", 1
+    Option "$GOODOLHUD_MENU_SHOWTIMER",          "goh_showtimer",          "GoodOlHUDShowTimerSettings"
+    Option "$GOODOLHUD_MENU_COLORTIMERUNDERPAR", "goh_colortimerunderpar", "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWTIMERTOTAL",     "goh_showtimertotal",     "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWMONSTERCOUNTER", "goh_showmonstercounter", "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWSECRETCOUNTER",  "goh_showsecretcounter",  "YesNo"
+    Option "$GOODOLHUD_MENU_SHOWITEMCOUNTER",    "goh_showitemcounter",    "YesNo"
+}

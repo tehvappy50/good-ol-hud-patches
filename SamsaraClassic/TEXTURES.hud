@@ -1,0 +1,12 @@
+// Armor icons
+
+Graphic "PENTICON_HUDT", 32, 32
+{
+    Patch "PENTICON", 0, 0 { FlipY }
+    XScale 2.66666
+    YScale 2.66666
+}
+
+// Miscellaneous inventory
+
+Graphic "DMBPA0_HUDT", 25, 16 { Patch "graphics/items/goodolhud_DMBPA0.png", 0, 0 }
