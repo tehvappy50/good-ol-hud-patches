@@ -613,7 +613,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         coordbase = (99 + coordnudge.X, -4 + coordnudge.Y);
 
-        let canshowberserk = CVar.FindCVar("goh_showberserk").GetBool() && Powerup(CPlayer.mo.FindInventory("PowerStrength"));
+        let canshowberserk = CVar.FindCVar("goh_showberserk").GetInt() && Powerup(CPlayer.mo.FindInventory("PowerStrength"));
         let cancolorhealth = CVar.FindCVar("goh_colorhealthoninvuln").GetBool() && (isInvulnerable() || Powerup(CPlayer.mo.FindInventory("PowerFakeInvulnerable")) || Powerup(CPlayer.mo.FindInventory("PowerFakeInvulnerableCleric")) ||
                                                                                     Powerup(CPlayer.mo.FindInventory("PowerFakeInvulnerableMage")) || Powerup(CPlayer.mo.FindInventory("PowerFakeInvulnerableFighter")) || Powerup(CPlayer.mo.FindInventory("QuakePentagram")) ||
                                                                                     Powerup(CPlayer.mo.FindInventory("PowerGodProtection")) || Powerup(CPlayer.mo.FindInventory("PowerDoggyMorph")) || Powerup(CPlayer.mo.FindInventory("Painkiller_IronWill_Protection")) ||
@@ -639,7 +639,26 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_HEALTH"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, cancolorhealth ? invulntextcolor : Font.CR_RED);
 
-        if (canshowberserk) { DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk.png", (coordbase.X + 83, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM); }
+        if (canshowberserk)
+        {
+            int berserkicon = (CVar.FindCVar("goh_showberserk").GetInt() - 1) * 2;
+
+            Name BerserkIconDefinitions[] =
+            {
+                "crossred",    "",
+                "crossgreen",  "",
+                "crossblue",   "",
+                "pillleftred", "pillrightwhite"
+            };
+
+            String berserkiconleft, berserkiconright;
+
+            if (BerserkIconDefinitions[berserkicon] != "") { berserkiconleft = BerserkIconDefinitions[berserkicon]; }
+            if (BerserkIconDefinitions[berserkicon + 1] != "") { berserkiconright = BerserkIconDefinitions[berserkicon + 1]; }
+
+            DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconleft .. ".png", (coordbase.X + 83 - (berserkiconright != "" ? 3 : 0), coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM);
+            if (berserkiconright != "") { DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconright .. ".png", (coordbase.X + 86, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM); }
+        }
 
         DrawString(GOHmHUDFont, FormatNumber(canshownegativehealth ? CPlayer.mo.Health : CPlayer.Health, 1, 4 + canshownegativehealth) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(CPlayer.mo.GetMaxHealth(true), 1, 4), (coordbase.X + 77 + (canshowberserk ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, cancolorhealth ? invulntextcolor : Font.CR_RED);
 
