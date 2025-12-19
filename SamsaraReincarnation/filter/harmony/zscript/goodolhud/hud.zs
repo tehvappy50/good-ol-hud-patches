@@ -2643,6 +2643,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Assault Shotgun':
               case '.357 Python':
               case 'Desert Eagle':
+              case 'HLUzi':
               case ' RPG ':
               case 'Spore Launcher':
               case 'M249 Squad Automatic Weapon':
@@ -4043,6 +4044,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_ERAD && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory("EradNitrofogger"))) ||
                                 (classnum == CLASS_ERAD && altclassnum >= 2 && Weapon(CPlayer.mo.FindInventory("EradFlamethrower"))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("DLT-19 Heavy Blaster Rifle"))) ||
+                                (classnum == CLASS_HALFLIFE && Weapon(CPlayer.mo.FindInventory("HLUzi"))) ||
                                 (classnum == CLASS_BITTERMAN && Weapon(CPlayer.mo.FindInventory("Q2ETFRifle"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 0 && Weapon(CPlayer.mo.FindInventory("Goldeneye_Phantom"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 1 && (Weapon(CPlayer.mo.FindInventory("Goldfinger_ThompsonDrum")) || Weapon(CPlayer.mo.FindInventory("Goldfinger_Thompson")))) ||
@@ -4274,6 +4276,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_ERAD && altclassnum == 1 && weaponname == "EradNitrofogger") ||
                                   (classnum == CLASS_ERAD && altclassnum >= 2 && weaponname == "EradFlamethrower") ||
                                   (classnum == CLASS_KATARN && weaponname == "DLT-19 Heavy Blaster Rifle") ||
+                                  (classnum == CLASS_HALFLIFE && weaponname == "HLUzi") ||
                                   (classnum == CLASS_BITTERMAN && weaponname == "Q2ETFRifle") ||
                                   (classnum == CLASS_BOND && altclassnum == 0 && weaponname == "Goldeneye_Phantom") ||
                                   (classnum == CLASS_BOND && altclassnum == 1 && (weaponname == "Goldfinger_ThompsonDrum" || weaponname == "Goldfinger_Thompson")) ||
