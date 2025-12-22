@@ -1196,9 +1196,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
         Inventory currentmode;
         bool usingdualweapon, usingspectralweapon;
 
-        if (CPlayer.ReadyWeapon)
+        let canshowpendingweapon = CVar.FindCVar("goh_showpendingweapon").GetBool() && CPlayer.PendingWeapon != WP_NOCHANGE;
+
+        if (canshowpendingweapon || CPlayer.ReadyWeapon)
         {
-            weaponname = CPlayer.ReadyWeapon.GetClassName();
+            weaponname = canshowpendingweapon ? CPlayer.PendingWeapon.GetClassName() : CPlayer.ReadyWeapon.GetClassName();
 
             switch (weaponname)
             {
@@ -1209,7 +1211,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Mauler':
               case 'Mauler2':
               case 'Sigil':
-                weaponmode = "$GOODOLHUD_WEAPON_MODE_" .. weaponname .. (weaponname == "Sigil" ? FormatNumber(CPlayer.ReadyWeapon.Health) : "");
+                weaponmode = "$GOODOLHUD_WEAPON_MODE_" .. weaponname .. (weaponname == "Sigil" ? FormatNumber(canshowpendingweapon ? CPlayer.PendingWeapon.Health : CPlayer.ReadyWeapon.Health) : "");
                 break;
 
               case 'PaintGun':
@@ -1293,7 +1295,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             DrawString(GOHmHUDFont,
                        "\c" .. colorschemetext ..
-                       (usingspectralweapon ? StringTable.Localize("$GOODOLHUD_WEAPON_SAMSARA_SPECTRAL") .. " " : "") .. (weaponalttag != "" ? StringTable.Localize(weaponalttag) : CPlayer.ReadyWeapon.GetTag()) ..
+                       (usingspectralweapon ? StringTable.Localize("$GOODOLHUD_WEAPON_SAMSARA_SPECTRAL") .. " " : "") .. (weaponalttag != "" ? StringTable.Localize(weaponalttag) : (canshowpendingweapon ? CPlayer.PendingWeapon.GetTag() : CPlayer.ReadyWeapon.GetTag())) ..
                        (weaponmode != "" ? " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize(weaponmode) .. StringTable.Localize("$GOODOLHUD_EXTRA_END") : ""),
                        (coordbasex, coordbasey), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
 
@@ -1302,6 +1304,29 @@ class GoodOlHUDStatusBar : BaseStatusBar
     }
 
     int foundammotypes;
+
+    Ammo, Ammo, int, int GetPendingAmmo() const
+    {
+        Ammo ammo1, ammo2;
+
+        if (CPlayer.PendingWeapon != WP_NOCHANGE)
+        {
+            ammo1 = CPlayer.PendingWeapon.Ammo1;
+            ammo2 = CPlayer.PendingWeapon.Ammo2;
+
+            if (ammo1 == null)
+            {
+                ammo1 = ammo2;
+                ammo2 = null;
+            }
+        }
+        else { ammo1 = ammo2 = null; }
+
+        let ammocount1 = ammo1 != null ? ammo1.Amount : 0;
+        let ammocount2 = ammo2 != null ? ammo2.Amount : 0;
+
+        return ammo1, ammo2, ammocount1, ammocount2;
+    }
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
@@ -1364,8 +1389,12 @@ class GoodOlHUDStatusBar : BaseStatusBar
         let pistolammo = CPlayer.mo.FindInventory("PistolModeOn");
         let vanillaquake = CPlayer.mo.FindInventory("QuakeModeOn");
 
+        let canshowpendingweapon = CVar.FindCVar("goh_showpendingweapon").GetBool() && CPlayer.PendingWeapon != WP_NOCHANGE;
+
         Inventory ammotype1, ammotype2, ammotype3, ammotype4;
-        [ammotype1, ammotype2] = GetCurrentAmmo();
+
+        if (canshowpendingweapon) { [ammotype1, ammotype2] = GetPendingAmmo(); }
+        else { [ammotype1, ammotype2] = GetCurrentAmmo(); }
 
         bool ammo1goonadeshack = false, ammo2goonadeshack = false, ammo3goonadeshack = false, ammo4goonadeshack = false; // used because NumberofGoonades isn't checked until first pickup
         bool showammo1perc = false, showammo2perc = false, showammo3perc = false, showammo4perc = false;
@@ -1380,9 +1409,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
         let usingrocketammo = Ammo(CPlayer.mo.FindInventory("RocketAmmo"));
         let usingcell = Ammo(CPlayer.mo.FindInventory("Cell"));
 
-        if (CPlayer.ReadyWeapon)
+        if (canshowpendingweapon || CPlayer.ReadyWeapon)
         {
-            Name weaponname = CPlayer.ReadyWeapon.GetClassName();
+            Name weaponname = canshowpendingweapon ? CPlayer.PendingWeapon.GetClassName() : CPlayer.ReadyWeapon.GetClassName();
 
             bool usingaltammo = false;
 
@@ -1554,10 +1583,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         for (int checkedammotypes = 1; checkedammotypes <= 4; checkedammotypes++)
         {
-            Name weaponname;
-
-            if (CPlayer.ReadyWeapon) { weaponname = CPlayer.ReadyWeapon.GetClassName(); }
-
             Inventory ammotype, ammotypereload;
             Name ammobarcolor;
             Name ammotextcolor;
@@ -1867,7 +1892,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         Name weaponname;
 
-        if (CPlayer.ReadyWeapon) { weaponname = CPlayer.ReadyWeapon.GetClassName(); }
+        let canshowpendingweapon = CVar.FindCVar("goh_showpendingweapon").GetBool() && CPlayer.PendingWeapon != WP_NOCHANGE;
+
+        if (canshowpendingweapon) { weaponname = CPlayer.PendingWeapon.GetClassName(); }
+        else if (CPlayer.ReadyWeapon) { weaponname = CPlayer.ReadyWeapon.GetClassName(); }
 
         bool hasslot1 = CPlayer.mo.FindInventory("GotWeapon0");
 
@@ -1944,13 +1972,50 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         let weaponbarflags = DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT;
 
-        DrawString(GOHmHUDFont, hasslot1 || usingslot1 ? "\c" .. (usingslot1 ? colorschemeactivetext : colorschemetext) .. FormatNumber(1, 1, 1) : "", (coordbasex, coordbasey), weaponbarflags);
-        DrawString(GOHmHUDFont, hasslot2 || usingslot2 ? "\c" .. (usingslot2 ? colorschemeactivetext : colorschemetext) .. FormatNumber(2, 1, 1) : "", (coordbasex + 10, coordbasey), weaponbarflags);
-        DrawString(GOHmHUDFont, hasslot3 || usingslot3 ? "\c" .. (usingslot3 ? colorschemeactivetext : colorschemetext) .. FormatNumber(3, 1, 1) : "", (coordbasex + 20, coordbasey), weaponbarflags);
-        DrawString(GOHmHUDFont, hasslot4 || usingslot4 ? "\c" .. (usingslot4 ? colorschemeactivetext : colorschemetext) .. FormatNumber(4, 1, 1) : "", (coordbasex + 30, coordbasey), weaponbarflags);
-        DrawString(GOHmHUDFont, hasslot5 || usingslot5 ? "\c" .. (usingslot5 ? colorschemeactivetext : colorschemetext) .. FormatNumber(5, 1, 1) : "", (coordbasex + 40, coordbasey), weaponbarflags);
-        DrawString(GOHmHUDFont, hasslot6 || usingslot6 ? "\c" .. (usingslot6 ? colorschemeactivetext : colorschemetext) .. FormatNumber(6, 1, 1) : "", (coordbasex + 50, coordbasey), weaponbarflags);
-        DrawString(GOHmHUDFont, hasslot7 || usingslot7 ? "\c" .. (usingslot7 ? colorschemeactivetext : colorschemetext) .. FormatNumber(7, 1, 1) : "", (coordbasex + 60, coordbasey), weaponbarflags);
+        for (int slotnum = 1; slotnum <= 7; slotnum++)
+        {
+            bool hasslot = false, usingslot = false;
+
+            switch (slotnum)
+            {
+                case 1:
+                  hasslot = hasslot1;
+                  usingslot = usingslot1;
+                  break;
+
+                case 2:
+                  hasslot = hasslot2;
+                  usingslot = usingslot2;
+                  break;
+
+                case 3:
+                  hasslot = hasslot3;
+                  usingslot = usingslot3;
+                  break;
+
+                case 4:
+                  hasslot = hasslot4;
+                  usingslot = usingslot4;
+                  break;
+
+                case 5:
+                  hasslot = hasslot5;
+                  usingslot = usingslot5;
+                  break;
+
+                case 6:
+                  hasslot = hasslot6;
+                  usingslot = usingslot6;
+                  break;
+
+                case 7:
+                  hasslot = hasslot7;
+                  usingslot = usingslot7;
+                  break;
+            }
+
+            DrawString(GOHmHUDFont, hasslot || usingslot ? "\c" .. (usingslot ? colorschemeactivetext : colorschemetext) .. FormatNumber(slotnum, 1, 1) : "", (coordbasex + (10 * ((slotnum == 0 ? 10 : slotnum) - 1)), coordbasey), weaponbarflags);
+        }
     }
 
     protected virtual void GOHDrawCooldownTimers(int invcoordbasex, int invcoordbasey, int wepcoordbasex, int wepcoordbasey)

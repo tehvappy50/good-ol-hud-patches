@@ -31,6 +31,7 @@ OptionMenu "GoodOlHUDOptions"
     //StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMCENTER", 1
     StaticText ""
     StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMRIGHT", 1
+    Option "$GOODOLHUD_MENU_SHOWPENDINGWEAPON",           "goh_showpendingweapon",           "YesNo"
     Option "$GOODOLHUD_MENU_SHOWWEAPONNAME",              "goh_showweaponname",              "YesNo"
     Option "$GOODOLHUD_MENU_RELOADABLEAMMOLABEL",         "goh_reloadableammolabel",         "GoodOlHUDReloadableAmmoLabelSettings"
     Option "$GOODOLHUD_MENU_SAMSARA_SHOWALIENWEAPONAMMO", "goh_samsara_showalienweaponammo", "YesNo"
