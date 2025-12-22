@@ -1445,7 +1445,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 if (goonades) { ammotype1 = goonades; }
                 else { ammo1goonadeshack = true; }
 
-                if (goonadethrowcheckamount > 0)
+                if (goonadethrowcheckamount > 0 && !canshowpendingweapon)
                 {
                     ammotype2 = goonadethrowcheck;
                     showammo2perc = true;
@@ -1462,7 +1462,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 if (goonades) { ammotype2 = goonades; }
                 else { ammo2goonadeshack = true; }
 
-                if (goonadethrowcheckamount > 0)
+                if (goonadethrowcheckamount > 0 && !canshowpendingweapon)
                 {
                     ammotype3 = goonadethrowcheck;
                     showammo3perc = true;
@@ -1478,7 +1478,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 if (goonades) { ammotype3 = goonades; }
                 else { ammo3goonadeshack = true; }
 
-                if (goonadethrowcheckamount > 0)
+                if (goonadethrowcheckamount > 0 && !canshowpendingweapon)
                 {
                     ammotype4 = goonadethrowcheck;
                     showammo4perc = true;

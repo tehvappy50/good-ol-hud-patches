@@ -1742,7 +1742,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     break;
 
                   case 'SWUzi': currentmode = CPlayer.mo.FindInventory("UziCheck"); break;
-                  default: currentmode = CPlayer.mo.FindInventory("BondDualWieldToken"); break;
+
+                  default:
+                    if (!canshowpendingweapon) { currentmode = CPlayer.mo.FindInventory("BondDualWieldToken"); }
+                    break;
+
                   case 'RTCW_Colt': currentmode = CPlayer.mo.FindInventory(weaponname .. "DualWield"); break;
                 }
 
@@ -2206,7 +2210,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 }
 
                 weaponmode = StringTable.Localize("$GOODOLHUD_WEAPON_MODE_" .. (usingsilencedweapon ? "" : "UN") .. "SILENCED") .. StringTable.Localize("$GOODOLHUD_EXTRA_END") ..
-                             " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize("$GOODOLHUD_WEAPON_MODE_" .. (CPlayer.mo.FindInventory("BondDualWieldToken") ? "DUAL" : "SINGLE"));
+                             " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize("$GOODOLHUD_WEAPON_MODE_" .. (CPlayer.mo.FindInventory("BondDualWieldToken") && !canshowpendingweapon ? "DUAL" : "SINGLE"));
                 break;
 
               case 'Goldeneye_WatchMagnet':
@@ -2262,7 +2266,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 if (usingdrummagweapon) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_BONDGF_SLOT4S"; }
                 weaponmode = StringTable.Localize("$GOODOLHUD_WEAPON_MODE_SAMSARA_BONDGF_" .. (usingdrummagweapon ? "DRUM" : "STICK")) .. StringTable.Localize("$GOODOLHUD_EXTRA_END") ..
-                             " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize("$GOODOLHUD_WEAPON_MODE_" .. (CPlayer.mo.FindInventory("BondDualWieldToken") ? "DUAL" : "SINGLE"));
+                             " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize("$GOODOLHUD_WEAPON_MODE_" .. (CPlayer.mo.FindInventory("BondDualWieldToken") && !canshowpendingweapon ? "DUAL" : "SINGLE"));
                 break;
 
               case 'RTCW_Luger':
@@ -2868,7 +2872,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     {
                         int throwpoweramount = throwpower.Amount;
 
-                        if (throwpoweramount > 0) { ammotype2 = throwpower; } // check if at least 1 due to inheriting from Ammo
+                        if (throwpoweramount > 0 && !canshowpendingweapon) { ammotype2 = throwpower; } // check if at least 1 due to inheriting from Ammo
                     }
                     break;
                 }
@@ -3204,7 +3208,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     break;
                 }
 
-                usingdual = weaponname != "Goldeneye_TankWeapon" ? CPlayer.mo.FindInventory("BondDualWieldToken") : null;
+                usingdual = weaponname != "Goldeneye_TankWeapon" && !canshowpendingweapon ? CPlayer.mo.FindInventory("BondDualWieldToken") : null;
 
                 if (usingdual)
                 {
@@ -3242,7 +3246,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Catacomb_AtomicQuickSpell':
                 let chargetime = CPlayer.mo.FindInventory("Catacomb3D_ChargeTime");
 
-                if (chargetime)
+                if (chargetime && !canshowpendingweapon)
                 {
                     if (!ammotype1)
                     {
