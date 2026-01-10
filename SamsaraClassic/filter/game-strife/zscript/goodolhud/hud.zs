@@ -1047,67 +1047,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
         }
     }
 
-    // [tv50] yeah I know these changes aren't the best method, but they needed to be done
-    void GOHDrawInventoryBar(InventoryBarState parms, Vector2 position, int numfields, int flags = 0, double bgalpha = 1.)
-    {
-        double width = parms.boxsize.X * numfields;
-        [position, flags] = AdjustPosition(position, flags, width, parms.boxsize.Y);
-
-        CPlayer.mo.InvFirst = ValidateInvFirst(numfields);
-
-        if (!CPlayer.mo.InvFirst) { return; } // Player has no listed inventory items.
-
-        Vector2 boxsize = parms.boxsize;
-        int boxseparator = 11;
-
-        // First draw all the boxes
-        for (int i = 0; i < numfields; i++) { DrawTexture(TexMan.CheckForTexture("graphics/hud/" .. theme .. "/icons/goodolhud_icon_inventory_" .. colorschemebase .. ".png"), position + ((boxsize.X + boxseparator) * i, 0), flags, bgalpha); }
-
-        // now the items and the rest
-        Vector2 itempos = position + boxsize / 2;
-        itempos += (-20, -34);
-
-        Vector2 textpos = position + boxsize - (1, 1 + parms.amountfont.mFont.GetHeight());
-        textpos += (-40, -70);
-
-        parms.selectofs = (-9, -61);
-
-        int i = 0;
-
-        Inventory item;
-
-        for (item = CPlayer.mo.InvFirst; item && i < numfields; item = item.NextInv())
-        {
-            for (int j = 0; j < 2; j++)
-            {
-                if (j ^ !!(flags & DI_DRAWCURSORFIRST))
-                {
-                    if (item == CPlayer.mo.InvSel)
-                    {
-                        double flashAlpha = bgalpha;
-
-                        if (flags & DI_ARTIFLASH) { flashAlpha *= itemflashFade; }
-
-                        if (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS)) { parms.selectofs.Y -= 15; }
-
-                        DrawTexture(parms.selector, position + parms.selectofs + ((boxsize.X + boxseparator) * i, 0), flags|DI_ITEM_OFFSETS, flashAlpha);
-                    }
-                }
-                else { DrawInventoryIcon(item, itempos + ((boxsize.X + boxseparator) * i, 0), flags|DI_DIMDEPLETED|DI_ITEM_CENTER, 1, (36, 30)); }
-            }
-
-            if (parms.amountfont && (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS))) { DrawString(parms.amountfont, "\c" .. colorschemetext .. FormatNumber(item.Amount, 1, 5), textpos + ((boxsize.X + boxseparator) * i, 0), flags|DI_TEXT_ALIGN_CENTER, parms.cr, parms.itemalpha); }
-
-            i++;
-        }
-
-        // Is there something to the left?
-        if (CPlayer.mo.FirstInv() != CPlayer.mo.InvFirst) { DrawTexture(parms.left, position + (-parms.arrowoffset.X, parms.arrowoffset.Y), flags|DI_ITEM_OFFSETS); }
-
-        // Is there something to the right?
-        if (item) { DrawTexture(parms.right, position + (parms.arrowoffset.X + 7, parms.arrowoffset.Y) + (width, 0), flags|DI_ITEM_OFFSETS); }
-    }
-
     int weaponnameamount;
 
     protected virtual void GOHDrawWeaponName(int coordbasex, int coordbasey)
@@ -2068,5 +2007,66 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 }
             }
         }
+    }
+
+    // [tv50] yeah I know these changes aren't the best method, but they needed to be done
+    void GOHDrawInventoryBar(InventoryBarState parms, Vector2 position, int numfields, int flags = 0, double bgalpha = 1.)
+    {
+        double width = parms.boxsize.X * numfields;
+        [position, flags] = AdjustPosition(position, flags, width, parms.boxsize.Y);
+
+        CPlayer.mo.InvFirst = ValidateInvFirst(numfields);
+
+        if (!CPlayer.mo.InvFirst) { return; } // Player has no listed inventory items.
+
+        Vector2 boxsize = parms.boxsize;
+        int boxseparator = 11;
+
+        // First draw all the boxes
+        for (int i = 0; i < numfields; i++) { DrawTexture(TexMan.CheckForTexture("graphics/hud/" .. theme .. "/icons/goodolhud_icon_inventory_" .. colorschemebase .. ".png"), position + ((boxsize.X + boxseparator) * i, 0), flags, bgalpha); }
+
+        // now the items and the rest
+        Vector2 itempos = position + boxsize / 2;
+        itempos += (-20, -34);
+
+        Vector2 textpos = position + boxsize - (1, 1 + parms.amountfont.mFont.GetHeight());
+        textpos += (-40, -70);
+
+        parms.selectofs = (-9, -61);
+
+        int i = 0;
+
+        Inventory item;
+
+        for (item = CPlayer.mo.InvFirst; item && i < numfields; item = item.NextInv())
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                if (j ^ !!(flags & DI_DRAWCURSORFIRST))
+                {
+                    if (item == CPlayer.mo.InvSel)
+                    {
+                        double flashAlpha = bgalpha;
+
+                        if (flags & DI_ARTIFLASH) { flashAlpha *= itemflashFade; }
+
+                        if (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS)) { parms.selectofs.Y -= 15; }
+
+                        DrawTexture(parms.selector, position + parms.selectofs + ((boxsize.X + boxseparator) * i, 0), flags|DI_ITEM_OFFSETS, flashAlpha);
+                    }
+                }
+                else { DrawInventoryIcon(item, itempos + ((boxsize.X + boxseparator) * i, 0), flags|DI_DIMDEPLETED|DI_ITEM_CENTER, 1, (36, 30)); }
+            }
+
+            if (parms.amountfont && (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS))) { DrawString(parms.amountfont, "\c" .. colorschemetext .. FormatNumber(item.Amount, 1, 5), textpos + ((boxsize.X + boxseparator) * i, 0), flags|DI_TEXT_ALIGN_CENTER, parms.cr, parms.itemalpha); }
+
+            i++;
+        }
+
+        // Is there something to the left?
+        if (CPlayer.mo.FirstInv() != CPlayer.mo.InvFirst) { DrawTexture(parms.left, position + (-parms.arrowoffset.X, parms.arrowoffset.Y), flags|DI_ITEM_OFFSETS); }
+
+        // Is there something to the right?
+        if (item) { DrawTexture(parms.right, position + (parms.arrowoffset.X + 7, parms.arrowoffset.Y) + (width, 0), flags|DI_ITEM_OFFSETS); }
     }
 }
