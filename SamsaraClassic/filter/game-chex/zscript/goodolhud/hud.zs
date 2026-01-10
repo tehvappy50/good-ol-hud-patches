@@ -57,7 +57,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         Font fnt;
 
-        // Create the fonts used for the fullscreen HUD
+        // Create the font used for the fullscreen HUD
         fnt = "fonts/goodolhud_font.bmf";
 
         GOHmHUDFont = HUDFont.Create(fnt, fnt.GetCharWidth("0") + 2, Mono_CellCenter, 2, 2);

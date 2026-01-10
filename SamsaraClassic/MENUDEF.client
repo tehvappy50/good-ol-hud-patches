@@ -2,6 +2,7 @@ OptionMenu "GoodOlHUDOptions"
 {
     Title "$GOODOLHUD_MENU_TITLE_OPTIONS"
     StaticText "$GOODOLHUD_MENU_SECTION_GENERAL", 1
+    Option "$GOODOLHUD_MENU_ENABLED",                    "goh_enabled",                    "YesNo"
     Option "$GOODOLHUD_MENU_THEME",                      "goh_theme",                      "GoodOlHUDThemeSettings"
     Option "$GOODOLHUD_MENU_COLORSCHEME",                "goh_colorscheme",                "GoodOlHUDColorSchemeSettings"
     Option "$GOODOLHUD_MENU_BARGRADIENTS",               "goh_bargradients",               "OnOff"
