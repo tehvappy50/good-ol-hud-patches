@@ -3936,7 +3936,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Catacomb_Waves':
                 ammoidentifier = "1";
 
-                if (ammocapacity == "RottMissiles" || ammocapacity == "Catacomb_Waves") { break; }
+                if (ammocapacity != "Clip") { break; }
 
                 switch (classnum)
                 {
@@ -3965,7 +3965,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Catacomb_XTerminators':
                 ammoidentifier = "2";
 
-                if (ammocapacity == "HSMissiles" || ammocapacity == "Catacomb_XTerminators") { break; }
+                if (ammocapacity != "Shell") { break; }
 
                 switch (classnum)
                 {
@@ -3990,7 +3990,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Catacomb_Nukes':
                 ammoidentifier = "3";
 
-                if (ammocapacity == "FBMissiles" || ammocapacity == "Catacomb_Nukes") { break; }
+                if (ammocapacity != "RocketAmmo") { break; }
 
                 switch (classnum)
                 {
@@ -4025,7 +4025,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Catacomb_Bolts':
                 ammoidentifier = "4";
 
-                if (ammocapacity == "DMissiles" || ammocapacity == "Catacomb_Bolts") { break; }
+                if (ammocapacity != "Cell") { break; }
 
                 switch (classnum)
                 {
