@@ -263,6 +263,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         timerbaseright = "graphics/hud/" .. theme .. "/timers/goodolhud_timer_basesideright_" .. colorschemebase .. ".png";
 
         let bargradients = CVar.FindCVar("goh_bargradients").GetBool();
+        let canshowmaxamounts = CVar.FindCVar("goh_showmaxamounts").GetBool();
         let canalwaysshowinvcounter = CVar.FindCVar("goh_alwaysshowinventorycounter").GetBool();
 
         // if you're bypassing 255, you're just asking for a crash anyway. let the VM abort serve as a warning
@@ -408,7 +409,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ENERGY"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
 
-            DrawString(GOHmHUDFont, FormatNumber(bioenergyamt, 1, 4) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(bioenergymaxamt, 1, 4), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_LIGHTBLUE);
+            DrawString(GOHmHUDFont, FormatNumber(bioenergyamt, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(bioenergymaxamt, 1, 4) : ""), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_LIGHTBLUE);
 
             bottomleftvertelements++;
 
@@ -572,7 +573,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             }
 
             DrawString(GOHmHUDFont,
-                       FormatNumber(hasquakepentagram ? 666 : armor.Amount, 1, 4) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(totalarmor, 1, 4) ..
+                       FormatNumber(hasquakepentagram ? 666 : armor.Amount, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(totalarmor, 1, 4) : "") ..
                        (CVar.FindCVar("goh_showarmorsavepercent").GetBool() ? " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. String.Format("%.1f", (hasquakepentagram ? 1.0 : armor.SavePercent) * 100) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE") .. StringTable.Localize("$GOODOLHUD_EXTRA_END") : ""),
                        (coordbase.X + 77 + (canshowarmortype ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
 
@@ -599,7 +600,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ARMORCLASS"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 
-            DrawString(GOHmHUDFont, FormatNumber(currenthexenarmor / (canshowarmorclass ? 5 : 1), 1, 3) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(100 / (canshowarmorclass ? 5 : 1), 1, 3), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
+            DrawString(GOHmHUDFont, FormatNumber(currenthexenarmor / (canshowarmorclass ? 5 : 1), 1, 3) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(100 / (canshowarmorclass ? 5 : 1), 1, 3) : ""), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
 
             bottomleftvertelements++;
 
@@ -661,7 +662,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             if (berserkiconright != "") { DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconright .. ".png", (coordbase.X + 86, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM); }
         }
 
-        DrawString(GOHmHUDFont, FormatNumber(canshownegativehealth ? CPlayer.mo.Health : CPlayer.Health, 1, 4 + canshownegativehealth) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(CPlayer.mo.GetMaxHealth(true), 1, 4), (coordbase.X + 77 + (canshowberserk ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, cancolorhealth ? invulntextcolor : Font.CR_RED);
+        DrawString(GOHmHUDFont, FormatNumber(canshownegativehealth ? CPlayer.mo.Health : CPlayer.Health, 1, 4 + canshownegativehealth) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(CPlayer.mo.GetMaxHealth(true), 1, 4) : ""), (coordbase.X + 77 + (canshowberserk ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, cancolorhealth ? invulntextcolor : Font.CR_RED);
 
         coordnudge.Y -= 16;
         powerupnudge.Y -= 16;
@@ -730,7 +731,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_EXPERIENCE" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_TEAL);
 
             DrawString(GOHmHUDFont,
-                       FormatNumber(CVar.FindCVar("goh_showxptonextlevel").GetBool() ? experiencenextamount : experienceamount, 1, 10) .. (currentlevel < maxlevel ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(experiencereqamount, 1, 10) : "") ..
+                       FormatNumber(CVar.FindCVar("goh_showxptonextlevel").GetBool() ? experiencenextamount : experienceamount, 1, 10) .. (canshowmaxamounts && currentlevel < maxlevel ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(experiencereqamount, 1, 10) : "") ..
                        " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. FormatNumber(currentlevel, 1, 4) .. StringTable.Localize("$GOODOLHUD_EXTRA_END"),
                        (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_TEAL);
 
@@ -3448,7 +3449,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. StringTable.Localize(ammostring), (coordbasex - 79, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
 
-            DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. (showammoperc ? (String.Format("%.1f", ammotype.Amount * 100.0 / ammotype.MaxAmount) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : (FormatNumber(ammotype.Amount, 1, 4) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(ammotype.MaxAmount, 1, 4))), (coordbasex + 77, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT);
+            DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. (showammoperc ? (String.Format("%.1f", ammotype.Amount * 100.0 / ammotype.MaxAmount) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : (FormatNumber(ammotype.Amount, 1, 4) .. (CVar.FindCVar("goh_showmaxamounts").GetBool() ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(ammotype.MaxAmount, 1, 4) : ""))), (coordbasex + 77, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT);
 
             coordnudge.Y -= 16;
 
@@ -4627,6 +4628,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         if (classmode) { altclassnum = clamp(classmode.Amount, 0, clamp(classmode.MaxAmount, 0, ALTCLASSCOUNT - 1)); }
 
+        let canshowmaxamounts = CVar.FindCVar("goh_showmaxamounts").GetBool();
+
         int checkedmiscitems = 0, activemiscitems = 0;
 
         for (checkedmiscitems = 0; checkedmiscitems < maxmiscitems; checkedmiscitems += 4)
@@ -4932,7 +4935,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                         [psienergyamt, psienergymaxamt] = GetAmount("DisruptorPSIEnergy");
 
-                        DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(psienergyamt, 1, 4) .. StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(psienergymaxamt, 1, 4), (coordbasex, (coordbasey + coordnudge.Y) + 24), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_CENTER);
+                        DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(psienergyamt, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(psienergymaxamt, 1, 4) : ""), (coordbasex, (coordbasey + coordnudge.Y) + 24), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_CENTER);
                     }
 
                     if (showcooldowntimer)

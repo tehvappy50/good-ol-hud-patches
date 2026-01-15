@@ -6,6 +6,7 @@ OptionMenu "GoodOlHUDOptions"
     Option "$GOODOLHUD_MENU_THEME",                      "goh_theme",                      "GoodOlHUDThemeSettings"
     Option "$GOODOLHUD_MENU_COLORSCHEME",                "goh_colorscheme",                "GoodOlHUDColorSchemeSettings"
     Option "$GOODOLHUD_MENU_BARGRADIENTS",               "goh_bargradients",               "OnOff"
+    Option "$GOODOLHUD_MENU_SHOWMAXAMOUNTS",             "goh_showmaxamounts",             "YesNo"
     Option "$GOODOLHUD_MENU_ALWAYSSHOWINVENTORYCOUNTER", "goh_alwaysshowinventorycounter", "YesNo"
     StaticText ""
     StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMLEFT", 1
