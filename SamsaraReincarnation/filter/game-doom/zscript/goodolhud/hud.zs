@@ -3567,7 +3567,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_WOLFEN:
-                    if (altclassnum == 2) { break; }
+                    if (classnum == CLASS_WOLFEN && altclassnum == 2) { break; }
 
                   case CLASS_HEXEN:
                   case CLASS_ROTT:
@@ -3593,7 +3593,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DOOM:
-                    if (altclassnum == 2) { break; }
+                    if (classnum == CLASS_DOOM && altclassnum == 2) { break; }
 
                   default: continue;
                 }
@@ -3603,7 +3603,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_WOLFEN:
-                    if (altclassnum == 2) { break; }
+                    if (classnum == CLASS_WOLFEN && altclassnum == 2) { break; }
 
                   default: continue;
                 }
@@ -3614,7 +3614,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DUKE:
-                    if (altclassnum != 2) { break; }
+                    if (classnum == CLASS_DUKE && altclassnum != 2) { break; }
 
                   default: continue;
                 }
@@ -3627,7 +3627,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DUKE:
-                    if (altclassnum == 2) { break; }
+                    if (classnum == CLASS_DUKE && altclassnum == 2) { break; }
 
                   default: continue;
                 }
@@ -3707,7 +3707,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_BOND:
-                    if (altclassnum == 0) { break; }
+                    if (classnum == CLASS_BOND && altclassnum == 0) { break; }
 
                   default: continue;
                 }
@@ -3779,7 +3779,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DUKE:
-                    if (altclassnum != 2) { break; }
+                    if (classnum == CLASS_DUKE && altclassnum != 2) { break; }
 
                   case CLASS_QUAKE:
                     if (vanillaquake) { break; }
@@ -3808,7 +3808,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DUKE:
-                    if (altclassnum != 2) { break; }
+                    if (classnum == CLASS_DUKE && altclassnum != 2) { break; }
 
                   case CLASS_STRIFE:
                   case CLASS_PAINKILLER:
@@ -3833,7 +3833,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DUKE:
-                    if (altclassnum != 2) { break; }
+                    if (classnum == CLASS_DUKE && altclassnum != 2) { break; }
 
                   case CLASS_QUAKE:
                     if (vanillaquake) { break; }
@@ -3868,7 +3868,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 switch (classnum)
                 {
                   case CLASS_DUKE:
-                    if (altclassnum != 2) { break; }
+                    if (classnum == CLASS_DUKE && altclassnum != 2) { break; }
 
                   case CLASS_QUAKE:
                     if (vanillaquake) { break; }
