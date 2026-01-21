@@ -1904,7 +1904,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Double Pistols':
                 usingdualweapon = weaponname == "Double Pistols";
 
-                if (usingdualweapon) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_ROTT_SLOT2"; }
+                if (usingdualweapon) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_ROTT_SLOT1"; }
                 weaponmode = "$GOODOLHUD_WEAPON_MODE_" .. (usingdualweapon ? "DUAL" : "SINGLE");
                 break;
 
@@ -4098,7 +4098,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DUKE && weaponname == "Pipebombs") ||
                           (classnum == CLASS_MARATHON && (weaponname == "KKV-7 SMG Flechette" || (weaponname == ".44 Magnum Mega Class A1" && CPlayer.mo.FindInventory("UsingDualPistols")))) ||
                           (classnum == CLASS_QUAKE && weaponname == "Mjolnir") ||
-                          (classnum == CLASS_ROTT && weaponname == "Bazooka") ||
+                          (classnum == CLASS_ROTT && weaponname == "Double Pistols") ||
                           (classnum == CLASS_BLAKE && weaponname == "Auto Charge Pistol" && CPlayer.mo.FindInventory("BlakeSuperAutoCharge")) ||
                           (classnum == CLASS_CALEB && weaponname == "Dynamite") ||
                           (classnum == CLASS_STRIFE && CPlayer.mo.FindInventory("StrifeBeaconCooldown") && CPlayer.mo.FindInventory("StrifeBeaconCooldown").Amount >= 101) ||
@@ -4139,7 +4139,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DUKE && weaponname == "  Shotgun  ") ||
                           (classnum == CLASS_MARATHON && weaponname == "WSTE-M5 Combat Shotgun") ||
                           (classnum == CLASS_QUAKE && weaponname == "Double Shotgun") ||
-                          (classnum == CLASS_ROTT && weaponname == "Double Pistols") ||
+                          (classnum == CLASS_ROTT && weaponname == "MP40") ||
                           (classnum == CLASS_BLAKE && weaponname == "Slow Fire Protector") ||
                           (classnum == CLASS_CALEB && weaponname == "Flaregun") ||
                           (classnum == CLASS_STRIFE && (weaponname == "  Crossbow  " || weaponname == "  Crossbow Poison  ")) ||
@@ -4223,7 +4223,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Duke3D_M16") ||
                           (classnum == CLASS_MARATHON && weaponname == "MA-75B Assault Rifle") ||
                           (classnum == CLASS_QUAKE && (weaponname == "Nailgun" || weaponname == "Nailgun DOE")) ||
-                          (classnum == CLASS_ROTT && weaponname == "MP40") ||
+                          (classnum == CLASS_ROTT && weaponname == "Bazooka") ||
                           (classnum == CLASS_BLAKE && weaponname == "Rapid Assault Weapon") ||
                           (classnum == CLASS_CALEB && weaponname == "Tommygun") ||
                           (classnum == CLASS_STRIFE && weaponname == "Assault Gun") ||
