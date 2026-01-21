@@ -53,4 +53,5 @@ OptionMenu "GoodOlHUDOptions"
     Option "$GOODOLHUD_MENU_SHOWMONSTERCOUNTER", "goh_showmonstercounter", "YesNo"
     Option "$GOODOLHUD_MENU_SHOWSECRETCOUNTER",  "goh_showsecretcounter",  "YesNo"
     Option "$GOODOLHUD_MENU_SHOWITEMCOUNTER",    "goh_showitemcounter",    "YesNo"
+    Option "$GOODOLHUD_MENU_SWAPITEMSSECRETS",   "goh_swapitemssecrets",   "YesNo"
 }
