@@ -1,0 +1,111 @@
+// Miscellaneous inventory
+
+Graphic "ART1_HUDT", 40, 42 { Patch "ART1A0", 0, 0 }
+
+Graphic "ART1_HUDT_1", 40, 42 { Patch "ART1A0", 0, 0 }
+
+Graphic "ART1_HUDT_2", 40, 42 { Patch "ART1B0", 0, 0 }
+
+Graphic "ART1_HUDT_3", 40, 42 { Patch "ART1C0", 0, 0 }
+
+Graphic "ART1_HUDT_4", 40, 42 { Patch "ART1D0", 0, 0 }
+
+Graphic "ART1_HUDT_5", 40, 42 { Patch "ART1E0", 0, 0 }
+
+Graphic "ART2_HUDT", 40, 42 { Patch "ART2A0", 0, 0 }
+
+Graphic "ART2_HUDT_1", 40, 42 { Patch "ART2A0", 0, 0 }
+
+Graphic "ART2_HUDT_2", 40, 42 { Patch "ART2B0", 0, 0 }
+
+Graphic "ART2_HUDT_3", 40, 42 { Patch "ART2C0", 0, 0 }
+
+Graphic "ART2_HUDT_4", 40, 42 { Patch "ART2D0", 0, 0 }
+
+Graphic "ART2_HUDT_5", 40, 42 { Patch "ART2E0", 0, 0 }
+
+Graphic "ART3_HUDT", 40, 42 { Patch "ART3A0", 0, 0 }
+
+Graphic "ART3_HUDT_1", 40, 42 { Patch "ART3A0", 0, 0 }
+
+Graphic "ART3_HUDT_2", 40, 42 { Patch "ART3B0", 0, 0 }
+
+Graphic "ART3_HUDT_3", 40, 42 { Patch "ART3C0", 0, 0 }
+
+Graphic "ART3_HUDT_4", 40, 42 { Patch "ART3D0", 0, 0 }
+
+Graphic "ART3_HUDT_5", 40, 42 { Patch "ART3E0", 0, 0 }
+
+Graphic "POW4_HUDT", 40, 42 { Patch "POW4E0", 0, 0 }
+
+Graphic "POW4_HUDT_1", 40, 42 { Patch "POW4E0", 0, 0 }
+
+Graphic "POW4_HUDT_2", 40, 42 { Patch "POW4D0", 0, 0 }
+
+Graphic "POW4_HUDT_3", 40, 42 { Patch "POW4C0", 0, 0 }
+
+Graphic "POW4_HUDT_4", 40, 42 { Patch "POW4B0", 0, 0 }
+
+Graphic "POW4_HUDT_5", 40, 42 { Patch "POW4A0", 0, 0 }
+
+Graphic "POW5_HUDT", 40, 42 { Patch "POW5E0", 0, 0 }
+
+Graphic "POW5_HUDT_1", 40, 42 { Patch "POW5E0", 0, 0 }
+
+Graphic "POW5_HUDT_2", 40, 42 { Patch "POW5D0", 0, 0 }
+
+Graphic "POW5_HUDT_3", 40, 42 { Patch "POW5C0", 0, 0 }
+
+Graphic "POW5_HUDT_4", 40, 42 { Patch "POW5B0", 0, 0 }
+
+Graphic "POW5_HUDT_5", 40, 42 { Patch "POW5A0", 0, 0 }
+
+Graphic "ART1_HUDT_SMOOTH", 40, 42 { Patch "ART1A0", 0, 0 }
+
+Graphic "SRT1_HUDT_1", 40, 42 { Patch "SRT1A0", 0, 0 }
+
+Graphic "SRT1_HUDT_2", 40, 42 { Patch "SRT1B0", 0, 0 }
+
+Graphic "SRT1_HUDT_3", 40, 42 { Patch "SRT1C0", 0, 0 }
+
+Graphic "SRT1_HUDT_4", 40, 42 { Patch "SRT1D0", 0, 0 }
+
+Graphic "ART2_HUDT_SMOOTH", 40, 42 { Patch "ART2A0", 0, 0 }
+
+Graphic "SRT2_HUDT_1", 40, 42 { Patch "SRT2A0", 0, 0 }
+
+Graphic "SRT2_HUDT_2", 40, 42 { Patch "SRT2B0", 0, 0 }
+
+Graphic "SRT2_HUDT_3", 40, 42 { Patch "SRT2C0", 0, 0 }
+
+Graphic "SRT2_HUDT_4", 40, 42 { Patch "SRT2D0", 0, 0 }
+
+Graphic "ART3_HUDT_SMOOTH", 40, 42 { Patch "ART3A0", 0, 0 }
+
+Graphic "SRT3_HUDT_1", 42, 42 { Patch "SRT3A0", 0, 0 }
+
+Graphic "SRT3_HUDT_2", 40, 42 { Patch "SRT3B0", 0, 0 }
+
+Graphic "SRT3_HUDT_3", 40, 42 { Patch "SRT3C0", 0, 0 }
+
+Graphic "SRT3_HUDT_4", 40, 42 { Patch "SRT3D0", 0, 0 }
+
+Graphic "POW4_HUDT_SMOOTH", 40, 42 { Patch "POW4E0", 0, 0 }
+
+Graphic "SPW4_HUDT_1", 40, 42 { Patch "SPW4D0", 0, 0 }
+
+Graphic "SPW4_HUDT_2", 40, 42 { Patch "SPW4C0", 0, 0 }
+
+Graphic "SPW4_HUDT_3", 40, 42 { Patch "SPW4B0", 0, 0 }
+
+Graphic "SPW4_HUDT_4", 40, 42 { Patch "SPW4A0", 0, 0 }
+
+Graphic "POW5_HUDT_SMOOTH", 40, 42 { Patch "POW5E0", 0, 0 }
+
+Graphic "SPW5_HUDT_1", 40, 42 { Patch "SPW5D0", 0, 0 }
+
+Graphic "SPW5_HUDT_2", 40, 42 { Patch "SPW5C0", 0, 0 }
+
+Graphic "SPW5_HUDT_3", 40, 42 { Patch "SPW5B0", 0, 0 }
+
+Graphic "SPW5_HUDT_4", 40, 42 { Patch "SPW5A0", 0, 0 }

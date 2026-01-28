@@ -1,0 +1,139 @@
+texture ART1_HUDT
+pic ART1_HUDT_1 tics 4
+pic ART1_HUDT_2 tics 4
+pic ART1_HUDT_3 tics 4
+pic ART1_HUDT_4 tics 4
+pic ART1_HUDT_5 tics 4
+pic ART1_HUDT_4 tics 4
+pic ART1_HUDT_3 tics 4
+pic ART1_HUDT_2 tics 4
+
+texture ART2_HUDT
+pic ART2_HUDT_1 tics 4
+pic ART2_HUDT_2 tics 4
+pic ART2_HUDT_3 tics 4
+pic ART2_HUDT_4 tics 4
+pic ART2_HUDT_5 tics 4
+pic ART2_HUDT_4 tics 4
+pic ART2_HUDT_3 tics 4
+pic ART2_HUDT_2 tics 4
+
+texture ART3_HUDT
+pic ART3_HUDT_1 tics 4
+pic ART3_HUDT_2 tics 4
+pic ART3_HUDT_3 tics 4
+pic ART3_HUDT_4 tics 4
+pic ART3_HUDT_5 tics 4
+pic ART3_HUDT_4 tics 4
+pic ART3_HUDT_3 tics 4
+pic ART3_HUDT_2 tics 4
+
+texture POW4_HUDT
+pic POW4_HUDT_1 tics 4
+pic POW4_HUDT_2 tics 4
+pic POW4_HUDT_3 tics 4
+pic POW4_HUDT_4 tics 4
+pic POW4_HUDT_5 tics 4
+pic POW4_HUDT_4 tics 4
+pic POW4_HUDT_3 tics 4
+pic POW4_HUDT_2 tics 4
+
+texture POW5_HUDT
+pic POW5_HUDT_1 tics 4
+pic POW5_HUDT_2 tics 4
+pic POW5_HUDT_3 tics 4
+pic POW5_HUDT_4 tics 4
+pic POW5_HUDT_5 tics 4
+pic POW5_HUDT_4 tics 4
+pic POW5_HUDT_3 tics 4
+pic POW5_HUDT_2 tics 4
+
+texture ART1_HUDT_SMOOTH
+pic ART1_HUDT_1 tics 2
+pic SRT1_HUDT_1 tics 2
+pic ART1_HUDT_2 tics 2
+pic SRT1_HUDT_2 tics 2
+pic ART1_HUDT_3 tics 2
+pic SRT1_HUDT_3 tics 2
+pic ART1_HUDT_4 tics 2
+pic SRT1_HUDT_4 tics 2
+pic ART1_HUDT_5 tics 2
+pic SRT1_HUDT_4 tics 2
+pic ART1_HUDT_4 tics 2
+pic SRT1_HUDT_3 tics 2
+pic ART1_HUDT_3 tics 2
+pic SRT1_HUDT_2 tics 2
+pic ART1_HUDT_2 tics 2
+pic SRT1_HUDT_1 tics 2
+
+texture ART2_HUDT_SMOOTH
+pic ART2_HUDT_1 tics 2
+pic SRT2_HUDT_1 tics 2
+pic ART2_HUDT_2 tics 2
+pic SRT2_HUDT_2 tics 2
+pic ART2_HUDT_3 tics 2
+pic SRT2_HUDT_3 tics 2
+pic ART2_HUDT_4 tics 2
+pic SRT2_HUDT_4 tics 2
+pic ART2_HUDT_5 tics 2
+pic SRT2_HUDT_4 tics 2
+pic ART2_HUDT_4 tics 2
+pic SRT2_HUDT_3 tics 2
+pic ART2_HUDT_3 tics 2
+pic SRT2_HUDT_2 tics 2
+pic ART2_HUDT_2 tics 2
+pic SRT2_HUDT_1 tics 2
+
+texture ART3_HUDT_SMOOTH
+pic ART3_HUDT_1 tics 2
+pic SRT3_HUDT_1 tics 2
+pic ART3_HUDT_2 tics 2
+pic SRT3_HUDT_2 tics 2
+pic ART3_HUDT_3 tics 2
+pic SRT3_HUDT_3 tics 2
+pic ART3_HUDT_4 tics 2
+pic SRT3_HUDT_4 tics 2
+pic ART3_HUDT_5 tics 2
+pic SRT3_HUDT_4 tics 2
+pic ART3_HUDT_4 tics 2
+pic SRT3_HUDT_3 tics 2
+pic ART3_HUDT_3 tics 2
+pic SRT3_HUDT_2 tics 2
+pic ART3_HUDT_2 tics 2
+pic SRT3_HUDT_1 tics 2
+
+texture POW4_HUDT_SMOOTH
+pic POW4_HUDT_1 tics 2
+pic SPW4_HUDT_1 tics 2
+pic POW4_HUDT_2 tics 2
+pic SPW4_HUDT_2 tics 2
+pic POW4_HUDT_3 tics 2
+pic SPW4_HUDT_3 tics 2
+pic POW4_HUDT_4 tics 2
+pic SPW4_HUDT_4 tics 2
+pic POW4_HUDT_5 tics 2
+pic SPW4_HUDT_4 tics 2
+pic POW4_HUDT_4 tics 2
+pic SPW4_HUDT_3 tics 2
+pic POW4_HUDT_3 tics 2
+pic SPW4_HUDT_2 tics 2
+pic POW4_HUDT_2 tics 2
+pic SPW4_HUDT_1 tics 2
+
+texture POW5_HUDT_SMOOTH
+pic POW5_HUDT_1 tics 2
+pic SPW5_HUDT_1 tics 2
+pic POW5_HUDT_2 tics 2
+pic SPW5_HUDT_2 tics 2
+pic POW5_HUDT_3 tics 2
+pic SPW5_HUDT_3 tics 2
+pic POW5_HUDT_4 tics 2
+pic SPW5_HUDT_4 tics 2
+pic POW5_HUDT_5 tics 2
+pic SPW5_HUDT_4 tics 2
+pic POW5_HUDT_4 tics 2
+pic SPW5_HUDT_3 tics 2
+pic POW5_HUDT_3 tics 2
+pic SPW5_HUDT_2 tics 2
+pic POW5_HUDT_2 tics 2
+pic SPW5_HUDT_1 tics 2
