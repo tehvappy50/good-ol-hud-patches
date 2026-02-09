@@ -4640,18 +4640,15 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawMiscItems(int coordbasex, int coordbasey)
     {
-        int maxmiscitems = 27 * 4;
+        int maxmiscitems = 24 * 4;
 
         static const Name MiscItemDefinitions[] =
         {
             "StrifeSigilPiece",                    "SIGP",           "",                     "",
-            "UnmakerUpgrade1Icon",                 "ART1_HUDT",      "",                     "",
-            "SamsaraDoom64UnmakerArtifact1",       "DM64UAR1_HUDT",  "",                     "",
-            "UnmakerUpgrade2Icon",                 "ART2_HUDT",      "",                     "",
-            "SamsaraDoom64UnmakerArtifact2",       "DM64UAR2_HUDT",  "",                     "",
-            "UnmakerUpgrade3Icon",                 "ART3_HUDT",      "",                     "",
-            "SamsaraDoom64UnmakerArtifact3",       "DM64UAR3_HUDT",  "",                     "",
-            "D64UnmakerUpgrade4",                  "POW4_HUDT",      "D64PowerFloater",      "[Green]",
+            "UnmakerUpgrade1Icon",                 "DM64UAR1_HUDT",  "",                     "",
+            "UnmakerUpgrade2Icon",                 "DM64UAR2_HUDT",  "",                     "",
+            "UnmakerUpgrade3Icon",                 "DM64UAR3_HUDT",  "",                     "",
+            "D64UnmakerUpgrade4_Samsara",          "POW4_HUDT",      "D64PowerFloater",      "[Green]",
             "D64UnmakerUpgrade5",                  "POW5_HUDT",      "D64PowerHellTime",     "[Red]",
             "TotenkopfHasPowerArmor",              "TK55A0",         "",                     "",
             "TotenkopfHasHealingOrb",              "TK55B0",         "",                     "",
@@ -4695,14 +4692,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
             {
               default:
                 if (!currentmiscitem) { continue; }
-                break;
-
-              case 'SamsaraDoom64UnmakerArtifact1':
-              case 'SamsaraDoom64UnmakerArtifact2':
-              case 'SamsaraDoom64UnmakerArtifact3':
-                currentmiscitem = CPlayer.mo.FindInventory("SamsaraDoom64UnmakerArtifact");
-
-                if (!currentmiscitem || altclassnum != 1) { continue; }
                 break;
 
               case 'TotenkopfHasPowerArmor':
@@ -4788,28 +4777,17 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'UnmakerUpgrade2Icon':
                   case 'UnmakerUpgrade3Icon':
                   case 'D64UnmakerUpgrade4':
+                  case 'D64UnmakerUpgrade4_Samsara':
                   case 'D64UnmakerUpgrade5':
                     if (!currentmiscitem) { continue; }
 
-                    if (smi_enabled) { currentmiscitemicon = currentmiscitemicon .. "_SMOOTH"; }
+                    //if (smi_enabled) { currentmiscitemicon = currentmiscitemicon .. "_SMOOTH"; }
 
                     if (MiscItemDefinitions[checkedmiscitems + 2] != "")
                     {
                         ispowerup = true;
                         isoutcastartifact = true;
                     }
-                    break;
-
-                  case 'SamsaraDoom64UnmakerArtifact1':
-                  case 'SamsaraDoom64UnmakerArtifact2':
-                  case 'SamsaraDoom64UnmakerArtifact3':
-                    currentmiscitem = CPlayer.mo.FindInventory("SamsaraDoom64UnmakerArtifact");
-
-                    if (!currentmiscitem || altclassnum != 1) { continue; }
-
-                    if (MiscItemDefinitions[checkedmiscitems] == "SamsaraDoom64UnmakerArtifact1" && currentmiscitem.Amount < 1) { continue; }
-                    if (MiscItemDefinitions[checkedmiscitems] == "SamsaraDoom64UnmakerArtifact2" && currentmiscitem.Amount < 2) { continue; }
-                    if (MiscItemDefinitions[checkedmiscitems] == "SamsaraDoom64UnmakerArtifact3" && currentmiscitem.Amount < 3) { continue; }
                     break;
 
                   case 'TotenkopfHasPowerArmor':
