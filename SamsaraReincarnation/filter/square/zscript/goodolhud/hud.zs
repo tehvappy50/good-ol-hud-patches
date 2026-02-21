@@ -4186,6 +4186,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_WOLFEN && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("  Dual Chainguns  "))) ||
                                 (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Golden Desert Eagle"))) ||
                                 (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("RoTTM60"))) ||
+                                (classnum == CLASS_BLAKE && Weapon(CPlayer.mo.FindInventory("Gatling Fusion Devastator"))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodGreaseGun"))) ||
                                 (classnum == CLASS_ERAD && altclassnum == 0 && Weapon(CPlayer.mo.FindInventory("EradEnergywhip"))) ||
                                 (classnum == CLASS_ERAD && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory("EradNitrofogger"))) ||
@@ -4419,6 +4420,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "  Dual Chainguns  ") ||
                                   (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Golden Desert Eagle") ||
                                   (classnum == CLASS_ROTT && weaponname == "RoTTM60") ||
+                                  (classnum == CLASS_BLAKE && weaponname == "Gatling Fusion Devastator") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodGreaseGun") ||
                                   (classnum == CLASS_ERAD && altclassnum == 0 && weaponname == "EradEnergywhip") ||
                                   (classnum == CLASS_ERAD && altclassnum == 1 && weaponname == "EradNitrofogger") ||
