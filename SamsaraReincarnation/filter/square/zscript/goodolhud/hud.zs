@@ -2062,6 +2062,12 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 }
                 break;
 
+              case ' Arachnicator ':
+              case 'EradRovingMine':
+              case 'EradMiniTankDetonator':
+                weaponmode = "$GOODOLHUD_WEAPON_MODE_SAMSARA_ERAD_" .. (CPlayer.mo.FindInventory("EradicatorPipAllowControl")  ? "GUIDED" : "HOMING");
+                break;
+
               case ' Tazer ':
               case ' Aldus Pistol ':
                 if (altclassnum >= 2) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_"; }
