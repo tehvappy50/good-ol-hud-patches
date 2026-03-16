@@ -1014,7 +1014,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             {
                 coordbase = (-102 + coordnudge.X, 3 + coordnudge.Y);
 
-                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_MONSTERS"), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK);
+                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_" .. (CVar.FindCVar("goh_monstercounterlabel").GetBool() ? "KILLS" : "MONSTERS")), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK);
 
                 DrawString(GOHmHUDFont, FormatNumber(Level.killed_monsters, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK);
                 DrawString(GOHmHUDFont, FormatNumber(Level.total_monsters, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_BRICK);
