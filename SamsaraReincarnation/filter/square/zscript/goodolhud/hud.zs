@@ -4775,19 +4775,83 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     if (!i.Icon.IsValid()) { continue; }
                     break;
 
-                  case 'TriangleKey': iconoverride = "STKEYS0"; break;
-                  case 'CircleKey': iconoverride = "STKEYS1"; break;
-                  case 'SquareKey': iconoverride = "STKEYS2"; break;
-                  case 'PyramidKey': iconoverride = "STKEYS3"; break;
-                  case 'SphereKey': iconoverride = "STKEYS4"; break;
-                  case 'CubeKey': iconoverride = "STKEYS5"; break;
-                  case 'HexagonKey': iconoverride = "STKEYS7"; break;
-                  case 'RhombusKey': iconoverride = "STKEYS8"; break;
-                  case 'TrapezoidKey': iconoverride = "STKEYS6"; break;
-                  case 'StarRune': iconoverride = "STKEYSS"; break;
-                  case 'CrescentRune': iconoverride = "STKEYSC"; break;
-                  case 'DiamondRune': iconoverride = "STKEYSD"; break;
-                  case 'OctagonKey': iconoverride = "STKEYSO"; break;
+                  case 'TriangleKey':
+                    if (Key(CPlayer.mo.FindInventory("BaseKey"))) { continue; }
+
+                    iconoverride = "STKEYS0";
+                    break;
+
+                  case 'CircleKey':
+                    if (Key(CPlayer.mo.FindInventory("GovsKey"))) { continue; }
+
+                    iconoverride = "STKEYS1";
+                    break;
+
+                  case 'SquareKey':
+                    if (Key(CPlayer.mo.FindInventory("Passcard"))) { continue; }
+
+                    iconoverride = "STKEYS2";
+                    break;
+
+                  case 'PyramidKey':
+                    if (Key(CPlayer.mo.FindInventory("IDBadge"))) { continue; }
+
+                    iconoverride = "STKEYS3";
+                    break;
+
+                  case 'SphereKey':
+                    if (Key(CPlayer.mo.FindInventory("PrisonKey"))) { continue; }
+
+                    iconoverride = "STKEYS4";
+                    break;
+
+                  case 'CubeKey':
+                    if (Key(CPlayer.mo.FindInventory("SeveredHand"))) { continue; }
+
+                    iconoverride = "STKEYS5";
+                    break;
+
+                  case 'HexagonKey':
+                    if (Key(CPlayer.mo.FindInventory("Power1Key"))) { continue; }
+
+                    iconoverride = "STKEYS7";
+                    break;
+
+                  case 'RhombusKey':
+                    if (Key(CPlayer.mo.FindInventory("Power2Key"))) { continue; }
+
+                    iconoverride = "STKEYS8";
+                    break;
+
+                  case 'TrapezoidKey':
+                    if (Key(CPlayer.mo.FindInventory("Power3Key"))) { continue; }
+
+                    iconoverride = "STKEYS6";
+                    break;
+
+                  case 'StarRune':
+                    if (Key(CPlayer.mo.FindInventory("GoldKey"))) { continue; }
+
+                    iconoverride = "STKEYSS";
+                    break;
+
+                  case 'CrescentRune':
+                    if (Key(CPlayer.mo.FindInventory("IDCard"))) { continue; }
+
+                    iconoverride = "STKEYSC";
+                    break;
+
+                  case 'DiamondRune':
+                    if (Key(CPlayer.mo.FindInventory("SilverKey"))) { continue; }
+
+                    iconoverride = "STKEYSD";
+                    break;
+
+                  case 'OctagonKey':
+                    if (Key(CPlayer.mo.FindInventory("OracleKey"))) { continue; }
+
+                    iconoverride = "STKEYSO";
+                    break;
                 }
 
                 Vector2 size;
