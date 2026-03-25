@@ -4058,6 +4058,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_HERETIC && Weapon(CPlayer.mo.FindInventory("CorvusTempestWand"))) ||
                                 (classnum == CLASS_MARATHON && Weapon(CPlayer.mo.FindInventory("SPNKR-25 Auto Cannon"))) ||
                                 (classnum == CLASS_QUAKE && Weapon(CPlayer.mo.FindInventory("Rocket Powered Impaler"))) ||
+                                (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("Split Missile"))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodFlamethrower"))) ||
                                 (classnum == CLASS_RMR && Weapon(CPlayer.mo.FindInventory("Subestron Arm"))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("Czerka Adventurer"))) ||
@@ -4369,6 +4370,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_HERETIC && weaponname == "CorvusTempestWand") ||
                                   (classnum == CLASS_MARATHON && weaponname == "SPNKR-25 Auto Cannon") ||
                                   (classnum == CLASS_QUAKE && weaponname == "Rocket Powered Impaler") ||
+                                  (classnum == CLASS_ROTT && weaponname == "Split Missile") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodFlamethrower") ||
                                   (classnum == CLASS_RMR && weaponname == "Subestron Arm") ||
                                   (classnum == CLASS_KATARN && weaponname == "Czerka Adventurer") ||
