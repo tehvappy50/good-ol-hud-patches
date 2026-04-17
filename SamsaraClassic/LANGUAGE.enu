@@ -7,6 +7,7 @@ GOODOLHUD_MENU_ENABLED = "Unpatched: Enable HUD";
 GOODOLHUD_MENU_SAMSARA_SHOWCHARACTERNAME = "Samsara: Show Character Name";
 GOODOLHUD_MENU_PLAYERNAMETEAMCOLOR = "Color Player/Character Name Based On Team";
 GOODOLHUD_MENU_SAMSARA_CHARACTERNAMECOLOR = "Samsara: Color Character Name";
+GOODOLHUD_MENU_SAMSARA_SHOWPENTAGRAMARMOR = "Samsara: Show Pentagram Of Protection Armor";
 
 GOODOLHUD_MENU_RELOADABLEAMMOLABEL = "Reloadable Ammo Label";
 GOODOLHUD_MENU_SAMSARA_SHOWALIENWEAPONAMMO = "Samsara: Show Marathon Alien Weapon Ammo";

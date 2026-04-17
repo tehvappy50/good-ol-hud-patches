@@ -424,7 +424,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         let armor = BasicArmor(CPlayer.mo.FindInventory("BasicArmor", true)), hexenarmor = HexenArmor(CPlayer.mo.FindInventory("HexenArmor", true));
         let currenthexenarmor = hexenarmor.Slots[0] + hexenarmor.Slots[1] + hexenarmor.Slots[2] + hexenarmor.Slots[3] + hexenarmor.Slots[4];
 
-        let hasquakepentagram = Powerup(CPlayer.mo.FindInventory("QuakePentagram"));
+        let hasquakepentagram = CVar.FindCVar("goh_samsara_showpentagramarmor").GetBool() && Powerup(CPlayer.mo.FindInventory("QuakePentagram"));
 
         let swaphealtharmor = CVar.FindCVar("goh_swaphealtharmor").GetBool();
 

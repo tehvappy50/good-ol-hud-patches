@@ -8,6 +8,7 @@ GOODOLHUD_MENU_SAMSARA_SHOWCHARACTERNAME = "Samsara: Show Character Name";
 GOODOLHUD_MENU_PLAYERNAMETEAMCOLOR = "Color Player/Character Name Based On Team";
 GOODOLHUD_MENU_SHOWMUGSHOT = "Unpatched: Show Mugshot";
 GOODOLHUD_MENU_SAMSARA_SHOWCHARACTERPORTRAIT = "Samsara: Show Character Portrait";
+GOODOLHUD_MENU_SAMSARA_SHOWPENTAGRAMARMOR = "Samsara: Show Pentagram Of Protection Armor";
 GOODOLHUD_MENU_SHOWXPTONEXTLEVEL = "Experience Amount Display";
 
 GOODOLHUD_MENU_RELOADABLEAMMOLABEL = "Reloadable Ammo Label";
