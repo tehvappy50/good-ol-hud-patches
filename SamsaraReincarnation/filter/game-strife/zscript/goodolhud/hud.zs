@@ -4514,24 +4514,26 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawCooldownTimers(int invcoordbasex, int invcoordbasey, int wepcoordbasex, int wepcoordbasey)
     {
-        int maxcooldowns = 14 * 2;
+        int maxcooldowns = 16 * 2;
 
         static const Name CooldownDefinitions[] =
         {
-            "TomeOfPowerCooldown",              "[Black]",
-            "FlechetteCooldown",                "[DarkGreen]",
-            "Flechette2Cooldown",               "[DarkGreen]",
-            "Flechette3Cooldown",               "[DarkGreen]",
-            "SamsaraDiscOfRepulsionCooldown",   "[Yellow]",
-            "SamsaraDarkServantCooldown",       "[DarkBrown]",
-            "HolodukeCooldown",                 "[Gray]",
-            "SamsaraQuadDamageCooldownDisplay", "[Ice]",
-            "SamsaraBloodGunsAkimboCooldown",   "[DarkGray]",
-            "StrifeBeaconCooldown",             "[LightBlue]",
-            "IPOGGrenadeCooldown",              "[White]",
-            "DisruptorPSICooldown",             "[Brick]",
-            "Hexen2TomeOfPowerCooldown",        "[Black]",
-            "Catacomb_HourglassCooldown",       "[Gray]"
+            "TomeOfPowerCooldown",                    "[Black]",
+            "FlechetteCooldown",                      "[DarkGreen]",
+            "Flechette2Cooldown",                     "[DarkGreen]",
+            "Flechette3Cooldown",                     "[DarkGreen]",
+            "SamsaraDiscOfRepulsionCooldown",         "[Yellow]",
+            "SamsaraDarkServantCooldown",             "[DarkBrown]",
+            "HolodukeCooldown",                       "[Gray]",
+            "SamsaraQuadDamageCooldownDisplay",       "[Ice]",
+            "SamsaraBloodGunsAkimboCooldown",         "[DarkGray]",
+            "StrifeBeaconCooldown",                   "[LightBlue]",
+            "IPOGGrenadeCooldown",                    "[White]",
+            "DisruptorPSICooldown",                   "[Brick]",
+            "SamsaraQuake2QuadDamageCooldownDisplay", "[Olive]",
+            "Hexen2TomeOfPowerCooldown",              "[Black]",
+            "Catacomb_HourglassCooldown",             "[Gray]",
+            "SamsaraQuake3QuadDamageCooldownDisplay", "[LightBlue]"
         };
 
         Vector2 coordbase = (0, 0);
@@ -4589,6 +4591,14 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     if (!currentpsi || currentpsi.Amount <= 2 || !canshowweaponbar) { continue; }
 
                     cooldownslot = 7;
+                    break;
+
+                  case 'SamsaraQuake2QuadDamageCooldownDisplay':
+                    if (Powerup(CPlayer.mo.FindInventory("PowerQ2QuadDamage"))) { continue; }
+                    break;
+
+                  case 'SamsaraQuake3QuadDamageCooldownDisplay':
+                    if (Powerup(CPlayer.mo.FindInventory("PowerQ3QuadDamageFactor"))) { continue; }
                     break;
                 }
 
