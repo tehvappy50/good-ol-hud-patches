@@ -4271,7 +4271,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_HEXEN && altclassnum == 3 && CPlayer.mo.FindInventory("Flechette3Cooldown") && CPlayer.mo.FindInventory("Flechette3Cooldown").Amount >= 5) ||
                           (classnum == CLASS_DUKE && weaponname == "Pipebombs") ||
                           (classnum == CLASS_MARATHON && (weaponname == "KKV-7 SMG Flechette" || (weaponname == ".44 Magnum Mega Class A1" && CPlayer.mo.FindInventory("UsingDualPistols")))) ||
-                          (classnum == CLASS_QUAKE && weaponname == "Mjolnir") ||
+                          (classnum == CLASS_QUAKE && (weaponname == "Mjolnir" || weaponname == "Gauntlet")) ||
                           (classnum == CLASS_ROTT && weaponname == "Double Pistols") ||
                           (classnum == CLASS_BLAKE && weaponname == "Auto Charge Pistol" && CPlayer.mo.FindInventory("BlakeSuperAutoCharge")) ||
                           (classnum == CLASS_CALEB && weaponname == "Dynamite") ||
