@@ -4560,6 +4560,12 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     if (cooldownname == "FlechetteCooldown" && altclassnum >= 2) { continue; }
                     if (cooldownname == "Flechette2Cooldown" && altclassnum != 2) { continue; }
                     if (cooldownname == "Flechette3Cooldown" && altclassnum <= 2) { continue; }
+                    cooldownslot = 1;
+                    break;
+
+                  case 'SamsaraDarkServantCooldown':
+                    if (CPlayer.mo.FindInventory("SamsaraHexen1LoadoutUnique3") && !CPlayer.mo.FindInventory("SamsaraHasAllLoadoutEquipment")) { continue; }
+                    break;
 
                   case 'StrifeBeaconCooldown':
                   case 'IPOGGrenadeCooldown':
