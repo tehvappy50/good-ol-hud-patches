@@ -1427,7 +1427,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawStatusTimers(int coordbasex, int coordbasey)
     {
-        int maxstatuses = 10 * 3;
+        int maxstatuses = 11 * 3;
 
         static const Name StatusDefinitions[] =
         {
@@ -1439,6 +1439,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "NothingSpeed",                             "white",     "[WhiteBorder]",
             "PowerSamsaraDoomguyStrStunnerSpeedDebuff", "purple",    "[PurpleBorder]",
             "ChickenPlayer",                            "white",     "[White]", // Morphs don't have a Powerup actor; handle them differently as a result
+            "PigPlayer",                                "brown",     "[Brown]",
             "Hexen2SheepPlayer",                        "gray",      "[Gray]",
             "ShrunkPlayer",                             "green",     "[Green]"
         };
