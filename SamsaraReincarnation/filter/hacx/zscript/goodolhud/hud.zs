@@ -4089,7 +4089,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_HEXEN && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory(" Bloodscourge "))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodNaturomDemonto"))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("Wookie Bowcaster"))) ||
-                                (classnum == CLASS_BITTERMAN && Weapon(CPlayer.mo.FindInventory("Q2Trap"))) ||
+                                (classnum == CLASS_BITTERMAN && (Weapon(CPlayer.mo.FindInventory("Q2Trap")) || Weapon(CPlayer.mo.FindInventory("Q2Disruptor")))) ||
                                 (classnum == CLASS_BOND && altclassnum == 0 && Weapon(CPlayer.mo.FindInventory("Goldeneye_GoldenGun"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory("Goldfinger_M14"))) ||
                                 (classnum == CLASS_UNREAL && Weapon(CPlayer.mo.FindInventory("Unreal_QuadShot"))) ||
@@ -4189,7 +4189,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_HEXEN && altclassnum == 2 && weaponname == "Fire Blast") ||
                           (classnum == CLASS_DUKE && weaponname == "Explosive Shotgun") ||
                           (classnum == CLASS_MARATHON && weaponname == "Fusion Pistol") ||
-                          (classnum == CLASS_QUAKE && (weaponname == "Grenade Launcher" || weaponname == "Grenade Launcher DOE")) ||
+                          (classnum == CLASS_QUAKE && (weaponname == "Grenade Launcher" || weaponname == "Grenade Launcher DOE" || weaponname == "Q1Widowmaker")) ||
                           (classnum == CLASS_ROTT && weaponname == "HeatSeeker") ||
                           (classnum == CLASS_BLAKE && weaponname == "Heavy Assault Weapon") ||
                           (classnum == CLASS_CALEB && weaponname == "Sawedoff") ||
@@ -4436,7 +4436,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_HEXEN && altclassnum == 1 && weaponname == " Bloodscourge ") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodNaturomDemonto") ||
                                   (classnum == CLASS_KATARN && weaponname == "Wookie Bowcaster") ||
-                                  (classnum == CLASS_BITTERMAN && weaponname == "Q2Trap") ||
+                                  (classnum == CLASS_BITTERMAN && (weaponname == "Q2Trap" || weaponname == "Q2Disruptor")) ||
                                   (classnum == CLASS_BOND && altclassnum == 0 && weaponname == "Goldeneye_GoldenGun") ||
                                   (classnum == CLASS_BOND && altclassnum == 1 && weaponname == "Goldfinger_M14") ||
                                   (classnum == CLASS_UNREAL && weaponname == "Unreal_QuadShot") ||
