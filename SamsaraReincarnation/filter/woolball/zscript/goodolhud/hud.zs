@@ -4066,6 +4066,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         bool hasslot6skulltag = (classnum == CLASS_DOOM && Weapon(CPlayer.mo.FindInventory(" RailGun "))) ||
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Gigazorcher 2100"))) ||
                                 (classnum == CLASS_HERETIC && Weapon(CPlayer.mo.FindInventory("CorvusTempestWand"))) ||
+                                (classnum == CLASS_WOLFEN && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Wolf3DLightningGun"))) ||
                                 (classnum == CLASS_MARATHON && Weapon(CPlayer.mo.FindInventory("SPNKR-25 Auto Cannon"))) ||
                                 (classnum == CLASS_QUAKE && Weapon(CPlayer.mo.FindInventory("Rocket Powered Impaler"))) ||
                                 (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("Split Missile"))) ||
@@ -4379,6 +4380,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         bool usingslot6skulltag = (classnum == CLASS_DOOM && weaponname == " RailGun ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Gigazorcher 2100") ||
                                   (classnum == CLASS_HERETIC && weaponname == "CorvusTempestWand") ||
+                                  (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "Wolf3DLightningGun") ||
                                   (classnum == CLASS_MARATHON && weaponname == "SPNKR-25 Auto Cannon") ||
                                   (classnum == CLASS_QUAKE && weaponname == "Rocket Powered Impaler") ||
                                   (classnum == CLASS_ROTT && weaponname == "Split Missile") ||
