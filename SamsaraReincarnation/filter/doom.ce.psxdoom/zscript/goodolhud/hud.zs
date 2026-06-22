@@ -1648,6 +1648,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Goldeneye_Klobb':
               case 'Goldeneye_DD44':
               case 'Goldeneye_ThrowingKnives':
+              case 'Goldeneye_HuntingKnife':
               case 'Goldeneye_KF7Soviet':
               case 'Goldeneye_AutoShotgun':
               case 'Goldeneye_Shotgun':
@@ -1667,6 +1668,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Goldfinger_ColtM1911':
               case 'Goldfinger_LugerP08':
               case 'Goldfinger_WaltherP38':
+              case 'Goldfinger_GolfClub':
               case 'Goldfinger_MP40':
               case 'Goldfinger_Shotgun':
               case 'Goldfinger_OverUnder':
@@ -4135,8 +4137,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RR && weaponname == " RR Rip Saw ") ||
                           (classnum == CLASS_BITTERMAN && weaponname == "Q2Machinegun") ||
                           (classnum == CLASS_DEMONESS && weaponname == "Hexen2IceMace") ||
-                          (classnum == CLASS_BOND && altclassnum == 0 && weaponname == "Goldeneye_ThrowingKnives") ||
-                          (classnum == CLASS_BOND && altclassnum == 1 && weaponname == "Goldfinger_OddjobHat") ||
+                          (classnum == CLASS_BOND && altclassnum == 0 && (weaponname == "Goldeneye_ThrowingKnives" || weaponname == "Goldeneye_HuntingKnife")) ||
+                          (classnum == CLASS_BOND && altclassnum == 1 && (weaponname == "Goldfinger_OddjobHat" || weaponname == "Goldfinger_GolfClub")) ||
                           (classnum == CLASS_CATACOMB && weaponname == "Catacomb_WavesQuickSpell") ||
                           (classnum == CLASS_PAINKILLER && weaponname == "Painkiller_Stakegun") ||
                           (classnum == CLASS_UNREAL && weaponname == "Unreal_RazorJack") ||
