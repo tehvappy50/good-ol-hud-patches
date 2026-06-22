@@ -1214,7 +1214,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawPowerupTimers(int coordbasex, int coordbasey)
     {
-        int maxpowerups = 56 * 3;
+        int maxpowerups = 57 * 3;
 
         static const Name PowerupDefinitions[] =
         {
@@ -1246,6 +1246,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PowerCatacomb_FireRing",                "cyan",      "[BlueBorder]", // that text color will do for now
             "PowerSamsaraDoomguyStrWeaponPower",     "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerHereticTome",                      "red",       "[RubyOre]", // different text color for heretic coexistence
+            "PowerSamsaraHexenWeaponLevel2",         "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerSamsaraBloodGunsAkimbo",           "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerEradEnWP",                         "red",       "[RubyOre]", // different text color for heretic coexistence
             "PowerHexen2WeaponLevel2",               "red",       "[RubyOre]", // different text color for heretic coexistence
@@ -1781,12 +1782,13 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'RPG':
               case 'Freezethrower':
               case 'Devastator Weapon':
+              case 'Duke3D_X3000':
               case 'Shrinker':
               case 'Expander':
                 let sharedname64 = weaponname == "Mighty Boot" || weaponname == "Pipebombs" || weaponname == "  Shotgun  ";
 
-                let nocounterpart64 = weaponname == "Duke3D_M16" || weaponname == "Golden Desert Eagle" || weaponname == "Shrinker" ||
-                                      weaponname == "Expander";
+                let nocounterpart64 = weaponname == "Duke3D_M16" || weaponname == "Golden Desert Eagle" || weaponname == "Duke3D_X3000" ||
+                                      weaponname == "Shrinker" || weaponname == "Expander";
 
                 if (altclassnum == 1 ||
                     (altclassnum == 2 && !sharedname64))
@@ -1822,6 +1824,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                       case 'RPG': weaponalttag = weaponalttag .. "SLOT5"; break;
                       case 'Freezethrower': weaponalttag = weaponalttag .. "SLOT6" .. (altclassnum == 2 ? "_" .. (CPlayer.mo.FindInventory("Duke64UsingShrinker") ? "SHRINKER" : "EXPANDER") : ""); break;
                       case 'Devastator Weapon': weaponalttag = weaponalttag .. "SLOT7"; break;
+                      case 'Duke3D_X3000': weaponalttag = weaponalttag .. "SLOT7S"; break;
                       default: weaponalttag = weaponalttag .. "UNIQUE" .. (weaponname == "Expander" ? "3" : "2"); break;
                     }
                 }
@@ -4083,6 +4086,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         bool hasslot7skulltag = (classnum == CLASS_DOOM && Weapon(CPlayer.mo.FindInventory(" BFG10K "))) ||
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Liquid Zorcher"))) ||
                                 (classnum == CLASS_HEXEN && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory(" Bloodscourge "))) ||
+                                (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Duke3D_X3000"))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodNaturomDemonto"))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("Wookie Bowcaster"))) ||
                                 (classnum == CLASS_BITTERMAN && (Weapon(CPlayer.mo.FindInventory("Q2Trap")) || Weapon(CPlayer.mo.FindInventory("Q2Disruptor")))) ||
@@ -4431,6 +4435,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         bool usingslot7skulltag = (classnum == CLASS_DOOM && weaponname == " BFG10K ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Liquid Zorcher") ||
                                   (classnum == CLASS_HEXEN && altclassnum == 1 && weaponname == " Bloodscourge ") ||
+                                  (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Duke3D_X3000") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodNaturomDemonto") ||
                                   (classnum == CLASS_KATARN && weaponname == "Wookie Bowcaster") ||
                                   (classnum == CLASS_BITTERMAN && (weaponname == "Q2Trap" || weaponname == "Q2Disruptor")) ||
@@ -4498,7 +4503,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawCooldownTimers(int invcoordbasex, int invcoordbasey, int wepcoordbasex, int wepcoordbasey)
     {
-        int maxcooldowns = 16 * 2;
+        int maxcooldowns = 17 * 2;
 
         static const Name CooldownDefinitions[] =
         {
@@ -4506,6 +4511,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "FlechetteCooldown",                      "[DarkGreen]",
             "Flechette2Cooldown",                     "[DarkGreen]",
             "Flechette3Cooldown",                     "[DarkGreen]",
+            "SamsaraHexenTomeOfPowerCooldown",        "[Black]",
             "SamsaraDiscOfRepulsionCooldown",         "[Yellow]",
             "SamsaraDarkServantCooldown",             "[DarkBrown]",
             "HolodukeCooldown",                       "[Gray]",
