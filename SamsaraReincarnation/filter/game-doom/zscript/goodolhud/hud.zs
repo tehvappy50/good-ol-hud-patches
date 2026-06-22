@@ -4187,7 +4187,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_HERETIC && weaponname == "Ethereal Crossbow") ||
                           (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "Mauser Rifle") ||
                           (classnum == CLASS_WOLFEN && altclassnum == 2 && weaponname == "Totenkopf_STG44") ||
-                          (classnum == CLASS_HEXEN && altclassnum == 0 && weaponname == "Bishop's Shortsword") ||
+                          (classnum == CLASS_HEXEN && altclassnum == 0 && (weaponname == "Bishop's Shortsword" || weaponname == "Wand of Embers")) ||
                           (classnum == CLASS_HEXEN && (altclassnum == 1 || altclassnum == 3) && weaponname == "Timon's Axe") ||
                           (classnum == CLASS_HEXEN && altclassnum == 2 && weaponname == "Fire Blast") ||
                           (classnum == CLASS_DUKE && weaponname == "Explosive Shotgun") ||
