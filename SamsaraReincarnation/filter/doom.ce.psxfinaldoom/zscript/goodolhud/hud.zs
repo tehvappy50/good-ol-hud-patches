@@ -1789,14 +1789,15 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Golden Desert Eagle':
               case 'RPG':
               case 'Freezethrower':
+              case 'Duke3D_Incinerator':
               case 'Devastator Weapon':
               case 'Duke3D_X3000':
               case 'Shrinker':
               case 'Expander':
                 let sharedname64 = weaponname == "Mighty Boot" || weaponname == "Pipebombs" || weaponname == "  Shotgun  ";
 
-                let nocounterpart64 = weaponname == "Duke3D_M16" || weaponname == "Golden Desert Eagle" || weaponname == "Duke3D_X3000" ||
-                                      weaponname == "Shrinker" || weaponname == "Expander";
+                let nocounterpart64 = weaponname == "Duke3D_M16" || weaponname == "Golden Desert Eagle" || weaponname == "Duke3D_Incinerator" ||
+                                      weaponname == "Duke3D_X3000" || weaponname == "Shrinker" || weaponname == "Expander";
 
                 if (altclassnum == 1 ||
                     (altclassnum == 2 && !sharedname64))
@@ -1831,6 +1832,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                       case 'Golden Desert Eagle': weaponalttag = weaponalttag .. "SLOT4S"; break;
                       case 'RPG': weaponalttag = weaponalttag .. "SLOT5"; break;
                       case 'Freezethrower': weaponalttag = weaponalttag .. "SLOT6" .. (altclassnum == 2 ? "_" .. (CPlayer.mo.FindInventory("Duke64UsingShrinker") ? "SHRINKER" : "EXPANDER") : ""); break;
+                      case 'Duke3D_Incinerator': weaponalttag = weaponalttag .. "SLOT6S"; break;
                       case 'Devastator Weapon': weaponalttag = weaponalttag .. "SLOT7"; break;
                       case 'Duke3D_X3000': weaponalttag = weaponalttag .. "SLOT7S"; break;
                       default: weaponalttag = weaponalttag .. "UNIQUE" .. (weaponname == "Expander" ? "3" : "2"); break;
@@ -4072,6 +4074,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Gigazorcher 2100"))) ||
                                 (classnum == CLASS_HERETIC && Weapon(CPlayer.mo.FindInventory("CorvusTempestWand"))) ||
                                 (classnum == CLASS_WOLFEN && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Wolf3DLightningGun"))) ||
+                                (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Duke3D_Incinerator"))) ||
                                 (classnum == CLASS_MARATHON && Weapon(CPlayer.mo.FindInventory("SPNKR-25 Auto Cannon"))) ||
                                 (classnum == CLASS_QUAKE && Weapon(CPlayer.mo.FindInventory("Rocket Powered Impaler"))) ||
                                 (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("Split Missile"))) ||
@@ -4387,6 +4390,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_CHEX && weaponname == "Gigazorcher 2100") ||
                                   (classnum == CLASS_HERETIC && weaponname == "CorvusTempestWand") ||
                                   (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "Wolf3DLightningGun") ||
+                                  (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Duke3D_Incinerator") ||
                                   (classnum == CLASS_MARATHON && weaponname == "SPNKR-25 Auto Cannon") ||
                                   (classnum == CLASS_QUAKE && weaponname == "Rocket Powered Impaler") ||
                                   (classnum == CLASS_ROTT && weaponname == "Split Missile") ||
