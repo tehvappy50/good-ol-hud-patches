@@ -1788,16 +1788,16 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Duke3D_M16':
               case 'Golden Desert Eagle':
               case 'RPG':
-              case 'Freezethrower':
               case 'Duke3D_Incinerator':
+              case 'Freezethrower':
+              case 'Expander':
+              case 'Shrinker':
               case 'Devastator Weapon':
               case 'Duke3D_X3000':
-              case 'Shrinker':
-              case 'Expander':
                 let sharedname64 = weaponname == "Mighty Boot" || weaponname == "Pipebombs" || weaponname == "  Shotgun  ";
 
                 let nocounterpart64 = weaponname == "Duke3D_M16" || weaponname == "Golden Desert Eagle" || weaponname == "Duke3D_Incinerator" ||
-                                      weaponname == "Duke3D_X3000" || weaponname == "Shrinker" || weaponname == "Expander";
+                                      weaponname == "Expander" || weaponname == "Shrinker" || weaponname == "Duke3D_X3000";
 
                 if (altclassnum == 1 ||
                     (altclassnum == 2 && !sharedname64))
@@ -1831,15 +1831,21 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                       case 'Golden Desert Eagle': weaponalttag = weaponalttag .. "SLOT4S"; break;
                       case 'RPG': weaponalttag = weaponalttag .. "SLOT5"; break;
+                      case 'Duke3D_Incinerator': weaponalttag = weaponalttag .. "SLOT5S"; break;
                       case 'Freezethrower': weaponalttag = weaponalttag .. "SLOT6" .. (altclassnum == 2 ? "_" .. (CPlayer.mo.FindInventory("Duke64UsingShrinker") ? "SHRINKER" : "EXPANDER") : ""); break;
-                      case 'Duke3D_Incinerator': weaponalttag = weaponalttag .. "SLOT6S"; break;
+
+                      case 'Expander':
+                      case 'Shrinker':
+                        weaponalttag = weaponalttag .. "SLOT6S";
+                        break;
+
                       case 'Devastator Weapon': weaponalttag = weaponalttag .. "SLOT7"; break;
                       case 'Duke3D_X3000': weaponalttag = weaponalttag .. "SLOT7S"; break;
                       default: weaponalttag = weaponalttag .. "UNIQUE" .. (weaponname == "Expander" ? "3" : "2"); break;
                     }
                 }
 
-                let hasaltmodelab = weaponname == "Shrinker" || weaponname == "Expander";
+                let hasaltmodelab = weaponname == "Expander" || weaponname == "Shrinker";
                 let hasaltmode64 = weaponname == "Glock 17" || weaponname == "  Shotgun  " || weaponname == "RPG" ||
                                    hasaltmodelab; // slot 6 handled in weaponalttag
 
@@ -2382,7 +2388,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 115 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 114 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2416,8 +2422,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             // B.J. Blazkowicz (Castle Totenkopf SDL)
             "Totenkopf_FlameThrowerFuel", "deeppink", "[Bijou]",
             // Duke Nukem (Original/Life's a Beach)
-            "ShrinkerAmmo",      "cyan",          "[Cyan]",
-            "ExpanderAmmo",      "deeppink",      "[Bijou]",
+            "ShrinkerAmmo",      "teal",          "[Teal]",
             "DukePistolReload",  "white",         "[White]",
             "DukePipebombSpeed", "blueyellowred", "BlueYellowRed",
             // Duke Nukem (Duke Nukem 64)
@@ -2910,6 +2915,14 @@ class GoodOlHUDStatusBar : BaseStatusBar
                         break;
                     }
                 }
+                break;
+
+              case 'Expander':
+              case 'Shrinker':
+                usingaltammo = weaponname == "Shrinker";
+
+                ammotype2 = Ammo(usingaltammo ? ammotype1 : CPlayer.mo.FindInventory("ShrinkerAmmo"));
+                if (usingaltammo) { ammotype1 = usingcell; }
                 break;
 
               case 'Alien Weapon':
@@ -3494,7 +3507,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmoCapacities(int coordbasex, int coordbasey)
     {
-        int maxammocapacities = 50 * 2;
+        int maxammocapacities = 49 * 2;
 
         static const Name AmmoCapacityDefinitions[] =
         {
@@ -3532,6 +3545,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "DMissiles",      "[LightBlue]",
             "Catacomb_Bolts", "[LightBlue]",
             // Ammo 4B
+            "ShrinkerAmmo",           "[Teal]",
             "Duke64ShrinkerAmmo",     "[Teal]",
             "PlasmaCell",             "[Teal]",
             "Painkiller_ElectroAmmo", "[Teal]",
@@ -3548,7 +3562,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "RTCW_AlliedAmmo2",             "[Purple]",
             // Ammo 7
             "DoomguyStrMines",           "[Cyan]",
-            "ShrinkerAmmo",              "[Cyan]",
             "DMMissiles",                "[Cyan]",
             "ChickenAmmo",               "[Cyan]",
             "Goldeneye_GoldenGunRounds", "[Cyan]",
@@ -3557,7 +3570,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
             // Ammo 8
             "DoomguyStrGas",              "[Bijou]",
             "Totenkopf_FlameThrowerFuel", "[Bijou]",
-            "ExpanderAmmo",               "[Bijou]",
             "FWMissiles",                 "[Bijou]",
             "SprayCanAmmo",               "[Bijou]",
             "RTCW_AlliedAmmo4",           "[Bijou]"
@@ -3642,7 +3654,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case 'ShrinkerAmmo':
-              case 'ExpanderAmmo':
                 switch (classnum)
                 {
                   case CLASS_DUKE:
@@ -3911,6 +3922,26 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 }
                 break;
 
+              case 'Cell':
+              case 'DMissiles':
+              case 'Catacomb_Bolts':
+                ammoidentifier = "4";
+
+                if (ammocapacity != "Cell") { break; }
+
+                switch (classnum)
+                {
+                  case CLASS_QUAKE:
+                    if (vanillaquake) { break; }
+
+                  case CLASS_DUKE:
+                  case CLASS_PAINKILLER:
+                    ammoidentifier = ammoidentifier .. "A";
+                    break;
+                }
+                break;
+
+              case 'ShrinkerAmmo':
               case 'Duke64ShrinkerAmmo':
               case 'PlasmaCell':
               case 'Painkiller_ElectroAmmo':
@@ -3933,7 +3964,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case 'DoomguyStrMines':
-              case 'ShrinkerAmmo':
               case 'DMMissiles':
               case 'ChickenAmmo':
               case 'Goldeneye_GoldenGunRounds':
@@ -3944,7 +3974,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
               case 'DoomguyStrGas':
               case 'Totenkopf_FlameThrowerFuel':
-              case 'ExpanderAmmo':
               case 'FWMissiles':
               case 'SprayCanAmmo':
               case 'RTCW_AlliedAmmo4':
@@ -4058,6 +4087,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         bool hasslot5skulltag = (classnum == CLASS_DOOM && Weapon(CPlayer.mo.FindInventory(" GrenadeLauncher "))) ||
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Zorch Launcher"))) ||
+                                (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Duke3D_Incinerator"))) ||
                                 (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("Doomstick"))) ||
                                 (classnum == CLASS_CALEB && (Weapon(CPlayer.mo.FindInventory("BloodProximityTNT")) || Weapon(CPlayer.mo.FindInventory("BloodRemoteTNT")))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("I.M. Mines"))) ||
@@ -4074,7 +4104,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Gigazorcher 2100"))) ||
                                 (classnum == CLASS_HERETIC && Weapon(CPlayer.mo.FindInventory("CorvusTempestWand"))) ||
                                 (classnum == CLASS_WOLFEN && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Wolf3DLightningGun"))) ||
-                                (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Duke3D_Incinerator"))) ||
+                                (classnum == CLASS_DUKE && altclassnum != 2 && (Weapon(CPlayer.mo.FindInventory("Expander")) || Weapon(CPlayer.mo.FindInventory("Shrinker")))) ||
                                 (classnum == CLASS_MARATHON && Weapon(CPlayer.mo.FindInventory("SPNKR-25 Auto Cannon"))) ||
                                 (classnum == CLASS_QUAKE && Weapon(CPlayer.mo.FindInventory("Rocket Powered Impaler"))) ||
                                 (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("Split Missile"))) ||
@@ -4334,6 +4364,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         bool usingslot5skulltag = (classnum == CLASS_DOOM && weaponname == " GrenadeLauncher ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Zorch Launcher") ||
+                                  (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Duke3D_Incinerator") ||
                                   (classnum == CLASS_ROTT && weaponname == "Doomstick") ||
                                   (classnum == CLASS_CALEB && (weaponname == "BloodProximityTNT" || weaponname == "BloodRemoteTNT")) ||
                                   (classnum == CLASS_KATARN && weaponname == "I.M. Mines") ||
@@ -4390,7 +4421,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_CHEX && weaponname == "Gigazorcher 2100") ||
                                   (classnum == CLASS_HERETIC && weaponname == "CorvusTempestWand") ||
                                   (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "Wolf3DLightningGun") ||
-                                  (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Duke3D_Incinerator") ||
+                                  (classnum == CLASS_DUKE && altclassnum != 2 && (weaponname == "Expander" || weaponname == "Shrinker")) ||
                                   (classnum == CLASS_MARATHON && weaponname == "SPNKR-25 Auto Cannon") ||
                                   (classnum == CLASS_QUAKE && weaponname == "Rocket Powered Impaler") ||
                                   (classnum == CLASS_ROTT && weaponname == "Split Missile") ||
