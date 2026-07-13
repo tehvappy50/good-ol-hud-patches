@@ -2402,7 +2402,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 121 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 122 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2559,6 +2559,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             // Thug
             "Kingpin_PistolMagazine", "white", "[White]",
             // John Mullins
+            "SoF_Knives",          "gray",  "[Gray]",
             "SoF_Pistol1Magazine", "white", "[White]"
         };
 
@@ -2697,6 +2698,23 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'DeusEx_MJ12PlasmaRifle':
               case 'DeusEx_SniperRifle':
               case 'DeusEx_RiotProd':
+              case 'Kingpin_Pistol':
+              case 'Kingpin_Shotgun':
+              case 'Kingpin_GrenadeLauncher':
+              case 'Kingpin_TommyGun':
+              case 'Kingpin_Bazooka':
+              case 'Kingpin_HMG':
+              case 'SoF_Pistol1':
+              case 'SoF_Pistol2':
+              case 'SoF_AssaultRifle':
+              case 'SoF_Shotgun':
+              case 'SoF_Machinegun':
+              case 'SoF_Rocket':
+              case 'SoF_Flamegun':
+              case 'SoF_Slugger':
+              case 'SoF_MPG':
+              case 'SoF_MPistol':
+              case 'SoF_SniperRifle':
                 switch (weaponname)
                 {
                   case '9mm Pistol':
@@ -2706,6 +2724,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'RTCW_Luger':
                   case 'DeusEx_10mmPistol':
                   case 'DeusEx_StealthPistol':
+                  case 'Kingpin_Pistol':
+                  case 'SoF_Pistol1':
                     if (pistolammo) { ammotype2 = usingclip; }
                     break;
                 }
