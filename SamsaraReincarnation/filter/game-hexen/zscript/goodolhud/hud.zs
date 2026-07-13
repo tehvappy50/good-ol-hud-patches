@@ -7,7 +7,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
     const INT_MIN = 0x80000000;
     const INT_MAX = 0x7FFFFFFF;
 
-    const CLASSCOUNT = 34;
+    const CLASSCOUNT = 36;
     const ALTCLASSCOUNT = 5;
 
     const CLASS_DOOM = 0;
@@ -44,6 +44,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
     const CLASS_QUAKE3 = 31;
     const CLASS_DESCENT = 32;
     const CLASS_DEUSEX = 33;
+    const CLASS_KINGPIN = 34;
+    const CLASS_SOF = 35;
 
     static const Name AltClassTokenDefinitions[] =
     {
@@ -74,6 +76,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
         "",
         "",
         "Goldeneye_PlayerAltClassToken",
+        "",
+        "",
         "",
         "",
         "",
@@ -241,7 +245,12 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case CLASS_DESCENT: GOHcolorscheme = 18; break;
-              case CLASS_DEUSEX: GOHcolorscheme = 0; break; // nothing made yet
+
+              case CLASS_DEUSEX: // nothing made yet
+              case CLASS_KINGPIN: // nothing made yet
+              case CLASS_SOF: // nothing made yet
+                GOHcolorscheme = 0;
+                break;
             }
             break;
 
@@ -843,6 +852,13 @@ class GoodOlHUDStatusBar : BaseStatusBar
             coordnudge.Y -= 16;
         }
 
+        if (classnum == CLASS_KINGPIN)
+        {
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_SAMSARA_KINGPINCASH") .. FormatNumber(GetAmount("Kingpin_Cash"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_DARKGREEN);
+
+            coordnudge.Y -= 16;
+        }
+
         if (CVar.FindCVar("goh_showcoincounter").GetBool()) { DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_MONEY") .. FormatNumber(GetAmount("Coin"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN); }
 
         // reset nudging at this point
@@ -1129,7 +1145,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "RTCW_BASE",         "RTCW",    "",             "",              "",             "",           "",                 "", "",           "",
             "SARGE",             "",        "",             "",              "",             "",           "",                 "", "",           "",
             "PYROGX",            "",        "",             "",              "",             "",           "",                 "", "",           "",
-            "JCDENTON",          "",        "",             "",              "",             "",           "",                 "", "",           ""
+            "JCDENTON",          "",        "",             "",              "",             "",           "",                 "", "",           "",
+            "KINGPIN",           "",        "",             "",              "",             "",           "",                 "", "",           "",
+            "SOF",               "",        "",             "",              "",             "",           "",                 "", "",           ""
         };
 
         String charactername, altcharactername;
@@ -1193,7 +1211,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
           "RTCW", "",     "",     "",     "",
           "Q3SG", "",     "",     "",     "",
           "PYRO", "",     "",     "",     "",
-          "DENT", "",     "",     "",     ""
+          "DENT", "",     "",     "",     "",
+          "DUKE", "",     "",     "",     "",
+          "DUKE", "",     "",     "",     ""
         };
 
         DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_mugshot_" .. colorschemebase .. ".png", (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
@@ -2383,7 +2403,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 114 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 116 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2530,7 +2550,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "DeusEx_LAWAmmo",         "olive",    "[Olive]",
             "DeusEx_ProdAmmo",        "darkgray", "[DarkGray]",
             "DeusEx_GlockMagazine",   "white",    "[White]",
-            "DeusEx_StealthMagazine", "white",    "[White]"
+            "DeusEx_StealthMagazine", "white",    "[White]",
+            // Thug
+            "Kingpin_PistolMagazine", "white", "[White]",
+            // John Mullins
+            "SoF_Pistol1Magazine", "white", "[White]"
         };
 
         Vector2 coordnudge;
@@ -4069,7 +4093,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_BITTERMAN && Weapon(CPlayer.mo.FindInventory("Q2Phalanx"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 0 && Weapon(CPlayer.mo.FindInventory("Goldeneye_GrenadeLauncher"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory("Goldfinger_M79"))) ||
-                                (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_K43")) || Weapon(CPlayer.mo.FindInventory("RTCW_M1Garand"))));
+                                (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_K43")) || Weapon(CPlayer.mo.FindInventory("RTCW_M1Garand")))) ||
+                                (classnum == CLASS_SOF && Weapon(CPlayer.mo.FindInventory("SoF_Flamegun")));;
 
         bool hasslot6 = (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_BoltsQuickSpell"))) ||
                         (classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon6"));
@@ -4152,7 +4177,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && (weaponname == "RTCW_Grenade" || weaponname == "RTCW_Pineapple")) ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3GrenadeLauncher") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 1) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 1))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_MiniCrossbow");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_MiniCrossbow") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Crowbar") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_Pistol2");
 
         bool usingslot2 = (classnum == CLASS_DOOM && weaponname == " Shotgun ") ||
                           (classnum == CLASS_CHEX && weaponname == "Large Zorcher") ||
@@ -4191,7 +4218,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && (weaponname == "RTCW_MP40" || weaponname == "RTCW_Thompson")) ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3Shotgun") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 2) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 2))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_Shotgun");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_Shotgun") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Shotgun") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_AssaultRifle");
 
         bool usingslot3 = (classnum == CLASS_DOOM && weaponname == "Super Shotgun") ||
                           (classnum == CLASS_DOOM && altclassnum == 2 && weaponname == "Automatic Shotgun") ||
@@ -4233,7 +4262,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && (weaponname == "RTCW_Mauser" || weaponname == "RTCW_Snooper")) ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3Nailgun") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 3) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 3))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_AssaultShotgun");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_AssaultShotgun") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_GrenadeLauncher") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_Shotgun");
 
         bool usingslot4 = (classnum == CLASS_DOOM && weaponname == " Chaingun ") ||
                           (classnum == CLASS_DOOM && altclassnum == 0 && weaponname == " Machine Gun ") ||
@@ -4275,7 +4306,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && weaponname == "RTCW_FG42") ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3LightningGun") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 4) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 4))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_AssaultRifle");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_AssaultRifle") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_TommyGun") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_Machinegun");
 
         bool usingslot4skulltag = (classnum == CLASS_DOOM && weaponname == " Minigun ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Ultra Rapid Zorcher") ||
@@ -4334,7 +4367,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && weaponname == "RTCW_Panzerfaust") ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3RocketLauncher") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 5) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 5))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_GEPGun");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_GEPGun") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Bazooka") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_Rocket");
 
         bool usingslot5skulltag = (classnum == CLASS_DOOM && weaponname == " GrenadeLauncher ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Zorch Launcher") ||
@@ -4346,7 +4381,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_BITTERMAN && weaponname == "Q2Phalanx") ||
                                   (classnum == CLASS_BOND && altclassnum == 0 && weaponname == "Goldeneye_GrenadeLauncher") ||
                                   (classnum == CLASS_BOND && altclassnum == 1 && weaponname == "Goldfinger_M79") ||
-                                  (classnum == CLASS_RTCW && (weaponname == "RTCW_K43" || weaponname == "RTCW_M1Garand"));
+                                  (classnum == CLASS_RTCW && (weaponname == "RTCW_K43" || weaponname == "RTCW_M1Garand")) ||
+                                  (classnum == CLASS_SOF && weaponname == "SoF_Flamegun");
 
         bool usingslot6 = (classnum == CLASS_DOOM && weaponname == "Plasma Rifle") ||
                           (classnum == CLASS_DOOM && altclassnum == 0 && weaponname == " Incinerator ") ||
@@ -4389,7 +4425,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && weaponname == "RTCW_Venom") ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3PlasmaGun") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 6) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 6))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_FlameThrower");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_FlameThrower") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Flamethrower") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_Slugger");
 
         bool usingslot6skulltag = (classnum == CLASS_DOOM && weaponname == " RailGun ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Gigazorcher 2100") ||
@@ -4447,7 +4485,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_RTCW && weaponname == "RTCW_TeslaGun") ||
                           (classnum == CLASS_QUAKE3 && weaponname == "Q3BFG10K") ||
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 7) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 7))) ||
-                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_MJ12PlasmaRifle");
+                          (classnum == CLASS_DEUSEX && weaponname == "DeusEx_MJ12PlasmaRifle") ||
+                          (classnum == CLASS_KINGPIN && weaponname == "Kingpin_HMG") ||
+                          (classnum == CLASS_SOF && weaponname == "SoF_MPG");
 
         bool usingslot7skulltag = (classnum == CLASS_DOOM && weaponname == " BFG10K ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Liquid Zorcher") ||
