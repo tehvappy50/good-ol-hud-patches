@@ -2343,6 +2343,17 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'DeusEx_MJ12PlasmaRifle': weaponmode = weaponmode .. (CPlayer.mo.FindInventory("SamsaraDeusExPlasmaRifleAmmoType") ? "NANOPHAGE" : "PLASMA"); break;
                 }
                 break;
+
+              case 'Kingpin_Pistol':
+              case 'Kingpin_Bazooka':
+                weaponmode = "$GOODOLHUD_WEAPON_MODE_";
+
+                switch (weaponname)
+                {
+                  case 'Kingpin_Pistol': weaponmode = weaponmode .. (CPlayer.mo.FindInventory(weaponname .. "_SilencerActive") ? "" : "UN") .. "SILENCED"; break;
+                  case 'Kingpin_Bazooka': weaponmode = weaponmode .. "SAMSARA_KINGPIN_" .. (CPlayer.mo.FindInventory(weaponname .. "_BigBubbaActive") ? "BIGBUBBA" : "") .. "ROCKETS"; break;
+                }
+                break;
             }
 
             if (descentweapon1 != "")
