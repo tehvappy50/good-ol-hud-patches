@@ -75,7 +75,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         "",
         "",
         "",
-        "Goldeneye_PlayerAltClassToken",
+        "BondClassMode",
         "",
         "",
         "",
