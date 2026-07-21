@@ -1092,6 +1092,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
           case CLASS_PAINKILLER:
           case CLASS_QUAKE3:
           case CLASS_DESCENT:
+          case CLASS_KINGPIN:
           case CLASS_SOF:
             coordbase = (0 + coordnudge.X, 0 + coordnudge.Y);
 
