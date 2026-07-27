@@ -2799,6 +2799,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               // Reloadables with more than one magazine
               case 'MA-75B Assault Rifle':
               case 'ONI-71 Wave Motion Cannon':
+              case 'Mercury Class Fusion Rifle':
               case 'RTCW_K43':
               case 'RTCW_M1Garand':
                 switch (weaponname)
@@ -2807,6 +2808,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'ONI-71 Wave Motion Cannon':
                     ammotype3 = weaponname == "ONI-71 Wave Motion Cannon" ? usingcell : usingclip;
                     ammotype4 = usingrocketammo;
+                    break;
+
+                  case 'Mercury Class Fusion Rifle':
+                    ammotype3 = usingcell;
                     break;
 
                   default:
@@ -4102,6 +4107,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Ultra Rapid Zorcher"))) ||
                                 (classnum == CLASS_WOLFEN && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("  Dual Chainguns  "))) ||
                                 (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Golden Desert Eagle"))) ||
+                                (classnum == CLASS_QUAKE && Weapon(CPlayer.mo.FindInventory("Q1AssaultCannon"))) ||
                                 (classnum == CLASS_ROTT && Weapon(CPlayer.mo.FindInventory("RoTTM60"))) ||
                                 (classnum == CLASS_BLAKE && Weapon(CPlayer.mo.FindInventory("Gatling Fusion Devastator"))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodGreaseGun"))) ||
@@ -4164,6 +4170,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Liquid Zorcher"))) ||
                                 (classnum == CLASS_HEXEN && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory(" Bloodscourge "))) ||
                                 (classnum == CLASS_DUKE && altclassnum != 2 && Weapon(CPlayer.mo.FindInventory("Duke3D_X3000"))) ||
+                                (classnum == CLASS_MARATHON && Weapon(CPlayer.mo.FindInventory("Mercury Class Fusion Rifle"))) ||
                                 (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("BloodNaturomDemonto"))) ||
                                 (classnum == CLASS_KATARN && Weapon(CPlayer.mo.FindInventory("Wookie Bowcaster"))) ||
                                 (classnum == CLASS_BITTERMAN && (Weapon(CPlayer.mo.FindInventory("Q2Trap")) || Weapon(CPlayer.mo.FindInventory("Q2Disruptor")))) ||
@@ -4270,7 +4277,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_HEXEN && altclassnum == 2 && weaponname == "Fire Blast") ||
                           (classnum == CLASS_DUKE && weaponname == "Explosive Shotgun") ||
                           (classnum == CLASS_MARATHON && weaponname == "Fusion Pistol") ||
-                          (classnum == CLASS_QUAKE && (weaponname == "Grenade Launcher" || weaponname == "Grenade Launcher DOE" || weaponname == "Q1Widowmaker")) ||
+                          (classnum == CLASS_QUAKE && (weaponname == "Grenade Launcher" || weaponname == "Grenade Launcher DOE")) ||
                           (classnum == CLASS_ROTT && weaponname == "HeatSeeker") ||
                           (classnum == CLASS_BLAKE && weaponname == "Heavy Assault Weapon") ||
                           (classnum == CLASS_CALEB && weaponname == "Sawedoff") ||
@@ -4351,6 +4358,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_CHEX && weaponname == "Ultra Rapid Zorcher") ||
                                   (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "  Dual Chainguns  ") ||
                                   (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Golden Desert Eagle") ||
+                                  (classnum == CLASS_QUAKE && weaponname == "Q1AssaultCannon") ||
                                   (classnum == CLASS_ROTT && weaponname == "RoTTM60") ||
                                   (classnum == CLASS_BLAKE && weaponname == "Gatling Fusion Devastator") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodGreaseGun") ||
@@ -4530,6 +4538,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_CHEX && weaponname == "Liquid Zorcher") ||
                                   (classnum == CLASS_HEXEN && altclassnum == 1 && weaponname == " Bloodscourge ") ||
                                   (classnum == CLASS_DUKE && altclassnum != 2 && weaponname == "Duke3D_X3000") ||
+                                  (classnum == CLASS_MARATHON && weaponname == "Mercury Class Fusion Rifle") ||
                                   (classnum == CLASS_CALEB && weaponname == "BloodNaturomDemonto") ||
                                   (classnum == CLASS_KATARN && weaponname == "Wookie Bowcaster") ||
                                   (classnum == CLASS_BITTERMAN && (weaponname == "Q2Trap" || weaponname == "Q2Disruptor")) ||
