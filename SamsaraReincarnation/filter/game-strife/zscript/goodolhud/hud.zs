@@ -1232,8 +1232,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
           "Q3SG", "",     "",     "",     "",
           "PYRO", "",     "",     "",     "",
           "DENT", "",     "",     "",     "",
-          "DUKE", "",     "",     "",     "",
-          "DUKE", "",     "",     "",     ""
+          "THUG", "",     "",     "",     "",
+          "JMUL", "",     "",     "",     ""
         };
 
         DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_mugshot_" .. colorschemebase .. ".png", (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
