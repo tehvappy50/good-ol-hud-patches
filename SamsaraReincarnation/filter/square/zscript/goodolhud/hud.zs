@@ -7,7 +7,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
     const INT_MIN = 0x80000000;
     const INT_MAX = 0x7FFFFFFF;
 
-    const CLASSCOUNT = 36;
+    const CLASSCOUNT = 37;
     const ALTCLASSCOUNT = 5;
 
     const CLASS_DOOM = 0;
@@ -46,6 +46,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
     const CLASS_DEUSEX = 33;
     const CLASS_KINGPIN = 34;
     const CLASS_SOF = 35;
+    const CLASS_OUTLAWS = 36;
 
     static const Name AltClassTokenDefinitions[] =
     {
@@ -76,6 +77,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         "",
         "",
         "BondClassMode",
+        "",
         "",
         "",
         "",
@@ -249,6 +251,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case CLASS_DEUSEX: // nothing made yet
               case CLASS_KINGPIN: // nothing made yet
               case CLASS_SOF: // nothing made yet
+              case CLASS_OUTLAWS: // nothing made yet
                 GOHcolorscheme = 0;
                 break;
             }
@@ -1182,7 +1185,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PYROGX",            "",        "",             "",              "",             "",           "",                 "", "",           "",
             "JCDENTON",          "",        "",             "",              "",             "",           "",                 "", "",           "",
             "KINGPIN",           "",        "",             "",              "",             "",           "",                 "", "",           "",
-            "SOF",               "",        "",             "",              "",             "",           "",                 "", "",           ""
+            "SOF",               "",        "",             "",              "",             "",           "",                 "", "",           "",
+            "ANDERSON",          "",        "",             "",              "",             "",           "",                 "", "",           ""
         };
 
         String charactername, altcharactername;
@@ -1248,7 +1252,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
           "PYRO", "",     "",     "",     "",
           "DENT", "",     "",     "",     "",
           "THUG", "",     "",     "",     "",
-          "JMUL", "",     "",     "",     ""
+          "JMUL", "",     "",     "",     "",
+          "JAME", "",     "",     "",     ""
         };
 
         DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_mugshot_" .. colorschemebase .. ".png", (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
