@@ -4149,7 +4149,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_BOND && altclassnum == 0 && Weapon(CPlayer.mo.FindInventory("Goldeneye_GrenadeLauncher"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 1 && Weapon(CPlayer.mo.FindInventory("Goldfinger_M79"))) ||
                                 (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_K43")) || Weapon(CPlayer.mo.FindInventory("RTCW_M1Garand")))) ||
-                                (classnum == CLASS_SOF && Weapon(CPlayer.mo.FindInventory("SoF_Flamegun")));;
+                                (classnum == CLASS_SOF && Weapon(CPlayer.mo.FindInventory("SoF_Flamegun")));
 
         bool hasslot6 = (classnum == CLASS_DOOM && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon6")) ||
                         (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon6") || Weapon(CPlayer.mo.FindInventory("Stunner Rifle")))) ||
