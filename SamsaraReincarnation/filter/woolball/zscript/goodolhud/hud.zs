@@ -4095,14 +4095,18 @@ class GoodOlHUDStatusBar : BaseStatusBar
                         (classnum == CLASS_RTCW && (CPlayer.mo.FindInventory("GotWeapon2") || Weapon(CPlayer.mo.FindInventory("RTCW_Thompson")))) ||
                         (classnum != CLASS_WOLFEN && classnum != CLASS_CATACOMB && classnum != CLASS_RTCW && CPlayer.mo.FindInventory("GotWeapon2"));
 
-        bool hasslot3 = (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_BurstsQuickSpell"))) ||
+        bool hasslot3 = (classnum == CLASS_DOOM && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon3")) ||
+                        (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon3") || Weapon(CPlayer.mo.FindInventory("Automatic Shotgun")))) ||
+                        (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_BurstsQuickSpell"))) ||
                         (classnum == CLASS_RTCW && (CPlayer.mo.FindInventory("GotWeapon3") || Weapon(CPlayer.mo.FindInventory("RTCW_Snooper")))) ||
-                        (classnum != CLASS_CATACOMB && classnum != CLASS_RTCW && CPlayer.mo.FindInventory("GotWeapon3"));
+                        (classnum != CLASS_DOOM && classnum != CLASS_CATACOMB && classnum != CLASS_RTCW && CPlayer.mo.FindInventory("GotWeapon3"));
 
-        bool hasslot4 = (classnum == CLASS_WOLFEN && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon4")) ||
+        bool hasslot4 = (classnum == CLASS_DOOM && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon4")) ||
+                        (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon4") || Weapon(CPlayer.mo.FindInventory(" Flamer ")))) ||
+                        (classnum == CLASS_WOLFEN && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon4")) ||
                         (classnum == CLASS_WOLFEN && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon4") || Weapon(CPlayer.mo.FindInventory("Totenkopf_MP40Dual")))) ||
                         (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_ZappersQuickSpell"))) ||
-                        (classnum != CLASS_WOLFEN && classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon4"));
+                        (classnum != CLASS_DOOM && classnum != CLASS_WOLFEN && classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon4"));
 
         bool hasslot4skulltag = (classnum == CLASS_DOOM && Weapon(CPlayer.mo.FindInventory(" Minigun "))) ||
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Ultra Rapid Zorcher"))) ||
@@ -4124,8 +4128,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_StG44")) || Weapon(CPlayer.mo.FindInventory("RTCW_BAR")))) ||
                                 (classnum == CLASS_QUAKE3 && Weapon(CPlayer.mo.FindInventory("Q3HeavyMachineGun")));
 
-        bool hasslot5 = (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_NukesQuickSpell"))) ||
-                        (classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon5"));
+        bool hasslot5 = (classnum == CLASS_DOOM && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon5")) ||
+                        (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon5") || Weapon(CPlayer.mo.FindInventory("Land Mine Layer")))) ||
+                        (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_NukesQuickSpell"))) ||
+                        (classnum != CLASS_DOOM && classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon5"));
 
         bool hasslot5skulltag = (classnum == CLASS_DOOM && Weapon(CPlayer.mo.FindInventory(" GrenadeLauncher "))) ||
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Zorch Launcher"))) ||
@@ -4140,8 +4146,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_K43")) || Weapon(CPlayer.mo.FindInventory("RTCW_M1Garand")))) ||
                                 (classnum == CLASS_SOF && Weapon(CPlayer.mo.FindInventory("SoF_Flamegun")));;
 
-        bool hasslot6 = (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_BoltsQuickSpell"))) ||
-                        (classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon6"));
+        bool hasslot6 = (classnum == CLASS_DOOM && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon6")) ||
+                        (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon6") || Weapon(CPlayer.mo.FindInventory("Stunner Rifle")))) ||
+                        (classnum == CLASS_CATACOMB && Weapon(CPlayer.mo.FindInventory("Catacomb_BoltsQuickSpell"))) ||
+                        (classnum != CLASS_DOOM && classnum != CLASS_CATACOMB && CPlayer.mo.FindInventory("GotWeapon6"));
 
         bool hasslot6skulltag = (classnum == CLASS_DOOM && Weapon(CPlayer.mo.FindInventory(" RailGun "))) ||
                                 (classnum == CLASS_CHEX && Weapon(CPlayer.mo.FindInventory("Gigazorcher 2100"))) ||
@@ -4160,8 +4168,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_BOND && altclassnum == 1 && (Weapon(CPlayer.mo.FindInventory("Goldfinger_M1Garand")) || Weapon(CPlayer.mo.FindInventory("Goldfinger_Kar98k")))) ||
                                 (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_MG42")) || Weapon(CPlayer.mo.FindInventory("RTCW_Browning"))));
 
-        bool hasslot7 = (classnum == CLASS_DOOM && altclassnum != 1 && CPlayer.mo.FindInventory("GotWeapon7")) ||
+        bool hasslot7 = (classnum == CLASS_DOOM && altclassnum == 0 && CPlayer.mo.FindInventory("GotWeapon7")) ||
                         (classnum == CLASS_DOOM && altclassnum == 1 && (CPlayer.mo.FindInventory("GotWeapon7") || Weapon(CPlayer.mo.FindInventory(" Unmaker ")))) ||
+                        (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon7") || Weapon(CPlayer.mo.FindInventory("Pyro Cannon")))) ||
                         (classnum == CLASS_CALEB && Weapon(CPlayer.mo.FindInventory("LifeLeech"))) ||
                         (classnum == CLASS_DISRUPTOR && (CPlayer.mo.FindInventory("GotWeapon7") || CPlayer.mo.FindInventory("DisruptorTeraBall"))) ||
                         (classnum == CLASS_SW && (CPlayer.mo.FindInventory("GotWeapon7") || CPlayer.mo.FindInventory("GotNuke"))) ||
