@@ -1109,8 +1109,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
           case CLASS_PAINKILLER:
           case CLASS_QUAKE3:
           case CLASS_DESCENT:
+          case CLASS_DEUSEX:
           case CLASS_KINGPIN:
           case CLASS_SOF:
+          case CLASS_OUTLAWS:
             coordbase = (0 + coordnudge.X, 0 + coordnudge.Y);
 
             if (CPlayer.mo.FindInventory("SamsaraUsingNewFullscreenHUD")) { DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize("$GOODOLHUD_WARNING_SAMSARA_NEWFULLSCREENHUD"), coordbase, DI_SCREEN_CENTER|DI_TEXT_ALIGN_CENTER); }
