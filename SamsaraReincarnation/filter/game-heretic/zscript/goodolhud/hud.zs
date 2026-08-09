@@ -2424,7 +2424,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 117 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 120 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2576,7 +2576,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "Kingpin_PistolMagazine", "white", "[White]",
             // John Mullins
             "SoF_Knives",          "gray",  "[Gray]",
-            "SoF_Pistol1Magazine", "white", "[White]"
+            "SoF_Pistol1Magazine", "white", "[White]",
+            // James Anderson
+            "Outlaws_Knives",           "darkgray",      "[DarkGray]",
+            "Outlaws_RevolverMagazine", "white",         "[White]",
+            "Outlaws_ThrowCounter",     "blueyellowred", "BlueYellowRed"
         };
 
         Vector2 coordnudge;
@@ -2731,6 +2735,12 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'SoF_MPG':
               case 'SoF_MPistol':
               case 'SoF_SniperRifle':
+              case 'Outlaws_Revolver':
+              case 'Outlaws_Shotgun':
+              case 'Outlaws_SawedOffShotgun':
+              case 'Outlaws_DoubleBarrelShotgun':
+              case 'Outlaws_Rifle':
+              case 'Outlaws_Cannon':
                 switch (weaponname)
                 {
                   case '9mm Pistol':
@@ -2742,6 +2752,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'DeusEx_StealthPistol':
                   case 'Kingpin_Pistol':
                   case 'SoF_Pistol1':
+                  case 'Outlaws_Revolver':
                     if (pistolammo) { ammotype2 = usingclip; }
                     break;
                 }
@@ -2892,12 +2903,21 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Thermal Detonator':
               case ' Anubis Mine ':
               case 'Sacred Manacle':
+              case 'Outlaws_Knife':
+              case 'Outlaws_Dynamite':
                 switch (weaponname)
                 {
                   case 'Pipebombs': ammotype2 = CPlayer.mo.FindInventory("DukePipebombSpeed"); break;
                   case 'Thermal Detonator': ammotype2 = CPlayer.mo.FindInventory("SamsaraDarkForcesThermalDetonatorThrowPower"); break;
                   case ' Anubis Mine ': ammotype2 = CPlayer.mo.FindInventory("PS_AMUNHOLD"); break;
                   case 'Sacred Manacle': ammotype2 = CPlayer.mo.FindInventory("PSSacredManacleCharges"); break;
+
+                  case 'Outlaws_Knife':
+                  case 'Outlaws_Dynamite':
+                    let throwcounter = CPlayer.mo.FindInventory("Outlaws_ThrowCounter");
+
+                    if (throwcounter && !canshowpendingweapon) { ammotype2 = throwcounter; }
+                    break;
 
                   default:
                     let throwpower = Ammo(CPlayer.mo.FindInventory("ThrowPower"));
@@ -3484,6 +3504,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'ThrowPower':
               case 'SamsaraDarkForcesThermalDetonatorThrowPower':
               case 'PS_AMUNHOLD':
+              case 'Outlaws_ThrowCounter':
                 ammostring = "$GOODOLHUD_" .. (ammoname == "ThrowPower" && weaponname == "BloodFlamethrower" ? "CHARGE" : "THROWPOWER");
                 break;
 
@@ -4236,7 +4257,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 1) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 1))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_MiniCrossbow") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Crowbar") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_Pistol2");
+                          (classnum == CLASS_SOF && weaponname == "SoF_Pistol2") ||
+                          (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_Knife");
 
         bool usingslot2 = (classnum == CLASS_DOOM && weaponname == " Shotgun ") ||
                           (classnum == CLASS_CHEX && weaponname == "Large Zorcher") ||
@@ -4277,7 +4299,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 2) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 2))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_Shotgun") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Shotgun") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_AssaultRifle");
+                          (classnum == CLASS_SOF && weaponname == "SoF_AssaultRifle") ||
+                          (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_Shotgun");
 
         bool usingslot3 = (classnum == CLASS_DOOM && weaponname == "Super Shotgun") ||
                           (classnum == CLASS_DOOM && altclassnum == 2 && weaponname == "Automatic Shotgun") ||
@@ -4321,7 +4344,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 3) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 3))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_AssaultShotgun") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_GrenadeLauncher") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_Shotgun");
+                          (classnum == CLASS_SOF && weaponname == "SoF_Shotgun") ||
+                          (classnum == CLASS_OUTLAWS && (weaponname == "Outlaws_SawedOffShotgun" || weaponname == "Outlaws_DoubleBarrelShotgun"));
 
         bool usingslot4 = (classnum == CLASS_DOOM && weaponname == " Chaingun ") ||
                           (classnum == CLASS_DOOM && altclassnum == 0 && weaponname == " Machine Gun ") ||
@@ -4365,7 +4389,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 4) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 4))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_AssaultRifle") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_TommyGun") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_Machinegun");
+                          (classnum == CLASS_SOF && weaponname == "SoF_Machinegun") ||
+                          (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_Rifle");
 
         bool usingslot4skulltag = (classnum == CLASS_DOOM && weaponname == " Minigun ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Ultra Rapid Zorcher") ||
@@ -4427,7 +4452,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 5) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 5))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_GEPGun") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Bazooka") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_Rocket");
+                          (classnum == CLASS_SOF && weaponname == "SoF_Rocket") ||
+                          (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_Cannon");
 
         bool usingslot5skulltag = (classnum == CLASS_DOOM && weaponname == " GrenadeLauncher ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Zorch Launcher") ||
@@ -4545,7 +4571,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 7) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 7))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_MJ12PlasmaRifle") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_HMG") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_MPG");
+                          (classnum == CLASS_SOF && weaponname == "SoF_MPG") ||
+                          (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_GatlingGun");
 
         bool usingslot7skulltag = (classnum == CLASS_DOOM && weaponname == " BFG10K ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Liquid Zorcher") ||
