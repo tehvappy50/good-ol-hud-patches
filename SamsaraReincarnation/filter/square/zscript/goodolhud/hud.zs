@@ -1275,7 +1275,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawPowerupTimers(int coordbasex, int coordbasey)
     {
-        int maxpowerups = 62 * 3;
+        int maxpowerups = 63 * 3;
 
         static const Name PowerupDefinitions[] =
         {
@@ -1301,6 +1301,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PowerEnviroSuit",                       "yellow",    "[RichYellow]", // different text color for square coexistence
             "PowerNoDrown",                          "sapphire",  "[Sapphire]",
             "PowerReversoPillGain",                  "white",     "[WhiteBorder]",
+            "PowerSheriffsBadgePower",               "darkgray",  "[Inversion]", // also gives damage resistance
             "PowerSamsaraDamageBooster",             "darkred",   "[DarkRed]",
             "PowerSamsaraBloodGunsAkimboQuadDamage", "darkgray",  "[Inversion]",
             "Power2xDamage",                         "red",       "[Red]",
@@ -4678,7 +4679,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_DESCENT && ((!descentsecondaryactive && descentprimary && descentprimary.Amount == 6) || (descentsecondaryactive && descentsecondary && descentsecondary.Amount == 6))) ||
                           (classnum == CLASS_DEUSEX && weaponname == "DeusEx_FlameThrower") ||
                           (classnum == CLASS_KINGPIN && weaponname == "Kingpin_Flamethrower") ||
-                          (classnum == CLASS_SOF && weaponname == "SoF_Slugger");
+                          (classnum == CLASS_SOF && weaponname == "SoF_Slugger") ||
+                          (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_MachineGun");
 
         bool usingslot6skulltag = (classnum == CLASS_DOOM && weaponname == " RailGun ") ||
                                   (classnum == CLASS_CHEX && weaponname == "Gigazorcher 2100") ||
