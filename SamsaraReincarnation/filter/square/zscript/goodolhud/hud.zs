@@ -1301,9 +1301,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PowerEnviroSuit",                       "yellow",    "[RichYellow]", // different text color for square coexistence
             "PowerNoDrown",                          "sapphire",  "[Sapphire]",
             "PowerReversoPillGain",                  "white",     "[WhiteBorder]",
-            "PowerSheriffsBadgePower",               "darkgray",  "[Inversion]", // also gives damage resistance
             "PowerSamsaraDamageBooster",             "darkred",   "[DarkRed]",
             "PowerSamsaraBloodGunsAkimboQuadDamage", "darkgray",  "[Inversion]",
+            "PowerSheriffsBadgePower",               "darkgray",  "[Inversion]", // also gives damage resistance
             "Power2xDamage",                         "red",       "[Red]",
             "PowerSamsaraLesserTome",                "red",       "[Red]",
             "PowerQ2DoubleDamage",                   "yellow",    "[YellowBorder]",

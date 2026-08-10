@@ -1265,9 +1265,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PowerIronFeet",                         "green",     "[Green]",
             "PowerIronFeetNoColor",                  "green",     "[Green]",
             "PowerReversoPillGain",                  "white",     "[WhiteBorder]",
-            "PowerSheriffsBadgePower",               "darkgray",  "[Inversion]", // also gives damage resistance
             "PowerSamsaraDamageBooster",             "darkred",   "[DarkRed]",
             "PowerSamsaraBloodGunsAkimboQuadDamage", "darkgray",  "[Inversion]",
+            "PowerSheriffsBadgePower",               "darkgray",  "[Inversion]", // also gives damage resistance
             "PowerSamsaraLesserTome",                "red",       "[Red]",
             "PowerQ2DoubleDamage",                   "yellow",    "[YellowBorder]",
             "WTStrength",                            "green",     "[GreenBorder]",
