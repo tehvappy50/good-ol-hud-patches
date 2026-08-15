@@ -2890,8 +2890,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Outlaws_SawedOffShotgun':
               case 'Outlaws_DoubleBarrelShotgun':
               case 'Outlaws_Rifle':
-              case 'Outlaws_Cannon':
               case 'Outlaws_OrganGun':
+              case 'Outlaws_Cannon':
                 switch (weaponname)
                 {
                   case '9mm Pistol':
@@ -4319,7 +4319,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_BOND && altclassnum == 0 && Weapon(CPlayer.mo.FindInventory("Goldeneye_Phantom"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 1 && (Weapon(CPlayer.mo.FindInventory("Goldfinger_ThompsonDrum")) || Weapon(CPlayer.mo.FindInventory("Goldfinger_Thompson")))) ||
                                 (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_StG44")) || Weapon(CPlayer.mo.FindInventory("RTCW_BAR")))) ||
-                                (classnum == CLASS_QUAKE3 && Weapon(CPlayer.mo.FindInventory("Q3HeavyMachineGun")));
+                                (classnum == CLASS_QUAKE3 && Weapon(CPlayer.mo.FindInventory("Q3HeavyMachineGun"))) ||
+                                (classnum == CLASS_OUTLAWS && Weapon(CPlayer.mo.FindInventory("Outlaws_OrganGun")));
 
         bool hasslot5 = (classnum == CLASS_DOOM && altclassnum != 2 && CPlayer.mo.FindInventory("GotWeapon5")) ||
                         (classnum == CLASS_DOOM && altclassnum == 2 && (CPlayer.mo.FindInventory("GotWeapon5") || Weapon(CPlayer.mo.FindInventory("Land Mine Layer")))) ||
@@ -4359,8 +4360,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                 (classnum == CLASS_BITTERMAN && Weapon(CPlayer.mo.FindInventory("Q2PlasmaBeam"))) ||
                                 (classnum == CLASS_BOND && altclassnum == 0 && (Weapon(CPlayer.mo.FindInventory("Goldeneye_Cougar")) || Weapon(CPlayer.mo.FindInventory("Goldeneye_SilverPP7")) || Weapon(CPlayer.mo.FindInventory("Goldeneye_ArabahViper")))) ||
                                 (classnum == CLASS_BOND && altclassnum == 1 && (Weapon(CPlayer.mo.FindInventory("Goldfinger_M1Garand")) || Weapon(CPlayer.mo.FindInventory("Goldfinger_Kar98k")))) ||
-                                (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_MG42")) || Weapon(CPlayer.mo.FindInventory("RTCW_Browning")))) ||
-                                (classnum == CLASS_OUTLAWS && Weapon(CPlayer.mo.FindInventory("Outlaws_OrganGun")));
+                                (classnum == CLASS_RTCW && (Weapon(CPlayer.mo.FindInventory("RTCW_MG42")) || Weapon(CPlayer.mo.FindInventory("RTCW_Browning"))));
 
         bool hasslot7 = (classnum == CLASS_DOOM && altclassnum == 0 && CPlayer.mo.FindInventory("GotWeapon7")) ||
                         (classnum == CLASS_DOOM && altclassnum == 1 && (CPlayer.mo.FindInventory("GotWeapon7") || Weapon(CPlayer.mo.FindInventory(" Unmaker ")))) ||
@@ -4580,7 +4580,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_BOND && altclassnum == 0 && weaponname == "Goldeneye_Phantom") ||
                                   (classnum == CLASS_BOND && altclassnum == 1 && (weaponname == "Goldfinger_ThompsonDrum" || weaponname == "Goldfinger_Thompson")) ||
                                   (classnum == CLASS_RTCW && (weaponname == "RTCW_StG44" || weaponname == "RTCW_BAR")) ||
-                                  (classnum == CLASS_QUAKE3 && weaponname == "Q3HeavyMachineGun");
+                                  (classnum == CLASS_QUAKE3 && weaponname == "Q3HeavyMachineGun") ||
+                                  (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_OrganGun");
 
         bool usingslot5 = (classnum == CLASS_DOOM && weaponname == "Rocket Launcher") ||
                           (classnum == CLASS_DOOM && altclassnum == 2 && weaponname == "Land Mine Layer") ||
@@ -4699,8 +4700,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                                   (classnum == CLASS_BITTERMAN && weaponname == "Q2PlasmaBeam") ||
                                   (classnum == CLASS_BOND && altclassnum == 0 && (weaponname == "Goldeneye_Cougar" || weaponname == "Goldeneye_SilverPP7" || weaponname == "Goldeneye_ArabahViper")) ||
                                   (classnum == CLASS_BOND && altclassnum == 1 && (weaponname == "Goldfinger_M1Garand" || weaponname == "Goldfinger_Kar98k")) ||
-                                  (classnum == CLASS_RTCW && (weaponname == "RTCW_MG42" || weaponname == "RTCW_Browning")) ||
-                                  (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_OrganGun");
+                                  (classnum == CLASS_RTCW && (weaponname == "RTCW_MG42" || weaponname == "RTCW_Browning"));
 
         bool usingslot7 = (classnum == CLASS_DOOM && weaponname == "B.F.G. 9000") ||
                           (classnum == CLASS_DOOM && altclassnum == 0 && (weaponname == "B.F.G. 2704" || weaponname == "Calamity Blade")) ||
