@@ -2423,7 +2423,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 124 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 123 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2469,7 +2469,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "Duke64DumDums",            "orange",        "[Orange]",
             "Duke64ExplosiveShells",    "brick",         "[Brick]",
             "Duke64HeatSeekingRockets", "darkbrown",     "[DarkBrown]",
-            "Duke64ShrinkerAmmo",       "teal",          "[Teal]",
             "Duke64PlasmaCharge",       "blueyellowred", "BlueYellowRed",
             // Security Officer
             "UnknownResonator1", "rainbow",        "Rainbow",
@@ -2997,7 +2996,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     {
                       case '  Shotgun  ': ammotype2 = Ammo(CPlayer.mo.FindInventory("Duke64ExplosiveShells")); break;
                       case 'RPG': ammotype2 = Ammo(CPlayer.mo.FindInventory("Duke64HeatSeekingRockets")); break;
-                      case 'Freezethrower': ammotype2 = Ammo(CPlayer.mo.FindInventory("Duke64ShrinkerAmmo")); break;
+                      case 'Freezethrower': ammotype2 = Ammo(CPlayer.mo.FindInventory("ShrinkerAmmo")); break;
 
                       case 'Devastator Weapon':
                         ammotype2 = CPlayer.mo.FindInventory("Duke64PlasmaCharge");
@@ -3598,7 +3597,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmoCapacities(int coordbasex, int coordbasey)
     {
-        int maxammocapacities = 49 * 2;
+        int maxammocapacities = 48 * 2;
 
         static const Name AmmoCapacityDefinitions[] =
         {
@@ -3637,7 +3636,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "Catacomb_Bolts", "[LightBlue]",
             // Ammo 4B
             "ShrinkerAmmo",           "[Teal]",
-            "Duke64ShrinkerAmmo",     "[Teal]",
             "PlasmaCell",             "[Teal]",
             "Painkiller_ElectroAmmo", "[Teal]",
             // Ammo 5
@@ -3747,9 +3745,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'ShrinkerAmmo':
                 switch (classnum)
                 {
-                  case CLASS_DUKE:
-                    if (classnum == CLASS_DUKE && altclassnum != 2) { break; }
-
+                  case CLASS_DUKE: break;
                   default: continue;
                 }
                 break;
@@ -3757,7 +3753,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case 'Duke64DumDums':
               case 'Duke64ExplosiveShells':
               case 'Duke64HeatSeekingRockets':
-              case 'Duke64ShrinkerAmmo':
                 switch (classnum)
                 {
                   case CLASS_DUKE:
@@ -4012,7 +4007,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case 'ShrinkerAmmo':
-              case 'Duke64ShrinkerAmmo':
               case 'PlasmaCell':
               case 'Painkiller_ElectroAmmo':
                 ammoidentifier = "4B";
