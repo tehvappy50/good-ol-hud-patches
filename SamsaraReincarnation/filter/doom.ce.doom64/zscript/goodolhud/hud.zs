@@ -1662,15 +1662,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 if (!psp2 || canshowpendingweapon)
                 {
-                    int laserlevel = 1;
-
-                    for (int laserlevelcheck = 1; laserlevelcheck <= 3; laserlevelcheck++)
-                    {
-                        if (CPlayer.mo.FindInventory("UnmakerUpgrade" .. laserlevelcheck .. "Icon")) { laserlevel++; }
-                    }
+                    let laserlevel = CPlayer.mo.FindInventory("UnmakerUpgrades");
 
                     weaponmode = StringTable.Localize("$GOODOLHUD_WEAPON_MODE_LASER") .. StringTable.Localize("$GOODOLHUD_EXTRA_END") ..
-                                 " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. FormatNumber(laserlevel, 1, 10, 0, StringTable.Localize("$GOODOLHUD_WEAPON_MODE_LEVEL") .. " ");
+                                 " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. FormatNumber((laserlevel ? clamp(laserlevel.Amount, 0, laserlevel.MaxAmount) : 0) + 1, 1, 10, 0, StringTable.Localize("$GOODOLHUD_WEAPON_MODE_LEVEL") .. " ");
                 } else {
                     weaponmode = "$GOODOLHUD_WEAPON_MODE_";
 
