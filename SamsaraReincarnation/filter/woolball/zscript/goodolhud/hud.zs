@@ -133,8 +133,66 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         GOHmHUDFont = HUDFont.Create(fnt, fnt.GetCharWidth("0") + 2, Mono_CellCenter, 2, 2);
 
-        GOHdiparms0 = InventoryBarState.CreateNoBox(GOHmHUDFont, Font.CR_UNTRANSLATED, 1, (40, 34), "graphics/hud/theme0/icons/goodolhud_icon_inventoryselector.png", (36, 30), "graphics/hud/theme0/icons/goodolhud_icon_inventoryleft.png", "graphics/hud/theme0/icons/goodolhud_icon_inventoryright.png", (44, -38), DI_SCREEN_CENTER_BOTTOM);
-        GOHdiparms1 = InventoryBarState.CreateNoBox(GOHmHUDFont, Font.CR_UNTRANSLATED, 1, (40, 34), "graphics/hud/theme1/icons/goodolhud_icon_inventoryselector.png", (36, 30), "graphics/hud/theme1/icons/goodolhud_icon_inventoryleft.png", "graphics/hud/theme1/icons/goodolhud_icon_inventoryright.png", (44, -38), DI_SCREEN_CENTER_BOTTOM);
+        GOHdiparms0 = InventoryBarState.CreateNoBox(GOHmHUDFont, Font.CR_UNTRANSLATED, 1., (40, 34), "graphics/hud/theme0/icons/goodolhud_icon_inventoryselector.png", (36, 30), "graphics/hud/theme0/icons/goodolhud_icon_inventoryleft.png", "graphics/hud/theme0/icons/goodolhud_icon_inventoryright.png", (44, -38), DI_SCREEN_CENTER_BOTTOM);
+        GOHdiparms1 = InventoryBarState.CreateNoBox(GOHmHUDFont, Font.CR_UNTRANSLATED, 1., (40, 34), "graphics/hud/theme1/icons/goodolhud_icon_inventoryselector.png", (36, 30), "graphics/hud/theme1/icons/goodolhud_icon_inventoryleft.png", "graphics/hud/theme1/icons/goodolhud_icon_inventoryright.png", (44, -38), DI_SCREEN_CENTER_BOTTOM);
+    }
+
+    override void Tick()
+    {
+        Super.Tick();
+
+        GOHDeadTimerInit();
+    }
+
+    bool playerdead;
+    int playerdeadtimer;
+
+    const PlayerDeadTimerCheckTimer = 105;
+    const PlayerDeadTimerCheckTimerTotal = 108;
+    const PlayerDeadTimerCheckFragCount = 111;
+    const PlayerDeadTimerCheckTeamFragCount = 114;
+    const PlayerDeadTimerCheckMonsterCounter = 117;
+    const PlayerDeadTimerCheckSecretCounter = 120;
+    const PlayerDeadTimerCheckItemCounterSwap = PlayerDeadTimerCheckSecretCounter;
+    const PlayerDeadTimerCheckItemCounter = 123;
+    const PlayerDeadTimerCheckSecretCounterSwap = PlayerDeadTimerCheckItemCounter;
+    const PlayerDeadTimerCheckKeys = 126;
+    const PlayerDeadTimerCheckMiscItems = 129;
+    const PlayerDeadTimerCheckOxygen = 132;
+    const PlayerDeadTimerCheckPowerups = 135;
+    const PlayerDeadTimerCheckHazardCount = 138;
+    const PlayerDeadTimerCheckStatusTimers = 141;
+    const PlayerDeadTimerCheckPowerupTimers = 144;
+    const PlayerDeadTimerCheckLevelExperience = 147;
+    const PlayerDeadTimerCheckHealth = 150;
+    const PlayerDeadTimerCheckHexenArmorSwap = PlayerDeadTimerCheckHealth;
+    const PlayerDeadTimerCheckHexenArmor = 153;
+    const PlayerDeadTimerCheckArmorSwap = PlayerDeadTimerCheckHexenArmor;
+    const PlayerDeadTimerCheckArmor = 156;
+    const PlayerDeadTimerCheckHealthSwap = PlayerDeadTimerCheckArmor;
+    const PlayerDeadTimerCheckEnergy = 159;
+    const PlayerDeadTimerCheckPlayerStats = 162;
+    const PlayerDeadTimerCheckMugshot = 165;
+    const PlayerDeadTimerCheckPlayerName = 168;
+    const PlayerDeadTimerCheckTeamName = 171;
+    const PlayerDeadTimerCheckCoinCounter = 174;
+    const PlayerDeadTimerCheckClassCurrencies = 177;
+    const PlayerDeadTimerCheckAmmoCapacities = 180;
+    const PlayerDeadTimerCheckAmmo = 183;
+    const PlayerDeadTimerCheckCooldownTimersWeaponBar = 186;
+    const PlayerDeadTimerCheckWeaponBar = 189;
+    const PlayerDeadTimerCheckCooldownTimersSelectedInventory = 192;
+    const PlayerDeadTimerCheckSelectedInventory = 195;
+    const PlayerDeadTimerCheckInventoryBar = PlayerDeadTimerCheckSelectedInventory;
+    const PlayerDeadTimerCheckWeaponName = 198;
+    const PlayerDeadTimerCheckDescentCamera = 201;
+
+    protected void GOHDeadTimerInit()
+    {
+        playerdead = CPlayer.mo.Health <= 0;
+
+        if (playerdead) { playerdeadtimer++; }
+        else { playerdeadtimer = 0; }
     }
 
     override void Draw (int state, double TicFrac)
@@ -336,7 +394,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
             }
 
-            DrawString(GOHmHUDFont, (teamcolor == Font.CR_UNTRANSLATED ? "\c" .. colorschemetext : "") .. teamname, coordbase, DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, teamcolor);
+            DrawString(GOHmHUDFont, (teamcolor == Font.CR_UNTRANSLATED ? "\c" .. colorschemetext : "") .. teamname, coordbase, DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, teamcolor, GOHHideOnDeath(1., PlayerDeadTimerCheckTeamName));
 
             coordnudge.Y -= 16;
             powerupnudge.Y -= 16;
@@ -392,7 +450,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                        (classnum == CLASS_DEMONESS ? "\c[Green]" .. StringTable.Localize("$GOODOLHUD_SAMSARA_DEMONESSWISDOM") .. " " .. FormatNumber(GetAmount("Hexen2Wisdom"), 1, 3) .. " \c-" : "") ..
                        (classnum == CLASS_DEMONESS ? "\c[LightBlue]" .. StringTable.Localize("$GOODOLHUD_SAMSARA_DEMONESSDEXTERITY") .. " " .. FormatNumber(GetAmount("Hexen2Dexterity"), 1, 3) .. " \c-" : "") ..
                        (classnum == CLASS_DEMONESS ? "\c[Red]" .. StringTable.Localize("$GOODOLHUD_SAMSARA_DEMONESSSTRENGTH") .. " " .. FormatNumber(GetAmount("Hexen2Strength"), 1, 3) .. " \c-" : ""),
-                       coordbase, DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT);
+                       coordbase, DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckPlayerStats));
 
             bottomleftvertelements++;
 
@@ -408,20 +466,20 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             [bioenergyamt, bioenergymaxamt] = GetAmount("DeusEx_BioEnergy");
 
-            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM);
+            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckEnergy));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_lightblue.png";
-            DrawBar(bar, barblank, bioenergyamt, bioenergymaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, bioenergyamt, bioenergymaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckEnergy));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_energyovermax1.png";
-            DrawBar(bar, barblank, bioenergyamt - bioenergymaxamt, bioenergymaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, bioenergyamt - bioenergymaxamt, bioenergymaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckEnergy));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_energyovermax2.png";
-            DrawBar(bar, barblank, bioenergyamt - (bioenergymaxamt * 2), bioenergymaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, bioenergyamt - (bioenergymaxamt * 2), bioenergymaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckEnergy));
 
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ENERGY"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ENERGY"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE, GOHHideOnDeath(1., PlayerDeadTimerCheckEnergy));
 
-            DrawString(GOHmHUDFont, FormatNumber(bioenergyamt, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(bioenergymaxamt, 1, 4) : ""), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_LIGHTBLUE);
+            DrawString(GOHmHUDFont, FormatNumber(bioenergyamt, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(bioenergymaxamt, 1, 4) : ""), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_LIGHTBLUE, GOHHideOnDeath(1., PlayerDeadTimerCheckEnergy));
 
             bottomleftvertelements++;
 
@@ -448,18 +506,18 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             let canshowarmortype = CVar.FindCVar("goh_showarmortype").GetBool();
 
-            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM);
+            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_green.png";
-            DrawBar(bar, barblank, hasquakepentagram ? 666 : armor.Amount, totalarmor, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, hasquakepentagram ? 666 : armor.Amount, totalarmor, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_armorovermax1.png";
-            DrawBar(bar, barblank, (hasquakepentagram ? 666 : armor.Amount) - totalarmor, totalarmor, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, (hasquakepentagram ? 666 : armor.Amount) - totalarmor, totalarmor, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_armorovermax2.png";
-            DrawBar(bar, barblank, (hasquakepentagram ? 666 : armor.Amount) - (totalarmor * 2), totalarmor, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, (hasquakepentagram ? 666 : armor.Amount) - (totalarmor * 2), totalarmor, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
 
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ARMOR"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ARMOR"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
 
             if (canshowarmortype)
             {
@@ -583,13 +641,13 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   case 'WHAdamantineRingArmor': armorcolor = "gray"; break;
                 }
 
-                DrawImage(hasquakepentagram ? "PENTICON_HUDT" : "graphics/hud/" .. theme .. "/icons/goodolhud_icon_armor" .. armorcolor .. ".png", (coordbase.X + 83, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM);
+                DrawImage(hasquakepentagram ? "PENTICON_HUDT" : "graphics/hud/" .. theme .. "/icons/goodolhud_icon_armor" .. armorcolor .. ".png", (coordbase.X + 83, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
             }
 
             DrawString(GOHmHUDFont,
                        FormatNumber(hasquakepentagram ? 666 : armor.Amount, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(totalarmor, 1, 4) : "") ..
                        (CVar.FindCVar("goh_showarmorsavepercent").GetBool() ? " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. String.Format("%.1f", (hasquakepentagram ? 1.0 : armor.SavePercent) * 100) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE") .. StringTable.Localize("$GOODOLHUD_EXTRA_END") : ""),
-                       (coordbase.X + 77 + (canshowarmortype ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
+                       (coordbase.X + 77 + (canshowarmortype ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckArmorSwap : PlayerDeadTimerCheckArmor));
 
             bottomleftvertelements++;
 
@@ -599,7 +657,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             if (swaphealtharmor) { coordnudge.Y += 16; }
         }
 
-        if (currenthexenarmor > 0)
+        if (hexenarmor && currenthexenarmor > 0)
         {
             if (swaphealtharmor) { coordnudge.Y -= 16; }
 
@@ -607,14 +665,14 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             let canshowarmorclass = CVar.FindCVar("goh_showarmorclass").GetBool();
 
-            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM);
+            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHexenArmorSwap : PlayerDeadTimerCheckHexenArmor));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_green.png";
-            DrawBar(bar, barblank, currenthexenarmor, 100, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, currenthexenarmor, 100, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHexenArmorSwap : PlayerDeadTimerCheckHexenArmor));
 
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ARMORCLASS"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ARMORCLASS"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHexenArmorSwap : PlayerDeadTimerCheckHexenArmor));
 
-            DrawString(GOHmHUDFont, FormatNumber(currenthexenarmor / (canshowarmorclass ? 5 : 1), 1, 3) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(100 / (canshowarmorclass ? 5 : 1), 1, 3) : ""), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
+            DrawString(GOHmHUDFont, FormatNumber(currenthexenarmor / (canshowarmorclass ? 5 : 1), 1, 3) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(100 / (canshowarmorclass ? 5 : 1), 1, 3) : ""), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHexenArmorSwap : PlayerDeadTimerCheckHexenArmor));
 
             bottomleftvertelements++;
 
@@ -625,7 +683,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         }
 
         // Health
-        if (swaphealtharmor) { coordnudge.Y += 16 * (0 + ((armor && armor.Amount > 0) || hasquakepentagram) + (currenthexenarmor > 0)); }
+        if (swaphealtharmor) { coordnudge.Y += 16 * (0 + ((armor && armor.Amount > 0) || hasquakepentagram) + (hexenarmor && currenthexenarmor > 0)); }
 
         coordbase = (99 + coordnudge.X, -4 + coordnudge.Y);
 
@@ -639,21 +697,21 @@ class GoodOlHUDStatusBar : BaseStatusBar
         String invulnbarcolor = "white";
         let invulntextcolor = Font.CR_WHITE;
 
-        DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM);
+        DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
 
         bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_" .. (cancolorhealth ? invulnbarcolor : "red") .. ".png";
-        DrawBar(bar, barblank, CPlayer.Health, CPlayer.mo.GetMaxHealth(true), (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+        DrawBar(bar, barblank, CPlayer.Health, CPlayer.mo.GetMaxHealth(true), (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
 
         if (!cancolorhealth) // do not overlap with multiple bars if invulned
         {
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_healthovermax1.png";
-            DrawBar(bar, barblank, CPlayer.Health - CPlayer.mo.GetMaxHealth(true), CPlayer.mo.GetMaxHealth(true), (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, CPlayer.Health - CPlayer.mo.GetMaxHealth(true), CPlayer.mo.GetMaxHealth(true), (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_healthovermax2.png";
-            DrawBar(bar, barblank, CPlayer.Health - (CPlayer.mo.GetMaxHealth(true) * 2), CPlayer.mo.GetMaxHealth(true), (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, CPlayer.Health - (CPlayer.mo.GetMaxHealth(true) * 2), CPlayer.mo.GetMaxHealth(true), (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
         }
 
-        DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_HEALTH"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, cancolorhealth ? invulntextcolor : Font.CR_RED);
+        DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_HEALTH"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, cancolorhealth ? invulntextcolor : Font.CR_RED, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
 
         if (canshowberserk)
         {
@@ -672,16 +730,16 @@ class GoodOlHUDStatusBar : BaseStatusBar
             if (BerserkIconDefinitions[berserkicon] != "") { berserkiconleft = BerserkIconDefinitions[berserkicon]; }
             if (BerserkIconDefinitions[berserkicon + 1] != "") { berserkiconright = BerserkIconDefinitions[berserkicon + 1]; }
 
-            DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconleft .. ".png", (coordbase.X + 83 - (berserkiconright != "" ? 3 : 0), coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM);
-            if (berserkiconright != "") { DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconright .. ".png", (coordbase.X + 86, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM); }
+            DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconleft .. ".png", (coordbase.X + 83 - (berserkiconright != "" ? 3 : 0), coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
+            if (berserkiconright != "") { DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_berserk_" .. berserkiconright .. ".png", (coordbase.X + 86, coordbase.Y - 2), DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth)); }
         }
 
-        DrawString(GOHmHUDFont, FormatNumber(canshownegativehealth ? CPlayer.mo.Health : CPlayer.Health, 1, 4 + canshownegativehealth) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(CPlayer.mo.GetMaxHealth(true), 1, 4) : ""), (coordbase.X + 77 + (canshowberserk ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, cancolorhealth ? invulntextcolor : Font.CR_RED);
+        DrawString(GOHmHUDFont, FormatNumber(canshownegativehealth ? CPlayer.mo.Health : CPlayer.Health, 1, 4 + canshownegativehealth) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(CPlayer.mo.GetMaxHealth(true), 1, 4) : ""), (coordbase.X + 77 + (canshowberserk ? 16 : 0), coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, cancolorhealth ? invulntextcolor : Font.CR_RED, GOHHideOnDeath(1., swaphealtharmor ? PlayerDeadTimerCheckHealthSwap : PlayerDeadTimerCheckHealth));
 
         coordnudge.Y -= 16;
         powerupnudge.Y -= 16;
 
-        if (swaphealtharmor) { coordnudge.Y -= 16 * (0 + ((armor && armor.Amount > 0) || hasquakepentagram) + (currenthexenarmor > 0)); }
+        if (swaphealtharmor) { coordnudge.Y -= 16 * (0 + ((armor && armor.Amount > 0) || hasquakepentagram) + (hexenarmor && currenthexenarmor > 0)); }
 
         // Level and experience
         if (classnum == CLASS_WITCHAVEN || classnum == CLASS_DEMONESS)
@@ -737,17 +795,17 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             int experiencenextamount = clamp(-(experiencereqamount - experienceamount), INT_MIN, 0);
 
-            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM);
+            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckLevelExperience));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_teal.png";
-            DrawBar(bar, barblank, experienceamount - experienceoffset, experiencereqamount - experienceoffset, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, experienceamount - experienceoffset, experiencereqamount - experienceoffset, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckLevelExperience));
 
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_EXPERIENCE" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_TEAL);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_EXPERIENCE" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_TEAL, GOHHideOnDeath(1., PlayerDeadTimerCheckLevelExperience));
 
             DrawString(GOHmHUDFont,
                        FormatNumber(CVar.FindCVar("goh_showxptonextlevel").GetBool() ? experiencenextamount : experienceamount, 1, 10) .. (canshowmaxamounts && currentlevel < maxlevel ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(experiencereqamount, 1, 10) : "") ..
                        " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. FormatNumber(currentlevel, 1, 4) .. StringTable.Localize("$GOODOLHUD_EXTRA_END"),
-                       (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_TEAL);
+                       (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_TEAL, GOHHideOnDeath(1., PlayerDeadTimerCheckLevelExperience));
 
             bottomleftvertelements++;
 
@@ -781,20 +839,20 @@ class GoodOlHUDStatusBar : BaseStatusBar
             coordbase = (99 + coordnudge.X, -4 + coordnudge.Y);
             int hazardcountamt = CPlayer.HazardCount, hazardcountmaxamt = 16 * TICRATE;
 
-            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM);
+            DrawImage(barbase, coordbase, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckHazardCount));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_darkgreen.png";
-            DrawBar(bar, barblank, hazardcountamt, hazardcountmaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, hazardcountamt, hazardcountmaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckHazardCount));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_hazardovermax1.png";
-            DrawBar(bar, barblank, hazardcountamt - hazardcountmaxamt, hazardcountmaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, hazardcountamt - hazardcountmaxamt, hazardcountmaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckHazardCount));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_hazardovermax2.png";
-            DrawBar(bar, barblank, hazardcountamt - (hazardcountmaxamt * 2), hazardcountmaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM);
+            DrawBar(bar, barblank, hazardcountamt - (hazardcountmaxamt * 2), hazardcountmaxamt, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckHazardCount));
 
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_HAZARD" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_DARKGREEN);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_HAZARD" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_DARKGREEN, GOHHideOnDeath(1., PlayerDeadTimerCheckHazardCount));
 
-            DrawString(GOHmHUDFont, String.Format("%.1f", hazardcountamt * 100.0 / hazardcountmaxamt) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE"), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_DARKGREEN);
+            DrawString(GOHmHUDFont, String.Format("%.1f", hazardcountamt * 100.0 / hazardcountmaxamt) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE"), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_DARKGREEN, GOHHideOnDeath(1., PlayerDeadTimerCheckHazardCount));
 
             bottomleftvertelements++;
 
@@ -818,7 +876,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             if (CPlayer.mo.FindInventory("DescentMissileCamera")) { cameraname = "DSMISCAM"; }
             else if (CPlayer.mo.FindInventory("DescentMissileStaticToken")) { cameraname = "DESSTAT1"; }
 
-            if (cameraname != "") { DrawImage(cameraname, coordbase, DI_SCREEN_CENTER_BOTTOM, 1, (-1, -1), camerascale); }
+            if (cameraname != "") { DrawImage(cameraname, coordbase, DI_SCREEN_CENTER_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckDescentCamera), (-1, -1), camerascale); }
         }
 
         // Bottom right.
@@ -853,19 +911,19 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
         if (classnum == CLASS_PAINKILLER)
         {
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_GOLD") .. FormatNumber(GetAmount("Painkiller_GoldAmount"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GOLD);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_GOLD") .. FormatNumber(GetAmount("Painkiller_GoldAmount"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GOLD, GOHHideOnDeath(1., PlayerDeadTimerCheckClassCurrencies));
 
             coordnudge.Y -= 16;
         }
 
         if (classnum == CLASS_KINGPIN)
         {
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_SAMSARA_KINGPINCASH") .. FormatNumber(GetAmount("Kingpin_Cash"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_DARKGREEN);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_SAMSARA_KINGPINCASH") .. FormatNumber(GetAmount("Kingpin_Cash"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_DARKGREEN, GOHHideOnDeath(1., PlayerDeadTimerCheckClassCurrencies));
 
             coordnudge.Y -= 16;
         }
 
-        if (CVar.FindCVar("goh_showcoincounter").GetBool()) { DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_MONEY") .. FormatNumber(GetAmount("Coin"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN); }
+        if (CVar.FindCVar("goh_showcoincounter").GetBool()) { DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_MONEY") .. FormatNumber(GetAmount("Coin"), 1, 10), (coordbase.X, (coordbase.Y + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_GREEN, GOHHideOnDeath(1., PlayerDeadTimerCheckCoinCounter)); }
 
         // reset nudging at this point
         coordnudge = (0 - (24 * canshowmaxamounts), 0 - (16 * weaponnameamount));
@@ -886,11 +944,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
             }
 
-            DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_inventory_" .. colorschemebase .. ".png", coordbase, DI_SCREEN_RIGHT_BOTTOM);
+            DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_inventory_" .. colorschemebase .. ".png", coordbase, DI_SCREEN_RIGHT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckSelectedInventory));
 
-            DrawInventoryIcon(CPlayer.mo.InvSel, (coordbase.X, coordbase.Y - 17), DI_DIMDEPLETED|DI_SCREEN_RIGHT_BOTTOM|DI_ITEM_CENTER, 1, (36, 30));
+            DrawInventoryIcon(CPlayer.mo.InvSel, (coordbase.X, coordbase.Y - 17), DI_DIMDEPLETED|DI_SCREEN_RIGHT_BOTTOM|DI_ITEM_CENTER, GOHHideOnDeath(1., PlayerDeadTimerCheckSelectedInventory), (36, 30));
 
-            DrawString(GOHmHUDFont, CPlayer.mo.InvSel.Amount > 1 || canalwaysshowinvcounter || showingitempercentage ? "\c" .. colorschemetext .. (showingitempercentage ? (FormatNumber(CPlayer.mo.InvSel.Amount * 100.0 / CPlayer.mo.InvSel.MaxAmount, 1, 3) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : FormatNumber(CPlayer.mo.InvSel.Amount, 1, 5)) : "", (coordbase.X - 1, coordbase.Y - 50), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_CENTER);
+            DrawString(GOHmHUDFont, CPlayer.mo.InvSel.Amount > 1 || canalwaysshowinvcounter || showingitempercentage ? "\c" .. colorschemetext .. (showingitempercentage ? (FormatNumber(CPlayer.mo.InvSel.Amount * 100.0 / CPlayer.mo.InvSel.MaxAmount, 1, 3) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : FormatNumber(CPlayer.mo.InvSel.Amount, 1, 5)) : "", (coordbase.X - 1, coordbase.Y - 50), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckSelectedInventory));
         }
 
         // Weapon bar
@@ -909,14 +967,14 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             coordbase.Y += 16 * (con_centernotify * con_notifylines);
 
-            DrawImage(barbase, coordbase, DI_SCREEN_CENTER_TOP);
+            DrawImage(barbase, coordbase, DI_SCREEN_CENTER_TOP, GOHHideOnDeath(1., PlayerDeadTimerCheckOxygen));
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_blue.png";
-            DrawBar(bar, barblank, CPlayer.air_finished - Level.maptime, Level.airsupply, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_CENTER_TOP);
+            DrawBar(bar, barblank, CPlayer.air_finished - Level.maptime, Level.airsupply, (coordbase.X, coordbase.Y - 1), 0, SHADER_HORZ, DI_SCREEN_CENTER_TOP, GOHHideOnDeath(1., PlayerDeadTimerCheckOxygen));
 
-            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_OXYGEN"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_CENTER_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BLUE);
+            DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_OXYGEN"), (coordbase.X - 79, coordbase.Y - 14), DI_SCREEN_CENTER_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BLUE, GOHHideOnDeath(1., PlayerDeadTimerCheckOxygen));
 
-            DrawString(GOHmHUDFont, FormatNumber(clamp((CPlayer.air_finished - Level.maptime + (TICRATE - 1)) / TICRATE, 0, INT_MAX), 1, 4), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_CENTER_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_BLUE);
+            DrawString(GOHmHUDFont, FormatNumber(clamp((CPlayer.air_finished - Level.maptime + (TICRATE - 1)) / TICRATE, 0, INT_MAX), 1, 4), (coordbase.X + 77, coordbase.Y - 14), DI_SCREEN_CENTER_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_BLUE, GOHHideOnDeath(1., PlayerDeadTimerCheckOxygen));
         }
 
         // Top right.
@@ -943,13 +1001,13 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 timeleft -= minutes * TICRATE * 60;
                 seconds = timeleft / TICRATE;
 
-                DrawString(GOHmHUDFont, "\c" .. colorschemetext .. String.Format("%02d:%02d:%02d", hours, minutes, seconds), coordbase, timerflags);
+                DrawString(GOHmHUDFont, "\c" .. colorschemetext .. String.Format("%02d:%02d:%02d", hours, minutes, seconds), coordbase, timerflags, Font.CR_UNTRANSLATED, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckTimer));
             } else {
                 int hubsec = Level.time / 35;
                 int mapsec = Level.maptime / 35;
                 int parsec = Level.partime;
 
-                DrawString(GOHmHUDFont, "\c" .. (CVar.FindCVar("goh_colortimerunderpar").GetBool() && mapsec < parsec && !deathmatch ? colorschemeactivetext : colorschemetext) .. String.Format("%02d:%02d:%02d", hubsec / 3600, (hubsec % 3600) / 60, hubsec % 60), coordbase, timerflags);
+                DrawString(GOHmHUDFont, "\c" .. (CVar.FindCVar("goh_colortimerunderpar").GetBool() && mapsec < parsec && !deathmatch ? colorschemeactivetext : colorschemetext) .. String.Format("%02d:%02d:%02d", hubsec / 3600, (hubsec % 3600) / 60, hubsec % 60), coordbase, timerflags, Font.CR_UNTRANSLATED, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckTimer));
             }
 
             coordnudge.Y += 16;
@@ -962,7 +1020,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             int totalsec = Level.totaltime / 35;
 
-            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. String.Format("%02d:%02d:%02d", totalsec / 3600, (totalsec % 3600) / 60, totalsec % 60), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT);
+            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. String.Format("%02d:%02d:%02d", totalsec / 3600, (totalsec % 3600) / 60, totalsec % 60), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckTimerTotal));
 
             coordnudge.Y += 16;
         }
@@ -974,12 +1032,12 @@ class GoodOlHUDStatusBar : BaseStatusBar
         if (CPlayer.mo.FindInventory("ChickenModeOn"))
         {
             // Chicken kill count
-            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. FormatNumber(GetAmount("ChickenKillCount"), 1, 10), coordbase, killcountflags);
+            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. FormatNumber(GetAmount("ChickenKillCount"), 1, 10), coordbase, killcountflags, Font.CR_UNTRANSLATED, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckFragCount));
         } else {
             if (deathmatch)
             {
                 // Individual frag count
-                DrawString(GOHmHUDFont, "\c" .. colorschemetext .. FormatNumber(CPlayer.FragCount, 1, 10 + (CPlayer.FragCount < 0)), coordbase, killcountflags);
+                DrawString(GOHmHUDFont, "\c" .. colorschemetext .. FormatNumber(CPlayer.FragCount, 1, 10 + (CPlayer.FragCount < 0)), coordbase, killcountflags, Font.CR_UNTRANSLATED, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckFragCount));
 
                 // Team frag count
                 if (teamplay)
@@ -995,11 +1053,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
                         if (PlayerInGame[i] && players[i].GetTeam() == CPlayer.GetTeam()) { count += players[i].FragCount; }
                     }
 
-                    DrawString(GOHmHUDFont, (teamcolor == Font.CR_UNTRANSLATED ? "\c" .. colorschemetext : "") .. FormatNumber(count, 1, 10 + (count < 0)), coordbase, killcountflags, teamcolor);
+                    DrawString(GOHmHUDFont, (teamcolor == Font.CR_UNTRANSLATED ? "\c" .. colorschemetext : "") .. FormatNumber(count, 1, 10 + (count < 0)), coordbase, killcountflags, teamcolor, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckTeamFragCount));
                 }
             } else {
                 // Kill count
-                DrawString(GOHmHUDFont, "\c" .. colorschemetext .. FormatNumber(GetAmount("KillCountAmountTrue"), 1, 10), coordbase, killcountflags);
+                DrawString(GOHmHUDFont, "\c" .. colorschemetext .. FormatNumber(GetAmount("KillCountAmountTrue"), 1, 10), coordbase, killcountflags, Font.CR_UNTRANSLATED, deathmatch ? 1. : GOHHideOnDeath(1., PlayerDeadTimerCheckFragCount));
             }
         }
 
@@ -1018,10 +1076,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
             {
                 coordbase = (-102 + coordnudge.X, 3 + coordnudge.Y);
 
-                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_" .. (CVar.FindCVar("goh_monstercounterlabel").GetBool() ? "KILLS" : "MONSTERS")), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK);
+                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_" .. (CVar.FindCVar("goh_monstercounterlabel").GetBool() ? "KILLS" : "MONSTERS")), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK, GOHHideOnDeath(1., PlayerDeadTimerCheckMonsterCounter));
 
-                DrawString(GOHmHUDFont, FormatNumber(Level.killed_monsters, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK);
-                DrawString(GOHmHUDFont, FormatNumber(Level.total_monsters, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_BRICK);
+                DrawString(GOHmHUDFont, FormatNumber(Level.killed_monsters, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_BRICK, GOHHideOnDeath(1., PlayerDeadTimerCheckMonsterCounter));
+                DrawString(GOHmHUDFont, FormatNumber(Level.total_monsters, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_BRICK, GOHHideOnDeath(1., PlayerDeadTimerCheckMonsterCounter));
 
                 coordnudge.Y += 16;
             }
@@ -1033,10 +1091,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 coordbase = (-102 + coordnudge.X, 3 + coordnudge.Y);
 
-                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_SECRETS"), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_SECRETS"), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW, GOHHideOnDeath(1., swapitemssecrets ? PlayerDeadTimerCheckSecretCounterSwap : PlayerDeadTimerCheckSecretCounter));
 
-                DrawString(GOHmHUDFont, FormatNumber(Level.found_secrets, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
-                DrawString(GOHmHUDFont, FormatNumber(Level.total_secrets, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_YELLOW);
+                DrawString(GOHmHUDFont, FormatNumber(Level.found_secrets, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW, GOHHideOnDeath(1., swapitemssecrets ? PlayerDeadTimerCheckSecretCounterSwap : PlayerDeadTimerCheckSecretCounter));
+                DrawString(GOHmHUDFont, FormatNumber(Level.total_secrets, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_YELLOW, GOHHideOnDeath(1., swapitemssecrets ? PlayerDeadTimerCheckSecretCounterSwap : PlayerDeadTimerCheckSecretCounter));
 
                 coordnudge.Y += 16;
 
@@ -1050,10 +1108,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 coordbase = (-102 + coordnudge.X, 3 + coordnudge.Y);
 
-                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ITEMS"), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
+                DrawString(GOHmHUDFont, StringTable.Localize("$GOODOLHUD_ITEMS"), coordbase, DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE, GOHHideOnDeath(1., swapitemssecrets ? PlayerDeadTimerCheckItemCounterSwap : PlayerDeadTimerCheckItemCounter));
 
-                DrawString(GOHmHUDFont, FormatNumber(Level.found_items, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
-                DrawString(GOHmHUDFont, FormatNumber(Level.total_items, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_LIGHTBLUE);
+                DrawString(GOHmHUDFont, FormatNumber(Level.found_items, 1, 5) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE, GOHHideOnDeath(1., swapitemssecrets ? PlayerDeadTimerCheckItemCounterSwap : PlayerDeadTimerCheckItemCounter));
+                DrawString(GOHmHUDFont, FormatNumber(Level.total_items, 1, 5), (coordbase.X + 56, coordbase.Y), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_LEFT, Font.CR_LIGHTBLUE, GOHHideOnDeath(1., swapitemssecrets ? PlayerDeadTimerCheckItemCounterSwap : PlayerDeadTimerCheckItemCounter));
 
                 coordnudge.Y += 16;
 
@@ -1172,7 +1230,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         DrawString(GOHmHUDFont,
                    (teamcolor == Font.CR_UNTRANSLATED ? "\c" .. colorschemetext : "") ..
                    (canshowcharactername ? StringTable.Localize(charactername) .. (altcharactername != "" ? " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize(altcharactername) .. StringTable.Localize("$GOODOLHUD_EXTRA_END") : "") : CPlayer.GetUserName()),
-                   (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, teamcolor);
+                   (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_LEFT, teamcolor, GOHHideOnDeath(1., PlayerDeadTimerCheckPlayerName));
     }
 
     protected virtual void GOHDrawMugShot(int coordbasex, int coordbasey)
@@ -1228,7 +1286,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
           "JAME", "",     "",     "",     ""
         };
 
-        DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_mugshot_" .. colorschemebase .. ".png", (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
+        DrawImage("graphics/hud/" .. theme .. "/icons/goodolhud_icon_mugshot_" .. colorschemebase .. ".png", (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckMugshot));
 
         if (canshowcharacterportrait)
         {
@@ -1236,9 +1294,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
             let [portraitw, portraith] = TexMan.GetSize(TexMan.CheckForTexture(characterportrait));
 
-            DrawImage(characterportrait, (coordbasex + 19.5, coordbasey + 33), DI_SCREEN_LEFT_BOTTOM, 1, (-1, -1), (35.0 / portraitw, 31.0 / portraith));
+            DrawImage(characterportrait, (coordbasex + 19.5, coordbasey + 33), DI_SCREEN_LEFT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckMugshot), (-1, -1), (35.0 / portraitw, 31.0 / portraith));
         }
-        else { DrawTexture(GetMugShot(5), (coordbasex + 19.6, coordbasey + 17.5), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_CENTER, 1, (35, 31)); }
+        else { DrawTexture(GetMugShot(5), (coordbasex + 19.6, coordbasey + 17.5), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_CENTER, GOHHideOnDeath(1., PlayerDeadTimerCheckMugshot), (35, 31)); }
     }
 
     bool haspowerup;
@@ -1383,7 +1441,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             let canshowmugshot = CVar.FindCVar("goh_showmugshot").GetBool() && GetMugShot(5).IsValid() && (classnum < 0 || classnum >= CLASSCOUNT);
             let canshowcharacterportrait = CVar.FindCVar("goh_samsara_showcharacterportrait").GetBool() && classnum >= 0 && classnum < CLASSCOUNT;
 
-            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize("$GOODOLHUD_POWERUPS" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize("$GOODOLHUD_POWERUPS" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
 
             for (checkedpowerups = 0; checkedpowerups < maxpowerups; checkedpowerups += 3)
             {
@@ -1437,11 +1495,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 currentpowerupnum++;
 
-                DrawImage(bottomleftverttimerrows == 1 && ((currentpowerupnum <= 1 && TexMan.CheckForTexture(timerbaseleft).IsValid()) || (currentpowerupnum == 7 && TexMan.CheckForTexture(timerbaseright).IsValid())) ? (currentpowerupnum <= 1 ? timerbaseleft : timerbaseright) : timerbase, powerup, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
+                DrawImage(bottomleftverttimerrows == 1 && ((currentpowerupnum <= 1 && TexMan.CheckForTexture(timerbaseleft).IsValid()) || (currentpowerupnum == 7 && TexMan.CheckForTexture(timerbaseright).IsValid())) ? (currentpowerupnum <= 1 ? timerbaseleft : timerbaseright) : timerbase, powerup, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
 
-                DrawImage("graphics/hud/" .. theme .. "/timers/goodolhud_timer_" .. PowerupDefinitions[checkedpowerups + 1] .. ".png", (powerup.X + 2, powerup.Y + 2), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
+                DrawImage("graphics/hud/" .. theme .. "/timers/goodolhud_timer_" .. PowerupDefinitions[checkedpowerups + 1] .. ".png", (powerup.X + 2, powerup.Y + 2), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
 
-                DrawString(GOHmHUDFont, "\c" .. PowerupDefinitions[checkedpowerups + 2] .. FormatNumber(currentpowerup.EffectTics / TICRATE, 1, 4), (powerup.X + 6, powerup.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER);
+                DrawString(GOHmHUDFont, "\c" .. PowerupDefinitions[checkedpowerups + 2] .. FormatNumber(currentpowerup.EffectTics / TICRATE, 1, 4), (powerup.X + 6, powerup.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
 
                 powerup.X += 22 + (!(currentpowerupnum % 4) ? 1 : 0); // !(currentpowerupnum % 4) is a lazy hack to make the powerups align with each 22.25 addition while following int rules
             }
@@ -1524,7 +1582,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
             let canshowmugshot = CVar.FindCVar("goh_showmugshot").GetBool() && GetMugShot(5).IsValid() && (classnum < 0 || classnum >= CLASSCOUNT);
             let canshowcharacterportrait = CVar.FindCVar("goh_samsara_showcharacterportrait").GetBool() && classnum >= 0 && classnum < CLASSCOUNT;
 
-            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize("$GOODOLHUD_STATUS" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+            DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize("$GOODOLHUD_STATUS" .. ((canshowmugshot || canshowcharacterportrait) && bottomleftvertelements >= 2 ? "" : "_SHORT")), (coordbasex, coordbasey), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
 
             for (checkedstatuses = 0; checkedstatuses < maxstatuses; checkedstatuses += 3)
             {
@@ -1563,11 +1621,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 currentstatusnum++;
 
-                DrawImage(bottomleftverttimerrows == 1 && ((currentstatusnum <= 1 && TexMan.CheckForTexture(timerbaseleft).IsValid()) || (currentstatusnum == 7 && TexMan.CheckForTexture(timerbaseright).IsValid())) ? (currentstatusnum <= 1 ? timerbaseleft : timerbaseright) : timerbase, status, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
+                DrawImage(bottomleftverttimerrows == 1 && ((currentstatusnum <= 1 && TexMan.CheckForTexture(timerbaseleft).IsValid()) || (currentstatusnum == 7 && TexMan.CheckForTexture(timerbaseright).IsValid())) ? (currentstatusnum <= 1 ? timerbaseleft : timerbaseright) : timerbase, status, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
 
-                DrawImage("graphics/hud/" .. theme .. "/timers/goodolhud_timer_" .. StatusDefinitions[checkedstatuses + 1] .. ".png", (status.X + 2, status.Y + 2), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS);
+                DrawImage("graphics/hud/" .. theme .. "/timers/goodolhud_timer_" .. StatusDefinitions[checkedstatuses + 1] .. ".png", (status.X + 2, status.Y + 2), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
 
-                DrawString(GOHmHUDFont, "\c" .. StatusDefinitions[checkedstatuses + 2] .. FormatNumber(checkingpoison && CPlayer.PoisonCount > 0 ? (CPlayer.PoisonCount - 5) / 10 : checkingmorph && CPlayer.MorphTics > 0 ? (CPlayer.MorphTics - (StatusDefinitions[checkedstatuses] == "ShrunkPlayer" ? TICRATE * 3 : 0)) / TICRATE : currentstatus.EffectTics / TICRATE, 1, 4), (status.X + 6, status.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER);
+                DrawString(GOHmHUDFont, "\c" .. StatusDefinitions[checkedstatuses + 2] .. FormatNumber(checkingpoison && CPlayer.PoisonCount > 0 ? (CPlayer.PoisonCount - 5) / 10 : checkingmorph && CPlayer.MorphTics > 0 ? (CPlayer.MorphTics - (StatusDefinitions[checkedstatuses] == "ShrunkPlayer" ? TICRATE * 3 : 0)) / TICRATE : currentstatus.EffectTics / TICRATE, 1, 4), (status.X + 6, status.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
 
                 status.X += 22 + (!(currentstatusnum % 4) ? 1 : 0); // !(currentstatusnum % 4) is a lazy hack to make the statuses align with each 22.25 addition while following int rules
             }
@@ -1598,7 +1656,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 if (icon.IsValid() && !item.IsBlinking())
                 {
                     // Each icon gets a 32x32 block.
-                    DrawTexture(icon, pos, fullscreenhudactive ? DI_SCREEN_LEFT_BOTTOM : DI_SCREEN_RIGHT_TOP, 1, (POWERUPICONSIZE, POWERUPICONSIZE));
+                    DrawTexture(icon, pos, fullscreenhudactive ? DI_SCREEN_LEFT_BOTTOM : DI_SCREEN_RIGHT_TOP, fullscreenhudactive ? (GOHHideOnDeath(1., PlayerDeadTimerCheckPowerups)) : 1., (POWERUPICONSIZE, POWERUPICONSIZE));
 
                     pos.x += fullscreenhudactive ? POWERUPICONSIZE : -POWERUPICONSIZE;
 
@@ -2374,7 +2432,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                            "\c" .. colorschemetext ..
                            StringTable.Localize(descentweapon1) ..
                            (weaponmode != "" ? " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize(weaponmode) .. StringTable.Localize("$GOODOLHUD_EXTRA_END") : ""),
-                           (coordbasex, coordbasey), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+                           (coordbasex, coordbasey), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckWeaponName));
 
                 weaponnameamount++;
 
@@ -2382,7 +2440,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 {
                     coordnudge.Y -= 16;
 
-                    DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize(descentweapon2), (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+                    DrawString(GOHmHUDFont, "\c" .. colorschemetext .. StringTable.Localize(descentweapon2), (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckWeaponName));
 
                     weaponnameamount++;
                 }
@@ -2391,7 +2449,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                            "\c" .. colorschemetext ..
                            (weaponalttag != "" ? StringTable.Localize(weaponalttag) : (canshowpendingweapon ? CPlayer.PendingWeapon.GetTag() : CPlayer.ReadyWeapon.GetTag())) ..
                            (weaponmode != "" ? " " .. StringTable.Localize("$GOODOLHUD_EXTRA_START") .. StringTable.Localize(weaponmode) .. StringTable.Localize("$GOODOLHUD_EXTRA_END") : ""),
-                           (coordbasex, coordbasey), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+                           (coordbasex, coordbasey), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckWeaponName));
 
                 weaponnameamount++;
             }
@@ -3481,7 +3539,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
             }
 
-            DrawImage(barbase, (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM);
+            DrawImage(barbase, (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmo));
 
             for (int checkedammos = 0; checkedammos < maxammos; checkedammos += 3)
             {
@@ -3584,11 +3642,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
             }
 
             bar = "graphics/hud/" .. theme .. "/bars/goodolhud_bar_" .. ammobarcolor .. ".png";
-            DrawBar(bar, barblank, ammotype.Amount, ammotype.MaxAmount, (coordbasex, (coordbasey + coordnudge.Y) - 1), 0, SHADER_HORZ, DI_SCREEN_RIGHT_BOTTOM);
+            DrawBar(bar, barblank, ammotype.Amount, ammotype.MaxAmount, (coordbasex, (coordbasey + coordnudge.Y) - 1), 0, SHADER_HORZ, DI_SCREEN_RIGHT_BOTTOM, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmo));
 
-            DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. StringTable.Localize(ammostring), (coordbasex - 79, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+            DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. StringTable.Localize(ammostring), (coordbasex - 79, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmo));
 
-            DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. (showammoperc ? (String.Format("%.1f", ammotype.Amount * 100.0 / ammotype.MaxAmount) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : (FormatNumber(ammotype.Amount, 1, 4) .. (CVar.FindCVar("goh_showmaxamounts").GetBool() ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(ammotype.MaxAmount, 1, 4) : ""))), (coordbasex + 77, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT);
+            DrawString(GOHmHUDFont, "\c" .. ammotextcolor .. (showammoperc ? (String.Format("%.1f", ammotype.Amount * 100.0 / ammotype.MaxAmount) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : (FormatNumber(ammotype.Amount, 1, 4) .. (CVar.FindCVar("goh_showmaxamounts").GetBool() ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(ammotype.MaxAmount, 1, 4) : ""))), (coordbasex + 77, (coordbasey + coordnudge.Y) - 14), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmo));
 
             coordnudge.Y -= 16;
 
@@ -4076,10 +4134,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
             }
 
-            DrawString(GOHmHUDFont, "\c" .. ammocapacitycolor .. StringTable.Localize("$GOODOLHUD_AMMOCAPACITY_SAMSARA_AMMO" .. ammoidentifier), (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
+            DrawString(GOHmHUDFont, "\c" .. ammocapacitycolor .. StringTable.Localize("$GOODOLHUD_AMMOCAPACITY_SAMSARA_AMMO" .. ammoidentifier), (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmoCapacities));
 
-            DrawString(GOHmHUDFont, "\c" .. ammocapacitycolor .. FormatNumber(currentammo, 1, 4) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbasex + 48, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT);
-            DrawString(GOHmHUDFont, "\c" .. ammocapacitycolor .. FormatNumber(currentammomax, 1, 4), (coordbasex + 48, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT);
+            DrawString(GOHmHUDFont, "\c" .. ammocapacitycolor .. FormatNumber(currentammo, 1, 4) .. StringTable.Localize("$GOODOLHUD_SEPARATOR"), (coordbasex + 48, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmoCapacities));
+            DrawString(GOHmHUDFont, "\c" .. ammocapacitycolor .. FormatNumber(currentammomax, 1, 4), (coordbasex + 48, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_LEFT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckAmmoCapacities));
 
             coordnudge.Y -= 16;
 
@@ -4645,7 +4703,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                   break;
             }
 
-            DrawString(GOHmHUDFont, hasslot || usingslot || hasslotskulltag || usingslotskulltag ? "\c" .. (usingslotskulltag ? colorschemeskulltagactivetext : (usingslot ? colorschemeactivetext : colorschemetext)) .. FormatNumber(slotnum, 1, 1) : "", (coordbasex + (10 * ((slotnum == 0 ? 10 : slotnum) - 1)), coordbasey), weaponbarflags);
+            DrawString(GOHmHUDFont, hasslot || usingslot || hasslotskulltag || usingslotskulltag ? "\c" .. (usingslotskulltag ? colorschemeskulltagactivetext : (usingslot ? colorschemeactivetext : colorschemetext)) .. FormatNumber(slotnum, 1, 1) : "", (coordbasex + (10 * ((slotnum == 0 ? 10 : slotnum) - 1)), coordbasey), weaponbarflags, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckWeaponBar));
         }
     }
 
@@ -4764,7 +4822,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     coordbase = (invcoordbasex, invcoordbasey - (16 * CurrentCooldownAmounts[cooldownslot + 1]));
                 }
 
-                DrawString(GOHmHUDFont, "\c" .. currentcooldowncolor .. FormatNumber(currentcooldown.Amount - 1, 1, 4), coordbase, DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_CENTER);
+                DrawString(GOHmHUDFont, "\c" .. currentcooldowncolor .. FormatNumber(currentcooldown.Amount - 1, 1, 4), coordbase, DI_SCREEN_RIGHT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., cooldownslot == -1 ? PlayerDeadTimerCheckCooldownTimersSelectedInventory : PlayerDeadTimerCheckCooldownTimersWeaponBar));
             }
         }
     }
@@ -4777,7 +4835,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         {
             if (i is "Key" && i.Icon.IsValid())
             {
-                DrawTexture(i.Icon, keypos, DI_ITEM_RIGHT_TOP);
+                DrawTexture(i.Icon, keypos, DI_ITEM_RIGHT_TOP, GOHHideOnDeath(1., PlayerDeadTimerCheckKeys));
 
                 Vector2 size = TexMan.GetScaledSize(i.Icon);
 
@@ -5116,7 +5174,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                 if (TexMan.CheckForTexture(currentmiscitemicon).IsValid())
                 {
-                    DrawImage(currentmiscitemicon, (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_TOP|DI_ITEM_CENTER);
+                    DrawImage(currentmiscitemicon, (coordbasex, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_TOP|DI_ITEM_CENTER, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems));
 
                     if (hascounter)
                     {
@@ -5124,7 +5182,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                         [miscitemamt, miscitemmaxamt] = GetAmount(MiscItemDefinitions[checkedmiscitems]);
 
-                        DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. (counterpercentage ? (FormatNumber(miscitemamt * 100.0 / miscitemmaxamt, 1, 3) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : FormatNumber(miscitemamt, 1, 4)), (coordbasex, (coordbasey + coordnudge.Y) + 24), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_CENTER);
+                        DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. (counterpercentage ? (FormatNumber(miscitemamt * 100.0 / miscitemmaxamt, 1, 3) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : FormatNumber(miscitemamt, 1, 4)), (coordbasex, (coordbasey + coordnudge.Y) + 24), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems));
                     }
 
                     if (usingpsienergy)
@@ -5133,7 +5191,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                         [psienergyamt, psienergymaxamt] = GetAmount("DisruptorPSIEnergy");
 
-                        DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(psienergyamt, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(psienergymaxamt, 1, 4) : ""), (coordbasex, (coordbasey + coordnudge.Y) + 24), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_CENTER);
+                        DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(psienergyamt, 1, 4) .. (canshowmaxamounts ? StringTable.Localize("$GOODOLHUD_SEPARATOR") .. FormatNumber(psienergymaxamt, 1, 4) : ""), (coordbasex, (coordbasey + coordnudge.Y) + 24), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems));
                     }
 
                     if (showcooldowntimer)
@@ -5142,11 +5200,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
                         {
                             let currentmiscitempoweruptimer = Powerup(CPlayer.mo.FindInventory(MiscItemDefinitions[checkedmiscitems + 2]));
 
-                            if (currentmiscitempoweruptimer) { DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(currentmiscitempoweruptimer.EffectTics / TICRATE, 1, 4), (coordbasex - 16, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT); }
+                            if (currentmiscitempoweruptimer) { DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(currentmiscitempoweruptimer.EffectTics / TICRATE, 1, 4), (coordbasex - 16, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems)); }
                         } else {
                             let currentmiscitemtimer = CPlayer.mo.FindInventory(MiscItemDefinitions[checkedmiscitems + 2]);
 
-                            if (currentmiscitemtimer) { DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(GetAmount(MiscItemDefinitions[checkedmiscitems + 2]) - 1, 1, 4), (coordbasex - 16, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT); }
+                            if (currentmiscitemtimer) { DrawString(GOHmHUDFont, "\c" .. currentmiscitemcolor .. FormatNumber(GetAmount(MiscItemDefinitions[checkedmiscitems + 2]) - 1, 1, 4), (coordbasex - 16, (coordbasey + coordnudge.Y)), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems)); }
                         }
                     }
 
@@ -5170,7 +5228,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         int boxseparator = 11;
 
         // First draw all the boxes
-        for (int i = 0; i < numfields; i++) { DrawTexture(TexMan.CheckForTexture("graphics/hud/" .. theme .. "/icons/goodolhud_icon_inventory_" .. colorschemebase .. ".png"), position + ((boxsize.X + boxseparator) * i, 0), flags, bgalpha); }
+        for (int i = 0; i < numfields; i++) { DrawTexture(TexMan.CheckForTexture("graphics/hud/" .. theme .. "/icons/goodolhud_icon_inventory_" .. colorschemebase .. ".png"), position + ((boxsize.X + boxseparator) * i, 0), flags, GOHHideOnDeath(bgalpha, PlayerDeadTimerCheckInventoryBar)); }
 
         // now the items and the rest
         Vector2 itempos = position + boxsize / 2;
@@ -5209,21 +5267,32 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
                         if (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS) || showpercentage) { parms.selectofs.Y -= 15; }
 
-                        DrawTexture(parms.selector, position + parms.selectofs + ((boxsize.X + boxseparator) * i, 0), flags|DI_ITEM_OFFSETS, flashAlpha);
+                        DrawTexture(parms.selector, position + parms.selectofs + ((boxsize.X + boxseparator) * i, 0), flags|DI_ITEM_OFFSETS, GOHHideOnDeath(flashAlpha, PlayerDeadTimerCheckInventoryBar));
                     }
                 }
-                else { DrawInventoryIcon(item, itempos + ((boxsize.X + boxseparator) * i, 0), flags|DI_DIMDEPLETED|DI_ITEM_CENTER, 1, (36, 30)); }
+                else { DrawInventoryIcon(item, itempos + ((boxsize.X + boxseparator) * i, 0), flags|DI_DIMDEPLETED|DI_ITEM_CENTER, GOHHideOnDeath(1., PlayerDeadTimerCheckInventoryBar), (36, 30)); }
             }
 
-            if (parms.amountfont && (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS) || showpercentage)) { DrawString(parms.amountfont, "\c" .. colorschemetext .. (showpercentage ? (FormatNumber(item.Amount * 100.0 / item.MaxAmount, 1, 3) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : FormatNumber(item.Amount, 1, 5)), textpos + ((boxsize.X + boxseparator) * i, 0), flags|DI_TEXT_ALIGN_CENTER, parms.cr, parms.itemalpha); }
+            if (parms.amountfont && (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS) || showpercentage)) { DrawString(parms.amountfont, "\c" .. colorschemetext .. (showpercentage ? (FormatNumber(item.Amount * 100.0 / item.MaxAmount, 1, 3) .. StringTable.Localize("$GOODOLHUD_PERCENTAGE")) : FormatNumber(item.Amount, 1, 5)), textpos + ((boxsize.X + boxseparator) * i, 0), flags|DI_TEXT_ALIGN_CENTER, parms.cr, GOHHideOnDeath(parms.itemalpha, PlayerDeadTimerCheckInventoryBar)); }
 
             i++;
         }
 
         // Is there something to the left?
-        if (CPlayer.mo.FirstInv() != CPlayer.mo.InvFirst) { DrawTexture(parms.left, position + (-parms.arrowoffset.X, parms.arrowoffset.Y), flags|DI_ITEM_OFFSETS); }
+        if (CPlayer.mo.FirstInv() != CPlayer.mo.InvFirst) { DrawTexture(parms.left, position + (-parms.arrowoffset.X, parms.arrowoffset.Y), flags|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckInventoryBar)); }
 
         // Is there something to the right?
-        if (item) { DrawTexture(parms.right, position + (parms.arrowoffset.X + 7, parms.arrowoffset.Y) + (width, 0), flags|DI_ITEM_OFFSETS); }
+        if (item) { DrawTexture(parms.right, position + (parms.arrowoffset.X + 7, parms.arrowoffset.Y) + (width, 0), flags|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckInventoryBar)); }
+    }
+
+    protected double GOHHideOnDeath(double origalpha, int hidetic)
+    {
+        if (!playerdead) { return origalpha; }
+
+        int canhideondeath = CVar.FindCVar("goh_hideondeath").GetInt();
+
+        if (canhideondeath <= 0 || (canhideondeath >= 2 && playerdeadtimer < hidetic)) { return origalpha; }
+
+        return 0.;
     }
 }
