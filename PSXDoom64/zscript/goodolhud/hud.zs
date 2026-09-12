@@ -779,7 +779,7 @@ class GoodOlHUDStatusBar : D64StatusBar
 
                 DrawImage("graphics/hud/" .. theme .. "/timers/goodolhud_timer_" .. PowerupDefinitions[checkedpowerups + 1] .. ".png", (powerup.X + 2, powerup.Y + 2), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
 
-                DrawString(GOHmHUDFont, "\c" .. PowerupDefinitions[checkedpowerups + 2] .. FormatNumber(currentpowerup.EffectTics / TICRATE, 1, 4), (powerup.X + 6, powerup.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
+                DrawString(GOHmHUDFont, "\c" .. PowerupDefinitions[checkedpowerups + 2] .. FormatNumber((currentpowerup.EffectTics / TICRATE) + (CVar.FindCVar("goh_effecttimerdisplaymode").GetBool() ? 1 : 0), 1, 4), (powerup.X + 6, powerup.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckPowerupTimers));
 
                 powerup.X += 22 + (!(currentpowerupnum % 4) ? 1 : 0); // !(currentpowerupnum % 4) is a lazy hack to make the powerups align with each 22.25 addition while following int rules
             }
@@ -874,7 +874,7 @@ class GoodOlHUDStatusBar : D64StatusBar
 
                 DrawImage("graphics/hud/" .. theme .. "/timers/goodolhud_timer_" .. StatusDefinitions[checkedstatuses + 1] .. ".png", (status.X + 2, status.Y + 2), DI_SCREEN_LEFT_BOTTOM|DI_ITEM_OFFSETS, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
 
-                DrawString(GOHmHUDFont, "\c" .. StatusDefinitions[checkedstatuses + 2] .. FormatNumber(checkingpoison && CPlayer.PoisonCount > 0 ? (CPlayer.PoisonCount - 5) / 10 : checkingmorph && CPlayer.MorphTics > 0 ? CPlayer.MorphTics / TICRATE : currentstatus.EffectTics / TICRATE, 1, 4), (status.X + 6, status.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
+                DrawString(GOHmHUDFont, "\c" .. StatusDefinitions[checkedstatuses + 2] .. FormatNumber((checkingpoison && CPlayer.PoisonCount > 0 ? (CPlayer.PoisonCount - 5) / 10 : checkingmorph && CPlayer.MorphTics > 0 ? CPlayer.MorphTics / TICRATE : currentstatus.EffectTics / TICRATE) + (CVar.FindCVar("goh_effecttimerdisplaymode").GetBool() ? 1 : 0), 1, 4), (status.X + 6, status.Y - 16), DI_SCREEN_LEFT_BOTTOM|DI_TEXT_ALIGN_CENTER, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckStatusTimers));
 
                 status.X += 22 + (!(currentstatusnum % 4) ? 1 : 0); // !(currentstatusnum % 4) is a lazy hack to make the statuses align with each 22.25 addition while following int rules
             }
@@ -1355,7 +1355,7 @@ class GoodOlHUDStatusBar : D64StatusBar
 
                     let currentmiscitemtimer = Powerup(CPlayer.mo.FindInventory(MiscItemDefinitions[checkedmiscitems + 2]));
 
-                    if (currentmiscitemtimer) { DrawString(GOHmHUDFont, "\c" .. MiscItemDefinitions[checkedmiscitems + 3] .. FormatNumber(currentmiscitemtimer.EffectTics / TICRATE, 1, 4), (coordbasex - 23, (coordbasey + coordnudge.Y) - 6), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems)); }
+                    if (currentmiscitemtimer) { DrawString(GOHmHUDFont, "\c" .. MiscItemDefinitions[checkedmiscitems + 3] .. FormatNumber((currentmiscitemtimer.EffectTics / TICRATE) + (CVar.FindCVar("goh_effecttimerdisplaymode").GetBool() ? 1 : 0), 1, 4), (coordbasex - 23, (coordbasey + coordnudge.Y) - 6), DI_SCREEN_RIGHT_TOP|DI_TEXT_ALIGN_RIGHT, Font.CR_UNTRANSLATED, GOHHideOnDeath(1., PlayerDeadTimerCheckMiscItems)); }
 
                     coordnudge.Y += 44;
                 }

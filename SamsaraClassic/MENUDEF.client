@@ -9,6 +9,7 @@ OptionMenu "GoodOlHUDOptions"
     Option "$GOODOLHUD_MENU_BARGRADIENTS",               "goh_bargradients",               "OnOff"
     Option "$GOODOLHUD_MENU_SHOWMAXAMOUNTS",             "goh_showmaxamounts",             "YesNo"
     Option "$GOODOLHUD_MENU_ALWAYSSHOWINVENTORYCOUNTER", "goh_alwaysshowinventorycounter", "YesNo"
+    Option "$GOODOLHUD_MENU_EFFECTTIMERDISPLAYMODE",     "goh_effecttimerdisplaymode",     "GoodOlHUDEffectTimerDisplayModeSettings"
     StaticText ""
     StaticText "$GOODOLHUD_MENU_SECTION_BOTTOMLEFT", 1
     Option "$GOODOLHUD_MENU_SHOWTEAMNAME",               "goh_showteamname",               "YesNo"
