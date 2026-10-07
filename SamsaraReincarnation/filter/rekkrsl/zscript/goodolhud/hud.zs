@@ -4926,7 +4926,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case 'KatarnBlazeItTimer':
-                if (!currentmiscitem && !CPlayer.mo.FindInventory("KatarnFireRateUp")) { continue; }
+                if (!CPlayer.mo.FindInventory("DFSuperCharge") && !CPlayer.mo.FindInventory("KatarnFireRateUp")) { continue; }
                 break;
 
               case 'DisruptorPsionicSelected':
@@ -5108,7 +5108,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     break;
 
                   case 'KatarnBlazeItTimer':
-                    if (!currentmiscitem && !CPlayer.mo.FindInventory("KatarnFireRateUp")) { continue; }
+                    if (!CPlayer.mo.FindInventory("DFSuperCharge") && !CPlayer.mo.FindInventory("KatarnFireRateUp")) { continue; }
 
                     hascounter = true;
                     break;
