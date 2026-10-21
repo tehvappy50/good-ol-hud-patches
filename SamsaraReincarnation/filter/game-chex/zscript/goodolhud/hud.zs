@@ -4275,7 +4275,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
         let descentsecondary = CPlayer.mo.FindInventory("DescentSecondaryCounter");
 
         bool usingslot1 = (classnum == CLASS_DOOM && weaponname == " Chainsaw ") ||
-                          (classnum == CLASS_CHEX && weaponname == "Super Bootspork") ||
+                          (classnum == CLASS_CHEX && (weaponname == "Super Bootspork" || weaponname == "Zorch Gloves")) ||
                           (classnum == CLASS_HERETIC && weaponname == "Gauntlets of the Necromancer") ||
                           (classnum == CLASS_WOLFEN && altclassnum != 2 && weaponname == "Knife" && CPlayer.mo.FindInventory("BJSuperKnife")) ||
                           (classnum == CLASS_WOLFEN && altclassnum == 2 && (weaponname == "Totenkopf_Mauser" || weaponname == "Totenkopf_MauserDual")) ||
