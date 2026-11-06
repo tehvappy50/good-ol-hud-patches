@@ -1345,8 +1345,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "PowerIronFeetNoColor",                  "green",     "[Green]",
             "PowerReversoPillGain",                  "white",     "[WhiteBorder]",
             "PowerSamsaraDamageBooster",             "darkred",   "[DarkRed]",
-            "PowerSamsaraBloodGunsAkimboQuadDamage", "darkgray",  "[Inversion]",
             // PowerQ2QuadDamage's custom timer is top priority, so currently not on this list
+            "PowerSamsaraBloodGunsAkimboQuadDamage", "darkgray",  "[Inversion]",
             "PowerSheriffsBadgePower",               "darkgray",  "[Inversion]", // also gives damage resistance
             "PowerSamsaraLesserTome",                "red",       "[Red]",
             "PowerQ2DoubleDamage",                   "red",       "[Red]",
