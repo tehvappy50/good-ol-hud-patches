@@ -1806,6 +1806,11 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUY" .. (altclassnum == 2 ? "STR" : "64") .. "_" .. (weaponname == " BFG10K " ? "SLOT7S" : "FALLBACKMELEE"); }
                 break;
 
+              case ' Pistol ':
+              case 'B.F.G. 9000':
+                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == "B.F.G. 9000" ? "SLOT7" : "FALLBACKRANGED"); }
+                break;
+
               case 'Mini-Zorcher':
               case 'Micro-Zorcher':
               case 'Dual Mini-Zorchers':
