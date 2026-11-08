@@ -1820,8 +1820,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case ' Pistol ':
+              case ' Shotgun ':
               case 'B.F.G. 9000':
-                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == "B.F.G. 9000" ? "SLOT7" : "FALLBACKRANGED"); }
+                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == " Pistol " ? "FALLBACKRANGED" : "SLOT" .. (weaponname == "B.F.G. 9000" ? "7" : "2")); }
                 break;
 
               case 'Mini-Zorcher':
@@ -3041,7 +3042,26 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 }
                 break;
 
-              case ' Railgun ':
+              case ' Shotgun ':
+                if (altclassnum == 3)
+                {
+                    ammotype2 = ammotype1;
+
+                    switch (weaponname)
+                    {
+                      case ' Shotgun ': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_ShotgunMagazine")); break;
+                    }
+
+                    if (canreload) { usingreloadpri = true; }
+                    else
+                    {
+                        ammotype1 = ammotype2 ? ammotype2 : null;
+                        if (ammotype2) { ammotype2 = null; }
+                    }
+                }
+                break;
+
+              case ' RailGun ':
                 if (altclassnum != 2 && canreload) { usingreloadpri = true; }
                 else
                 {
