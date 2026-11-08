@@ -2503,7 +2503,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 119 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 120 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2534,6 +2534,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
             // Doomguy (Stronghold)
             "DoomguyStrMines", "cyan",     "[Cyan]",
             "DoomguyStrGas",   "deeppink", "[Bijou]",
+            // Doomguy (Complex)
+            "ComplexDoom_PistolMagazine", "white", "[White]",
             // B.J. Blazkowicz (Castle Totenkopf SDL)
             "Totenkopf_FlameThrowerFuel", "deeppink", "[Bijou]",
             // Duke Nukem (Original/Life's a Beach)
@@ -2727,7 +2729,6 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               // Pistol ammo
-              case ' Pistol ':
               case ' Rifle ':
               case 'Mini-Zorcher':
               case 'Micro-Zorcher':
@@ -3014,6 +3015,27 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               // The others
+              case ' Pistol ':
+                switch (altclassnum)
+                {
+                  default:
+                    if (pistolammo) { ammotype1 = usingclip; }
+                    break;
+
+                  case 3:
+                    ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_PistolMagazine"));
+                    if (pistolammo) { ammotype2 = usingclip; }
+
+                    if (canreload) { usingreloadpri = true; }
+                    else
+                    {
+                        ammotype1 = ammotype2 ? ammotype2 : null;
+                        if (ammotype2) { ammotype2 = null; }
+                    }
+                    break;
+                }
+                break;
+
               case ' Railgun ':
                 if (altclassnum != 2 && canreload) { usingreloadpri = true; }
                 else
