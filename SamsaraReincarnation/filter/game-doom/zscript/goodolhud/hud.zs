@@ -1805,8 +1805,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
               case ' Pistol ':
               case ' Shotgun ':
+              case 'Super Shotgun':
               case 'B.F.G. 9000':
-                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == " Pistol " ? "FALLBACKRANGED" : "SLOT" .. (weaponname == "B.F.G. 9000" ? "7" : "2")); }
+                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == " Pistol " ? "FALLBACKRANGED" : "SLOT" .. (weaponname == "B.F.G. 9000" ? "7" : (weaponname == "Super Shotgun" ? "3" : "2"))); }
                 break;
 
               case 'Mini-Zorcher':
@@ -2742,6 +2743,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               // Reloadables
+              case 'ComplexDoom_AssaultShotgun':
               case 'Automatic Shotgun':
               case 'Gigazorcher 2100':
               case 'Duke3D_M16':
@@ -3027,6 +3029,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case ' Shotgun ':
+              case 'Super Shotgun':
                 if (altclassnum == 3)
                 {
                     ammotype2 = ammotype1;
@@ -3034,6 +3037,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     switch (weaponname)
                     {
                       case ' Shotgun ': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_ShotgunMagazine")); break;
+                      case 'Super Shotgun': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_SSGShell")); break;
                     }
 
                     if (canreload) { usingreloadpri = true; }
@@ -4409,6 +4413,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
                           (classnum == CLASS_OUTLAWS && weaponname == "Outlaws_Shotgun");
 
         bool usingslot3 = (classnum == CLASS_DOOM && weaponname == "Super Shotgun") ||
+                          (classnum == CLASS_DOOM && altclassnum == 3 && weaponname == "ComplexDoom_AssaultShotgun") ||
                           (classnum == CLASS_DOOM && altclassnum == 2 && weaponname == "Automatic Shotgun") ||
                           (classnum == CLASS_CHEX && weaponname == "Super Large Zorcher") ||
                           (classnum == CLASS_HERETIC && weaponname == "Ethereal Crossbow") ||
