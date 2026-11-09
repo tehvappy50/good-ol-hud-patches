@@ -1809,8 +1809,9 @@ class GoodOlHUDStatusBar : BaseStatusBar
               case ' Pistol ':
               case ' Shotgun ':
               case 'Super Shotgun':
+              case ' Chaingun ':
               case 'B.F.G. 9000':
-                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == " Pistol " ? "FALLBACKRANGED" : "SLOT" .. (weaponname == "B.F.G. 9000" ? "7" : (weaponname == "Super Shotgun" ? "3" : "2"))); }
+                if (altclassnum == 3) { weaponalttag = "$GOODOLHUD_WEAPON_SAMSARA_DOOMGUYCOM_" .. (weaponname == " Pistol " ? "FALLBACKRANGED" : "SLOT" .. (weaponname == "B.F.G. 9000" ? "7" : (weaponname == " Chaingun " ? "4" : (weaponname == "Super Shotgun" ? "3" : "2")))); }
                 break;
 
               case 'Mini-Zorcher':
@@ -3033,6 +3034,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
               case ' Shotgun ':
               case 'Super Shotgun':
+              case ' Chaingun ':
+              case 'Rocket Launcher':
+              case ' GrenadeLauncher ':
+              case 'Plasma Rifle':
                 if (altclassnum == 3)
                 {
                     ammotype2 = ammotype1;
@@ -3041,6 +3046,10 @@ class GoodOlHUDStatusBar : BaseStatusBar
                     {
                       case ' Shotgun ': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_ShotgunMagazine")); break;
                       case 'Super Shotgun': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_SSGShell")); break;
+                      case ' Chaingun ': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_ARMagazine")); break;
+                      case 'Rocket Launcher': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_RocketDrum")); break;
+                      case ' GrenadeLauncher ': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_GrenadeDrum")); break;
+                      case 'Plasma Rifle': ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_PlasmaCell")); break;
                     }
 
                     if (canreload) { usingreloadpri = true; }
@@ -3053,11 +3062,32 @@ class GoodOlHUDStatusBar : BaseStatusBar
                 break;
 
               case ' RailGun ':
-                if (altclassnum != 2 && canreload) { usingreloadpri = true; }
-                else
+                switch (altclassnum)
                 {
+                  default:
+                    if (canreload) { usingreloadpri = true; }
+                    else
+                    {
+                        ammotype1 = ammotype2 ? ammotype2 : null;
+                        if (ammotype2) { ammotype2 = null; }
+                    }
+                    break;
+
+                  case 2:
                     ammotype1 = ammotype2 ? ammotype2 : null;
                     if (ammotype2) { ammotype2 = null; }
+                    break;
+
+                  case 3:
+                    ammotype1 = Ammo(CPlayer.mo.FindInventory("ComplexDoom_CellCharge"));
+
+                    if (canreload) { usingreloadpri = true; }
+                    else
+                    {
+                        ammotype1 = ammotype2 ? ammotype2 : null;
+                        if (ammotype2) { ammotype2 = null; }
+                    }
+                    break;
                 }
                 break;
 
