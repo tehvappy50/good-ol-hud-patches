@@ -2498,7 +2498,7 @@ class GoodOlHUDStatusBar : BaseStatusBar
 
     protected virtual void GOHDrawAmmo(int coordbasex, int coordbasey)
     {
-        int maxammos = 120 * 3; // some of these are magazines or counters (charge/overheating/etc.)
+        int maxammos = 121 * 3; // some of these are magazines or counters (charge/overheating/etc.)
 
         static const Name AmmoDefinitions[] = // have to use Name for switch/case and DECORATE purposes
         {
@@ -2530,7 +2530,8 @@ class GoodOlHUDStatusBar : BaseStatusBar
             "DoomguyStrMines", "cyan",     "[Cyan]",
             "DoomguyStrGas",   "deeppink", "[Bijou]",
             // Doomguy (Complex)
-            "ComplexDoom_PistolMagazine", "white", "[White]",
+            "ComplexDoom_HandGrenadeAmmo", "black", "[Black]",
+            "ComplexDoom_PistolMagazine",  "white", "[White]",
             // B.J. Blazkowicz (Castle Totenkopf SDL)
             "Totenkopf_FlameThrowerFuel", "deeppink", "[Bijou]",
             // Duke Nukem (Original/Life's a Beach)
