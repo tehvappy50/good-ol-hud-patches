@@ -1,0 +1,11 @@
+[enu default]
+
+// Menu
+
+GOODOLHUD_MENU_RELOADABLEAMMOLABEL = "Reloadable Ammo Label";
+
+// Bottom right
+
+GOODOLHUD_WEAPON_DECHAINSAW = "Chainsaw";
+GOODOLHUD_AMMOCAPACITY_GAS = "GA";
+GOODOLHUD_AMMOCAPACITY_MINES = "MI";
