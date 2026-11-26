@@ -1047,7 +1047,7 @@ class GoodOlHUDStatusBar : GoodOlHUDStrongholdStatusBar
                 if (usingaltammo) { ammotype1 = Ammo(CPlayer.mo.FindInventory("HEGrenadeRounds")); }
                 break;
 
-              case 'Autoshotgun':
+              case 'AutoShotgun':
                 usingreload = true;
 
                 ammotype2 = ammotype1;

@@ -51,7 +51,7 @@ class GoodOlHUDStrongholdStatusBar : DoomStatusBar
 
         // Special case for the Auto Shotgun - if AS is selected then display clip
         // Don't worry, the shells remaining are still shown to the right.
-        if (weaponname == "Autoshotgun")
+        if (weaponname == "AutoShotgun")
         {
             if (a2) { DrawString(mHUDFont, FormatNumber(a2.Amount, 3, 3), (40, 172), DI_TEXT_ALIGN_RIGHT|DI_NOSHADOW, Font.CR_GOLD); }
         } else {
@@ -125,7 +125,7 @@ class GoodOlHUDStrongholdStatusBar : DoomStatusBar
         Inventory ammotype1, ammotype2;
         [ammotype1, ammotype2] = GetCurrentAmmo();
 
-        if (weaponname == "Autoshotgun")
+        if (weaponname == "AutoShotgun")
         {
             // magazine
             if (ammotype2 != null && ammotype2 != ammotype1)
